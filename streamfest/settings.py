@@ -14,7 +14,7 @@ APPEND_SLASH = True
 #PREPEND_WWW = True
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
-
+AUTH_USER_MODEL = 'customuser.User'
 
 
 
@@ -25,6 +25,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'customuser',
+    'ckeditor',
+    'staticPages',
+    'speaker'
 ]
 
 MIDDLEWARE = [
