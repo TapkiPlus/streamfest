@@ -1,0 +1,10 @@
+.video-translate{
+    background: url(http://placehold.it/1920x750/00ff00) no-repeat center;
+    height: 750px;
+    padding-top: 100px;
+}
+.coming-soon-section{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
