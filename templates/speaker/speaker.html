@@ -4,12 +4,12 @@
 {% block content %}
 
 <!--Page Title-->
-    <section class="page-title" style="background-image:url(http://placehold.it/1920x400);">
+    <section class="page-title" style="background-image:url({{ curSpeaker.pageHeader.url }});">
         <div class="auto-container">
-            <h1>Speakers</h1>
+            <h1>{{curSpeaker.nickName}}</h1>
             <ul class="bread-crumb clearfix">
-                <li><a href="../staticPages/index.html">Home</a></li>
-                <li>Speakers</li>
+                <li><a href="../staticPages/index.html">Главная</a></li>
+                <li>Стримеры</li>
             </ul>
         </div>
     </section>
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="image-column col-lg-4 col-md-12 col-sm-12">
                     <div class="image-box">
-                        <figure class="image"><img src="http://placehold.it/800x600" alt=""></figure>
+                        <figure class="image"><img src="{{ curSpeaker.photo.url }}" alt=""></figure>
                         <ul class="social-icon-two social-icon-colored text-center">
                             <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
                             <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
@@ -35,8 +35,8 @@
                 <div class="info-column col-lg-8 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="text-box">
-                            <h3>Dale Marke</h3>
-                            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <h3>{{curSpeaker.name}} {{ curSpeaker.family }}</h3>
+                           {{ curSpeaker.about | safe }}
                             <h4>Sessions by Marke</h4>
                             <div class="row">
                                 <div class="col-lg-4">

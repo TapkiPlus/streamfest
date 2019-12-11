@@ -28,7 +28,8 @@ class Speaker(models.Model):
     isAtHome = models.BooleanField('Отображать на главной?', default=False)
 
     def save(self, *args, **kwargs):
-        slug = slugify(self.nickNameSlug)
+        slug = slugify(self.nickName)
+
         if self.nickNameSlug != slug:
             testSlug = Speaker.objects.filter(nickNameSlug=slug)
             slugRandom = ''
