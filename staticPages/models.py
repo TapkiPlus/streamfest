@@ -12,6 +12,22 @@ class Sponsor(models.Model):
         verbose_name = "Спонсор"
         verbose_name_plural = "Спонсоры"
 
+class Banner(models.Model):
+    order = models.IntegerField('Порядок отображения', default=1)
+    image = models.ImageField('Картинка', upload_to='banners/', blank=False)
+    smallText = models.CharField('Маленький текст', max_length=255, blank=False)
+    bigText = models.CharField('Большой текст', max_length=255, blank=False)
+    buttonText = models.CharField('Надпись на кнопке', max_length=255, blank=False)
+    buttonUrl = models.CharField('Ссылка с кнопки', max_length=255, blank=False)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return 'Баннер, порядковый номер : %s' % self.order
+
+    class Meta:
+        verbose_name = "Баннер"
+        verbose_name_plural = "Баннеры"
+
 
 class Faq(models.Model):
     question = models.ImageField('Вопрос)', upload_to='sponsor_img/',

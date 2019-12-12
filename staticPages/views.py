@@ -5,6 +5,7 @@ from .models import *
 def index(request):
     allSpeakers = Speaker.objects.filter(isAtHome=True)
     indexactive = 'current'
+    allBanners = Banner.objects.filter(is_active=True).order_by('order')
     return render(request, 'staticPages/index.html', locals())
 
 def faq(request):
