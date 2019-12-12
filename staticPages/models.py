@@ -30,10 +30,9 @@ class Banner(models.Model):
 
 
 class Faq(models.Model):
-    question = models.ImageField('Вопрос)', upload_to='sponsor_img/',
-                              blank=False, null=True)
+    question = models.CharField('Вопрос', max_length=255, blank=False,null=True)
     answer = RichTextUploadingField('Ответ', blank=True, null=True)
-    isVip = models.BooleanField('Выводить на странице', default=True)
+    isActive = models.BooleanField('Выводить на странице', default=True)
     def __str__(self):
         return 'Вопрос - Ответ №{}'.format(self.id)
 
