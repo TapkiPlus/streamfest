@@ -6,8 +6,7 @@ import string
 
 
 class Speaker(models.Model):
-    name = models.CharField('Имя', max_length=255, blank=False, null=True)
-    family = models.CharField('Фамилия', max_length=255, blank=False, null=True)
+    name = models.CharField('ФИО', max_length=255, blank=False, null=True)
     nickName = models.CharField('Ник', max_length=255, blank=False, null=True)
     photo = models.ImageField('Фото)', upload_to='speaker_img/',
                               blank=False, null=True)
@@ -25,6 +24,7 @@ class Speaker(models.Model):
 
 
     about = RichTextUploadingField('Описание', blank=True, null=True)
+    streaming = RichTextUploadingField('Что стримит', blank=True, null=True)
     isAtHome = models.BooleanField('Отображать на главной?', default=False)
 
     def save(self, *args, **kwargs):

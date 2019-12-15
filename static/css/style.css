@@ -73,12 +73,12 @@ Last Change:    12/9/2019
 
 ***/
  
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900|Orbitron:500,700|Ubuntu:400,500,700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:200,300,400,500,600,700,800,900|Ubuntu:500,700|Ubuntu:400,500,700&amp;display=swap');
 
 /*
 	font-family: 'Ubuntu', sans-serif;
-	font-family: 'Poppins', sans-serif;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 */
 
 /*** 
@@ -128,13 +128,13 @@ body {
 	background:#ffffff;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 a{
 	text-decoration:none;
 	cursor:pointer;
-	color:#f20487;
+	color:#4dd5f3;
 }
 
 button,
@@ -272,7 +272,8 @@ color:#ffffff;
 	color:#ffffff;
 	font-weight:400;
 	text-align:center;
-	background-color: #ec167f;
+	background-color: #009ccc
+;
 	overflow: hidden;
 	border-radius: 10px;
 }
@@ -282,7 +283,7 @@ color:#ffffff;
 }
 
 .btn-style-one:hover{
-	color:#ec167f;
+	color:#4dd5f3;
 	-webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.10);
 	-moz-box-shadow: 0 10px 30px rgba(0,0,0,0.10);
 	-ms-box-shadow: 0 10px 30px rgba(0,0,0,0.10);
@@ -711,7 +712,7 @@ color:#ffffff;
 	margin-top: 45px;
 	font-size: 24px;
 	line-height: 1em;
-	color: #f20487;
+	color: #4dd5f3;
 	text-decoration: underline;
 	font-family: "Ubuntu", sans-serif;
 	font-weight: 400;
@@ -1047,10 +1048,10 @@ img{
 	-ms-transform: scale(-1);
 	-o-transform: scale(-1);
 	transform: scale(-1);
-	background: rgb(247,0,104);
-	background: -moz-linear-gradient(to left, rgba(247,0,104,1) 0%, rgba(68,16,102,1) 100%);
-	background: -webkit-linear-gradient(to left, rgba(247,0,104,1) 0%, rgba(68,16,102,1) 100%);
-	background: linear-gradient(to left, rgba(247,0,104) 0%,rgba(68,16,102,1) 100%);
+	background: #4dd5f3;
+	background: -moz-linear-gradient(to left,  #4dd5f3 0%,  #009ccc 100%);
+	background: -webkit-linear-gradient(to left,  #4dd5f3 0%, #009ccc 100%);
+	background: linear-gradient(to left,  #4dd5f3 0%, #009ccc 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F70068', endColorstr='#441066',GradientType=1 );
 	-webkit-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
@@ -1107,7 +1108,7 @@ img{
 	-ms-transform: rotateX(90deg);
 	-o-transform: rotateX(90deg);
 	transform: rotateX(90deg);
-	border-bottom: 3px solid #f20487;
+	border-bottom: 3px solid #4dd5f3;
 	border-radius: 0 0 6px 6px;
 	-webkit-box-shadow:2px 2px 5px 1px rgba(0,0,0,0.05),-2px 0px 5px 1px rgba(0,0,0,0.05);
 	-ms-box-shadow:2px 2px 5px 1px rgba(0,0,0,0.05),-2px 0px 5px 1px rgba(0,0,0,0.05);
@@ -1183,7 +1184,7 @@ img{
 	-ms-transform: rotateX(90deg);
 	-o-transform: rotateX(90deg);
 	transform: rotateX(90deg);
-	border-bottom: 3px solid #f20487;
+	border-bottom: 3px solid #4dd5f3;
 	border-radius: 0 0 6px 6px;
 	-webkit-box-shadow:2px 2px 5px 1px rgba(0,0,0,0.05),-2px 0px 5px 1px rgba(0,0,0,0.05);
 	-ms-box-shadow:2px 2px 5px 1px rgba(0,0,0,0.05),-2px 0px 5px 1px rgba(0,0,0,0.05);
@@ -1412,6 +1413,7 @@ img{
 .header-style-two .main-box{
 	padding: 0;
 	box-shadow: 0 0 30px rgba(0,0,0,0.10);
+	background: white;
 }
 
 .header-style-two .outer-box,
@@ -2418,7 +2420,7 @@ img{
 .banner-meetup .countdown{
 	position:relative;
 	text-align: center;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 .banner-meetup .countdown .time-counter{
@@ -4042,7 +4044,7 @@ img{
 	height: 150px;
 	width: 150px;
 	overflow: hidden;
-	border: 4px solid #682372;
+	border: 4px solid #009ccc;
 	box-shadow: 0 0 20px rgba(0,0,0,0.30);
 	/*border-radius: 50%;*/
 	z-index: 9;
@@ -4068,27 +4070,27 @@ img{
 	transition: all 300ms ease;
 }
 
-.speaker-block-three .inner-box:hover .image img{
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	-o-transform: scale(1.1);
-	transform: scale(1.1);
-}
+/*.speaker-block-three .inner-box:hover .image img{*/
+	/*-webkit-transform: scale(1.1);*/
+	/*-moz-transform: scale(1.1);*/
+	/*-ms-transform: scale(1.1);*/
+	/*-o-transform: scale(1.1);*/
+	/*transform: scale(1.1);*/
+/*}*/
 
 .speaker-block-three .info-box{
 	position: relative;
 	display: inline-block;
 	padding: 10px 30px;
 	padding-right: 10px;
-	background-color: #f20487;
+	background-color: #4dd5f3;
 }
 
 .speaker-block-three .info-box:before{
 	position: absolute;
 	left: 0;
 	right: -30px;
-	background-color: #f20487;
+	background-color: #4dd5f3;
 	content:"";
 	top: 0;
 	height: 100%;
@@ -5549,7 +5551,7 @@ img{
 	line-height: .9em;
 	color: #ec167f;
 	font-weight: 200;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	margin-bottom: 20px;
 }
 
@@ -6760,7 +6762,7 @@ img{
 	top: 40px;
 	font-size: 30px;
 	line-height: 1em;
-	color:#f20487;
+	color:#4dd5f3;
 }
 
 .blog-single .lower-content blockquote p{
@@ -6776,7 +6778,7 @@ img{
 	display: block;
 	font-size: 15px;
 	line-height: 30px;
-	color: #f20487;
+	color: #4dd5f3;
 	font-weight: 400;
 	font-style: normal;
 	padding-left: 30px;
@@ -6788,7 +6790,7 @@ img{
 	top:14px;
 	height: 1px;
 	width: 20px;
-	background-color: #f20487;
+	background-color: #4dd5f3;
 	content: "";
 }
 
@@ -7017,7 +7019,7 @@ img{
 .coming-soon .cs-countdown{
 	position:relative;
 	text-align: center;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 .coming-soon .cs-countdown div{
@@ -7135,7 +7137,7 @@ img{
 
 .coming-soon .emailed-form .form-group input[type="submit"]:hover,
 .coming-soon .emailed-form button:hover{
-	color: #f20487;
+	color: #4dd5f3;
 }
 
 .coming-soon .icon-circle-blue{
@@ -7632,7 +7634,7 @@ img{
 .contact-form .form-group input:focus,
 .contact-form .form-group select:focus,
 .contact-form .form-group textarea:focus{
-	border-color:#f20487;
+	border-color:#4dd5f3;
 }
 
 .contact-form .form-group textarea{
@@ -7717,7 +7719,7 @@ img{
 }
 
 .contact-page-section .contact-info li a:hover{
-	color: #f20487;
+	color: #4dd5f3;
 }
 
 
@@ -8881,7 +8883,7 @@ img{
 }
 
 .main-footer.style-three .footer-nav li a:hover{
-	color: #f20487;
+	color: #4dd5f3;
 }
 
 .main-footer.style-three .copyright-text{

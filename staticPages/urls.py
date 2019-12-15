@@ -10,6 +10,7 @@ urlpatterns = [
    # # path('posts/', views.allPosts, name='allposts'),
    # # path('post/<slug>/', views.showPost, name='showpost'),
    path('faq/', views.faq, name='faq'),
+   path('contacts/', views.contacts, name='contacts'),
    # path('contacts/', views.contacts, name='contacts'),
    # path('services/', views.services, name='services'),
    # path('service/<slug>/', views.service, name='service'),

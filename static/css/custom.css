@@ -8,3 +8,19 @@
     left: 0;
     right: 0;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #09cccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #09cccc;
+}

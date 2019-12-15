@@ -4,7 +4,7 @@
         <div class="main-box">
         	<div class="auto-container clearfix">
             	<div class="logo-box">
-                	<div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+                	<div class="logo"><a href="index.html"><img style="height: 50px" src="{% static 'images/ru.png' %}" alt="" title=""></a></div>
                 </div>
 
                 <!--Nav Box-->
@@ -35,7 +35,7 @@
 
                                 </li>
 
-                                <li><a href="contact.html">Как добраться</a></li>
+                                <li><a href="{% url 'contacts' %}">Как добраться</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -44,9 +44,9 @@
                     <!-- Outer box -->
                     <div class="outer-box">
                         <!--Search Box-->
-                        <div class="search-box-outer">
-                            <div class="search-box-btn"><span class="flaticon-search"></span></div>
-                        </div>
+{#                        <div class="search-box-outer">#}
+{#                            <div class="search-box-btn"><span class="flaticon-search"></span></div>#}
+{#                        </div>#}
 
                         <!-- Button Box -->
                         <div class="btn-box">

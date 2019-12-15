@@ -14,5 +14,9 @@ def faq(request):
     right_faqs = faqs[1::2]
     return render(request, 'staticPages/faq.html', locals())
 
+def contacts(request):
+
+    return render(request, 'staticPages/contacts.html', locals())
+
 
 
