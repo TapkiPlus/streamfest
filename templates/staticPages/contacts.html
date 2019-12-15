@@ -4,7 +4,7 @@
 {% block content %}
 
 
- <!--Page Title-->
+    <!--Page Title-->
     <section class="page-title" style="background-image:url({% static 'images/vhod-1.jpg' %});">
         <div class="auto-container">
             <h1>ТЕХНОПАРК «СКОЛКОВО»</h1>
@@ -21,59 +21,63 @@
     <!-- Contact Page Section -->
     <section class="contact-page-section">
         <div class="auto-container">
-             <section class="map-section">
-        <div class="auto-container">
-            <div class="map-outer">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02f79490145bc8c3e217841b2604d825f0efd34665a4567f8e8d01cf2a4a7050&amp;width=1180&amp;height=500&amp;lang=ru_RU&amp;scroll=true%22%3E"></script>
-            </div>
-        </div>
-    </section>
+            <section class="map-section">
+                <div class="auto-container">
+                    <div class="map-outer">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02f79490145bc8c3e217841b2604d825f0efd34665a4567f8e8d01cf2a4a7050&amp;width=1180&amp;height=500&amp;lang=ru_RU&amp;scroll=true%22%3E"></script>
+                    </div>
+                </div>
+            </section>
             <div class="row clearfix">
-                 <!-- Map Section -->
+                <!-- Map Section -->
 
-    <!-- End Map Section -->
+                <!-- End Map Section -->
                 <div class="info-column col-lg-9 col-md-12 col-sm-12 order-2">
                     <div class="inner-column">
                         <div class="sec-title style-two">
-{#                            <span class="title">Как и на чем </span>#}
+                            {#                            <span class="title">Как и на чем </span>#}
                             <h2>Как добраться</h2>
                         </div>
 
                         <div class="event-info-tabs tabs-box">
                             <!--Tabs Box-->
                             <ul class="tab-buttons clearfix">
-                                <li class="tab-btn active-btn" data-tab="#tab1">Time</li>
-                                <li class="tab-btn" data-tab="#tab2">Venue</li>
-                                <li class="tab-btn" data-tab="#tab3">How to</li>
-                                <li class="tab-btn" data-tab="#tab4">How to</li>
+                                <li class="tab-btn active-btn" data-tab="#tab1">МЕТРО</li>
+                                <li class="tab-btn " data-tab="#tab5">АВТОБУС</li>
+                                <li class="tab-btn" data-tab="#tab2">ТАКСИ</li>
+                                <li class="tab-btn" data-tab="#tab3">СВОЕ АВТО</li>
+                                <li class="tab-btn" data-tab="#tab4">КАРШЕРИНГ</li>
                             </ul>
 
                             <div class="tabs-content">
                                 <!--Tab-->
                                 <div class="tab active-tab" id="tab1">
-                                    <h4><span class="icon far fa-calendar"></span> January 20, 2020</h4>
-                                    <div class="text">9.00 AM - 04.00 PM</div>
-                                    <ul class="info-list">
-                                        <li><span class="icon icon_profile"></span> Dianne Ameter</li>
-                                        <li><span class="icon icon_phone"></span> <a href="tel:+690-147-265-345">+123 456 7890</a></li>
-                                        <li><span class="icon icon_mail"></span> <a href="mailto:sopport@Eventrox.com">sopport@Eventrox.com</a></li>
-                                    </ul>
+                                    <p>Доехать до Сколково можно на электропоезде по направлению МЦД-1 (Одинцово-Лобня), на станцию «Инновационный центр Сколково».</p>
+                                    <p>Пересадка на МЦД-1 осуществялется с станции метро Белорусская. Стоимость билета 45р по карте "Тройка".</p>
                                 </div>
 
                                 <!--Tab-->
                                 <div class="tab" id="tab2">
-                                    <h4><span class="icon fa fa-map-marker-alt"></span>Pearl hotel, New york, USA</h4>
-                                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
+                                    <p>Вызывайте Яндекс.Такси или Uber — только они могут проезжать на территорию Сколково.</p>
+                                    <p> Все остальные такси остановят у шлагбаума на КПП, и вам придется идти пешком.</p>
+                                    <p>Такси нужно вызывать на адрес "Парковка Технопарк Сколково".</p>
                                 </div>
 
                                 <!--Tab-->
                                 <div class="tab" id="tab3">
-                                    <h4><span class="icon fa fa-directions"></span> How to get there</h4>
-                                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
+                                    <p>До Сколково можно доехать по Минскому, Можайскому и Сколковскому шоссе и оставить машину на одной из двух парковок: Технопарк или парковке Сколковская.</p>
+                                    <p> ВАЖНО: в навигаторе вбивайте адрес Парковка Технопарк Сколково.</p>
+
+                                    <p>На всех парковках первые два часа бесплатно, а дальше — 50 рублей/час.</p>
                                 </div>
-                                 <div class="tab" id="tab4">
-                                    <h4><span class="icon fa fa-directions"></span> How to get there</h4>
-                                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
+                                <div class="tab" id="tab4">
+                                    <p>Запарковать машину прямо перед зданием нельзя — вас не пустят на территорию. На парковке «Амальтея» парковаться нельзя.</p>
+                                    <p>В Сколково нельзя завершить аренду машин от «Яндекс.Драйв», Anytime, МатрёшCar — их можно только поставить на ожидание!</p>
+                                    <pКак проехать - смотрите "На машине".></p>
+                                </div>
+                                <div class="tab" id="tab5">
+                                    <p> На автобусе 867 от станции метро Кунцевская до остановки "Сколково" (время в пути ~ 30мин)</p>
+
                                 </div>
                             </div>
                         </div>
@@ -96,7 +100,7 @@
                                 <p><strong>Call Us</strong></p>
                                 <p>+321 4567 89 012 & 79 023</p>
                             </li>
-                              <li>
+                            <li>
                                 <span class="icon fa fa-phone-volume"></span>
                                 <p><strong>Call Us</strong></p>
                                 <p>+321 4567 89 012 & 79 023</p>
@@ -129,11 +133,11 @@
 
             </div>
             <div class="row">
-                    <div class="form-column col-lg-9 col-md-12 col-sm-12">
+                <div class="form-column col-lg-9 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="contact-form">
                             <div class="sec-title">
-                                <h2>Get in Touch</h2>
+                                <h2>Есть вопрос? Напишите нам!</h2>
                             </div>
                             <form method="post" action="sendemail.php" id="contact-form">
                                 <div class="row clearfix">
@@ -161,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-               </div>
+            </div>
         </div>
     </section>
     <!--End Contact Page Section -->
