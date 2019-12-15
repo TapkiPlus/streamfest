@@ -792,6 +792,10 @@ img{
 	position:relative;
 	text-align: center;
 	overflow: hidden;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	height: 450px;
 	z-index: 1;
 	padding: 120px 0;
 	background-repeat: no-repeat;
@@ -3109,6 +3113,7 @@ img{
 }
 
 .feature-block-two .inner-box{
+	min-height: 150px;
 	position: relative;
 	padding: 40px 30px;
 	padding-left: 100px;
