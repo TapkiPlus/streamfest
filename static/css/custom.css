@@ -29,3 +29,36 @@ h4 > a{
   font: 17px  'Ubuntu', sans-serif;
     font-weight: 500;
 }
+
+.owl-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.owl-dots{
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+}
+.owl-prev, .owl-next{
+    z-index: 10;
+
+}
+
+.owl-theme .owl-nav [class*=owl-]{
+    background: #4dd5f3;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background: #009ccc;
+}
+
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #4dd5f3;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{
+    background: #009ccc;
+}

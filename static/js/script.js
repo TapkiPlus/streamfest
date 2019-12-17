@@ -107,8 +107,9 @@
 			animateOut: 'fadeOut',
 		    animateIn: 'fadeIn',
 			loop:true,
-			margin:0,
+			margin:10,
 			nav:true,
+
 			smartSpeed: 500,
 			autoHeight: true,
 			autoplay: true,
@@ -155,7 +156,7 @@
 	if ($('.gallery-carousel').length) {
 		$('.gallery-carousel').owlCarousel({
 			loop:true,
-			margin:0,
+			margin:10,
 			nav:true,
 			smartSpeed: 500,
 			autoplay: true,

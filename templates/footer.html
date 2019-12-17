@@ -30,14 +30,22 @@
                             <!--Footer Column-->
                             <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget useful-links">
-                                    <h2 class="widget-title">Useful Links</h2>
+                                    <h2 class="widget-title">Ссылки</h2>
                                     <ul class="user-links">
-                                        <li><a href="index-2.html">Home</a></li>
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="projects.html">Projects</a></li>
-                                        <li><a href="blog.html">Blogs</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                      <li ><a href="/">Главная</a>
+
+                                </li>
+                                <li class=""><a href="about-us.html">Активности</a>
+
+                                </li>
+                                <li class=""><a href="{% url 'all_speakers' %}">Участники</a>
+
+                                </li>
+                                <li class=""><a href="{% url 'faq' %}">FAQ</a>
+
+                                </li>
+
+                                <li><a href="{% url 'contacts' %}">Как добраться</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -51,7 +59,7 @@
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <!--Footer Column-->
                                 <div class="footer-widget contact-widget">
-                                    <h2 class="widget-title">Contact Us</h2>
+                                    <h2 class="widget-title">Контакты</h2>
                                      <!--Footer Column-->
                                     <div class="widget-content">
                                         <ul class="contact-list">
