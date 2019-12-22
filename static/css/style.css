@@ -4022,7 +4022,8 @@ img{
 	position: relative;
 	display: block;
 	text-align: center;
-	padding: 50px 0;
+	/*padding: 50px 0;*/
+	padding-bottom: 50px;
 }
 
 /*.speaker-block-three .image-box:before{*/
@@ -4046,10 +4047,12 @@ img{
 .speaker-block-three .image-box .image{
 	position: relative;
 	display: inline-block;
-	height: 150px;
-	width: 200px;
+	/*height: 150px;*/
+	height: 200px;
+	/*width: 200px;*/
+	width: 100%;
 	overflow: hidden;
-	border: 4px solid #009ccc;
+	/*border: 4px solid #009ccc;*/
 	box-shadow: 0 0 20px rgba(0,0,0,0.30);
 	/*border-radius: 50%;*/
 	z-index: 9;
