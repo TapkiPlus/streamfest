@@ -71,14 +71,14 @@
                     <div class="pricing-block-three col-lg-4 offset-2 col-md-6 col-sm-12 wow fadeInUp">
                         <div class="inner-box">
                             <div class="title">Parson</div>
-                            <h4 class="price">$19</h4>
+                            <h4 class="price">{{ oneDayTicket.price }} руб</h4>
                             <ul class="features">
                                 <li>01 Conference Tickets</li>
                                 <li>Free Lunch And Coffee</li>
                                 <li>Certificate</li>
                             </ul>
                             <div class="btn-box">
-                                <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">BUY Ticket</span></a>
+                                 <a href="{% url 'order' oneDayTicket_slug%}" class="theme-btn btn-style-one"><span class="btn-title">BUY Ticket</span></a>
                             </div>
                         </div>
                     </div>
@@ -87,14 +87,14 @@
                     <div class="pricing-block-three col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
                         <div class="inner-box">
                             <div class="title">Family</div>
-                            <h4 class="price">$59</h4>
+                            <h4 class="price">{{ twoDayTicket.price }} руб</h4>
                             <ul class="features">
                                 <li>05 Conference Tickets</li>
                                 <li>Free Lunch And Coffee</li>
                                 <li>Certificate</li>
                             </ul>
                             <div class="btn-box">
-                                <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">BUY Ticket</span></a>
+                               <a href="{% url 'order' twoDayTicket_slug%}" class="theme-btn btn-style-one"><span class="btn-title">BUY Ticket</span></a>
                             </div>
                         </div>
                     </div>

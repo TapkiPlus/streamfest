@@ -1,0 +1,34 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+  <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'images/background/5.jpg' %});">
+        <div class="auto-container">
+            <h1>Успешная оплата</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="/">Главная</a></li>
+                <li>Успешная оплата</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+    <section class="error-section">
+        <div class="anim-icons full-width">
+            <span class="icon icon-circle-blue wow fadeIn animated" style="visibility: visible; animation-name: fa-spin;"></span>
+            <span class="icon icon-dots wow fadeInleft animated" style="visibility: visible;"></span>
+            <span class="icon icon-line-1 wow zoomIn animated" style="visibility: visible; animation-name: fa-spin;"></span>
+            <span class="icon icon-circle-1 wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;"></span>
+        </div>
+
+        <div class="auto-container">
+
+            <h4>Ваш заказ успешно оплачен</h4>
+            <div class="text">Sorry, we couldn't find the page you're looking for</div>
+            <a href="index.html" class="theme-btn btn-style-three"><span class="btn-title">Home Page</span></a>
+            <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Contact Us</span></a>
+        </div>
+    </section>
+
+
+{%  endblock %}

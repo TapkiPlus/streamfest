@@ -21,9 +21,6 @@ class Speaker(models.Model):
     linkIN = models.CharField('Ссылка на Instagram', max_length=255, blank=True, null=True, default='Не указано')
     views = models.IntegerField('Просмотров профиля', default=0)
     buys = models.IntegerField('Покупок', default=0)
-
-
-
     about = RichTextUploadingField('Описание', blank=True, null=True)
     streaming = RichTextUploadingField('Что стримит', blank=True, null=True)
     isAtHome = models.BooleanField('Отображать на главной?', default=False)
@@ -48,7 +45,6 @@ class Speaker(models.Model):
     class Meta:
         verbose_name = "Стример"
         verbose_name_plural = "Стримеры"
-
 
 
 class Ticket(models.Model):
@@ -91,23 +87,28 @@ class Ticket(models.Model):
         verbose_name_plural = "Билеты"
 
 
+def createSpeakerItem(sender, instance, created, **kwargs):
+    if created:
+        oneDayArticle = Ticket.objects.get(isDefaultOneDayTicket=True)
+        twoDayArticle = Ticket.objects.get(isDefaultTwoDayTicket=True)
+        Ticket.objects.create(streamer=instance,
+                              article=f'{instance.nickNameSlug}_{oneDayArticle.article}')
+        Ticket.objects.create(streamer=instance,
+                              article=f'{instance.nickNameSlug}_{twoDayArticle.article}')
 
-
-def createSpeakerItem(sender, instance, **kwargs):
-    oneDayArticle = Ticket.objects.get(isDefaultOneDayTicket=True)
-    twoDayArticle = Ticket.objects.get(isDefaultTwoDayTicket=True)
-    Ticket.objects.create(streamer=instance,article=f'{instance.nickNameSlug}_{oneDayArticle.article}')
-    Ticket.objects.create(streamer=instance, article=f'{instance.nickNameSlug}_{twoDayArticle.article}')
 
 post_save.connect(createSpeakerItem, sender=Speaker)
 
 
 class Order(models.Model):
+    streamer = models.ForeignKey(Speaker,blank=True,null=True, on_delete=models.CASCADE,
+                                     verbose_name='Билет от')
     customerFio = models.CharField("ФИО покупателя", max_length=255, blank=False, null=True)
     customerPhone = models.CharField("Телефон покупателя", max_length=255, blank=False, null=True)
     customerEmail = models.CharField("E-Mail покупателя", max_length=255, blank=False, null=True)
     ticket = models.ForeignKey(Ticket, blank=True,null=True, on_delete=models.CASCADE,
                                      verbose_name='Заказан')
+    price = models.IntegerField('Сумма', default=0)
 
     isPayed = models.BooleanField('Оплачено', default=False)
     createdAt = models.DateTimeField('Заказ создан', auto_now_add=True)

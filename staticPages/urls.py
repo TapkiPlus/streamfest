@@ -13,6 +13,7 @@ urlpatterns = [
    path('contacts/', views.contacts, name='contacts'),
    path('order/<pass_type>/', views.order, name='order'),
    path('new_order/', views.new_order, name='new_order'),
+   path('order_complete/<order_id>/', views.order_complete, name='order_complete'),
    # path('services/', views.services, name='services'),
    # path('service/<slug>/', views.service, name='service'),
    # path('robots.txt', views.robots, name='robots'),
