@@ -25,10 +25,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'customuser',
+    'customuser.apps.CustomuserConfig',
     'ckeditor',
-    'staticPages',
-    'speaker'
+    'staticPages.apps.StaticpagesConfig',
+    'speaker.apps.SpeakerConfig',
+
 ]
 
 MIDDLEWARE = [

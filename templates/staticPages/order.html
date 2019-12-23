@@ -1,0 +1,55 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+  <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'images/background/5.jpg' %});">
+        <div class="auto-container">
+            <h1>Оформление заказа</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="/">Главная</a></li>
+                <li>Оформление заказа</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+<section class="contact-page-section">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+
+                <!-- Form Column -->
+                <div class="form-column col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <div class="contact-form">
+                            <div class="sec-title">
+                                <h2>Оформление заказа</h2>
+                            </div>
+                            <form method="post" action="{% url 'new_order' %}" id="contact-form" >{% csrf_token %}
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="text" name="username" placeholder="Ваше ФИО" required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="text" class="phone-field" name="phone" placeholder="Ваш телефон" required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="email" name="email" placeholder="Ваш Email" required>
+                                    </div>
+                                    <input type="hidden" name="passArticle" value="{{ passArticle }}">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="btn-title">Submit Now</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{%  endblock %}
