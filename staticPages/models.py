@@ -44,10 +44,12 @@ class Faq(models.Model):
         verbose_name_plural = "Вопросы - Ответы"
 
 class Post(models.Model):
-    name = models.CharField('ФИО', max_length=255, blank=False, null=True)
+    name = models.CharField('Название', max_length=255, blank=False, null=True)
     image = models.ImageField('Изображение для поста', upload_to='post_img/', blank=False,
                                    null=True)
     nameSlug = models.CharField(max_length=255, blank=True, null=True, unique=True, db_index=True)
+    author = models.CharField('Автор',max_length=255, blank=True, null=True, unique=True, db_index=True)
+    date = models.CharField('Дата', max_length=255, blank=True, null=True, unique=True, db_index=True)
 
     views = models.IntegerField('Просмотров', default=0)
 
@@ -57,12 +59,12 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         slug = slugify(self.name)
-        if self.nickNameSlug != slug:
+        if self.nameSlug != slug:
             testSlug = Post.objects.filter(nameSlug=slug)
             slugRandom = ''
             if testSlug:
                 slugRandom = '-' + ''.join(choices(string.ascii_lowercase + string.digits, k=2))
-            self.nickNameSlug = slug + slugRandom
+            self.nameSlug = slug + slugRandom
         super(Post, self).save(*args, **kwargs)
 
     def __str__(self):

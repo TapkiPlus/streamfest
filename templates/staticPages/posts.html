@@ -1,0 +1,56 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+ <section class="page-title" style="background-image:url({% static 'images/background/5.jpg' %});">
+        <div class="auto-container">
+            <h1>Новости</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="/">Главная</a></li>
+                <li>Новости</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!-- News Section -->
+    <section class="news-section alternate">
+        <div class="auto-container">
+            <div class="row">
+                {% for post in allPosts %}
+                <!-- News Block Three -->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'post' post.nameSlug %}"><img src="{{ post.image.url }}" alt=""></a></figure>
+                        </div>
+                        <div class="lower-content">
+                            <ul class="post-info">
+                                <li><span class="far fa-user"></span> {{ post.author }}</li>
+                                <li><span class="far fa-comments"></span> {{ post.date }}</li>
+                            </ul>
+                            <h4><a href="{% url 'post' post.nameSlug %}">{{ post.about }}</a></h4>
+                            <div class="btn-box"><a href="{% url 'post' post.nameSlug %}" class="read-more">Подробнее</a></div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+            <!--Styled Pagination-->
+            <!--ul class="styled-pagination text-center">
+                <li><a href="#">1</a></li>
+                <li><a href="#" class="active">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#"><span class="icon fa fa-angle-right"></span></a></li>
+            </ul>
+            <!--End Styled Pagination-->
+        </div>
+    </section>
+    <!--End News Section -->
+
+
+
+{%  endblock %}

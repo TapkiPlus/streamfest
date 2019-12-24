@@ -8,16 +8,17 @@ from speaker.models import Ticket,Order
 from platron.request.request_builders.init_payment_builder import InitPaymentBuilder
 from platron.request.clients.post_client import PostClient
 from platron.sdk_exception import SdkException
-#import settings
+import settings
 import xml.etree.ElementTree as ET
 
 
 def index(request):
-    allSpeakers = Speaker.objects.filter(isAtHome=True)
+    allSpeakers = Speaker.objects.filter(isAtHome=True).order_by('orderPP')
     indexactive = 'current'
     allBanners = Banner.objects.filter(is_active=True).order_by('order')
     oneDayTicket = Ticket.objects.get(isDefaultOneDayTicket=True)
     twoDayTicket = Ticket.objects.get(isDefaultTwoDayTicket=True)
+    posts = Post.objects.filter(isAtHome=True)
     return render(request, 'staticPages/index.html', locals())
 
 def faq(request):
@@ -59,14 +60,14 @@ def new_order(request):
         price = Ticket.objects.get(article=tiketType).price
         if streamerNickNameSlug:
             streamer = Speaker.objects.get(nickNameSlug=streamerNickNameSlug)
-            newOrder=Order.objects.create(streamer=streamer,
+            newOrder = Order.objects.create(streamer=streamer,
                              ticket=ticket,
                              customerFio=customerFio,
                              customerEmail=customerEmail,
                              customerPhone=customerPhone,
                              price=price)
         else:
-            newOrder=Order.objects.create(ticket=ticket,
+            newOrder = Order.objects.create(ticket=ticket,
                                  customerFio=customerFio,
                                  customerEmail=customerEmail,
                                  customerPhone=customerPhone,
@@ -101,3 +102,18 @@ def order_complete(request, order_id):
         return render(request, 'staticPages/order_complete.html', locals())
     else:
         return HttpResponse(status=404)
+
+
+def posts(request):
+    allPosts = Post.objects.all()
+    return render(request, 'staticPages/posts.html', locals())
+
+
+def post(request, slug):
+    post = Post.objects.get(nameSlug=slug)
+    allPosts = Post.objects.all()[:3]
+    return render(request, 'staticPages/post.html', locals())
+
+def about(request):
+
+    return render(request, 'staticPages/about.html', locals())

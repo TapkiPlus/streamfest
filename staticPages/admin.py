@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(Sponsor)
 admin.site.register(Faq)
 admin.site.register(Banner)
+admin.site.register(Post)

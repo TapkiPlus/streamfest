@@ -12,5 +12,5 @@ def speaker(request,nickNameSlug):
     return render(request, 'speaker/speaker.html', locals())
 
 def all_speakers(request):
-    allSpeakers = Speaker.objects.all()
+    allSpeakers = Speaker.objects.all().order_by('orderPP')
     return render(request, 'speaker/speakers.html', locals())

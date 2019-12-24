@@ -1,0 +1,108 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'images/background/5.jpg' %});">
+        <div class="auto-container">
+            <h1>{{ post.name }}</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="/">Главная</a></li>
+                <li><a href="{% url 'allposts' %}">Новости</a></li>
+                <li>{{ post.name }}</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!--Sidebar Page Container-->
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+                <!--Content Side / Blog Sidebar-->
+                <div class="content-side col-lg-8 col-md-12 col-sm-12">
+                    <div class="blog-single">
+                         <!-- News Block Three -->
+                        <div class="news-block">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <figure class="image"><img src="{{ post.image.url }}" alt=""></figure>
+                                </div>
+                                <div class="lower-content">
+                                    <ul class="post-info">
+                                        <li><span class="far fa-user"></span> {{ post.author }}</li>
+                                        <li><span class="far fa-comments"></span> {{ post.date }}</li>
+                                    </ul>
+                                    {{ post.fullText | safe }}
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Other Options -->
+                        <div class="post-share-options clearfix">
+                            <div class="pull-left">
+                                <ul class="tags">
+                                    <li><a href="#">Eventa</a></li>
+                                    <li><a href="#">Conference</a></li>
+                                    <li><a href="#">Business</a></li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!--Sidebar Side-->
+                <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                    <aside class="sidebar padding-left">
+
+
+
+                        <!-- Post Widget -->
+                        <div class="sidebar-widget popular-posts">
+                            <h4 class="sidebar-title">Последние новости</h4>
+                            <div class="widget-content">
+                                {% for post in allPosts %}
+                                    <article class="post">
+                                    <div class="post-inner">
+                                        <figure class="post-thumb"><a href="{% url 'post' post.nameSlug %}"><img src="{{ post.image.url }}" alt=""></a></figure>
+                                        <div class="post-info">{{ post.date }}</div>
+                                        <div class="text"><a href="{% url 'post' post.nameSlug %}">{{ post.about }}</a></div>
+                                    </div>
+                                </article>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget popular-tags">
+                            <h4 class="sidebar-title">Tags</h4>
+                            <div class="widget-content">
+                                <a href="#">Event</a>
+                                <a href="#">Meetup</a>
+                                <a href="#">Conference</a>
+                                <a href="#">Meeting</a>
+                                <a href="#">Business</a>
+                                <a href="#">Seminar</a>
+                                <a href="#">Workshop</a>
+                                <a href="#">Professionals</a>
+                                <a href="#">Eventa</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar Page Container -->
+
+
+
+{%  endblock %}
