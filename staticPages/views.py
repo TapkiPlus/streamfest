@@ -8,7 +8,7 @@ from speaker.models import Ticket,Order
 from platron.request.request_builders.init_payment_builder import InitPaymentBuilder
 from platron.request.clients.post_client import PostClient
 from platron.sdk_exception import SdkException
-import settings
+#import settings
 import xml.etree.ElementTree as ET
 
 
@@ -87,7 +87,7 @@ def new_order(request):
         except SdkException as msg:
             print(msg)
     else:
-        return render(request, 'staticPages/index.html', locals())
+        return HttpResponse(status=404)
 
 @csrf_exempt
 def order_complete(request, order_id):
@@ -100,4 +100,4 @@ def order_complete(request, order_id):
             order.streamer.save()
         return render(request, 'staticPages/order_complete.html', locals())
     else:
-        return HttpResponse(status=500)
+        return HttpResponse(status=404)

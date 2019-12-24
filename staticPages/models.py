@@ -1,5 +1,8 @@
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
+from pytils.translit import slugify
+from random import choices
+import string
 
 class Sponsor(models.Model):
     image = models.ImageField('Изображение)', upload_to='sponsor_img/',
@@ -39,3 +42,32 @@ class Faq(models.Model):
     class Meta:
         verbose_name = "Вопрос - Ответ"
         verbose_name_plural = "Вопросы - Ответы"
+
+class Post(models.Model):
+    name = models.CharField('ФИО', max_length=255, blank=False, null=True)
+    image = models.ImageField('Изображение для поста', upload_to='post_img/', blank=False,
+                                   null=True)
+    nameSlug = models.CharField(max_length=255, blank=True, null=True, unique=True, db_index=True)
+
+    views = models.IntegerField('Просмотров', default=0)
+
+    about = models.TextField('Описание', blank=True, null=True)
+    fullText = RichTextUploadingField('Содержание поста', blank=True, null=True)
+    isAtHome = models.BooleanField('Отображать на главной?', default=False)
+
+    def save(self, *args, **kwargs):
+        slug = slugify(self.name)
+        if self.nickNameSlug != slug:
+            testSlug = Post.objects.filter(nameSlug=slug)
+            slugRandom = ''
+            if testSlug:
+                slugRandom = '-' + ''.join(choices(string.ascii_lowercase + string.digits, k=2))
+            self.nickNameSlug = slug + slugRandom
+        super(Post, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return 'Пост: {}'.format(self.name)
+
+    class Meta:
+        verbose_name = "Пост"
+        verbose_name_plural = "Посты"

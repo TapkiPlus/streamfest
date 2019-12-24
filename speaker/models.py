@@ -2,11 +2,13 @@ from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 from pytils.translit import slugify
 from random import choices
-from django.db.models.signals import post_save, post_delete
 import string
+from django.db.models.signals import post_save, post_delete
+
 
 
 class Speaker(models.Model):
+    orderPP = models.IntegerField('Номер ПП', default=10)
     name = models.CharField('ФИО', max_length=255, blank=False, null=True)
     nickName = models.CharField('Ник', max_length=255, blank=False, null=True, db_index=True)
     photo = models.ImageField('Фото)', upload_to='speaker_img/',
