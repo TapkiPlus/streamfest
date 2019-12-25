@@ -10,23 +10,23 @@
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+    background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #009ccc;
+    background: #009ccc;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #009ccc;
+    background: #009ccc;
 }
 
 h4 > a{
-  font: 17px  'Ubuntu', sans-serif;
+    font: 17px  'Ubuntu', sans-serif;
     font-weight: 500;
 }
 
@@ -56,9 +56,54 @@ h4 > a{
 
 
 .owl-theme .owl-dots .owl-dot span {
-  background: #4dd5f3;
+    background: #4dd5f3;
 }
 
 .owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{
     background: #009ccc;
+}
+
+.map{
+    margin-bottom: 25px;
+}
+
+
+@media only screen and (max-width: 599px){
+    .tab-buttons{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .event-info-tabs .tab-btn{
+        flex-basis: 50%;
+        text-align: center;
+        flex-grow: 1;
+        float: none;
+    }
+    .contact-page-section .contact-column{
+        margin-bottom: 20px;
+    }
+    .tabs-box{
+        margin-bottom: 30px;
+    }
+    .form-group{
+        margin-bottom: 15px !important;
+    }
+    .form-group button{
+        margin-top: 15px;
+    }
+
+    .about-section{
+        padding: 150px 0 20px !important;
+    }
+    .faq-section, .pricing-section-three, .speakers-section-three, .about-section-two, .pricing-section-two, .speakers-section-two, .features-section, .about1,  .news-section {
+        padding: 0px 0 50px !important;
+    }
+
+
+    .pricing-block-three .title{
+        font-size: 26px !important;
+    }
+    .pricing-block-three .price{
+        font-size: 50px !important;
+    }
 }

@@ -34,8 +34,8 @@
                         <ul class="accordion-box">
                            {% for faq in left_faqs %}
                                 <li class="accordion block  wow fadeInUp">
-                                <div class="acc-btn {% if forloop.counter == 1 %}active{% endif %}"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-down"></span> </div>{{ faq.question }}</div>
-                                <div class="acc-content current">
+                                <div class="acc-btn {% if forloop.counter == 1 %}active-block{% endif %}"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-down"></span> </div>{{ faq.question }}</div>
+                                <div class="acc-content {% if forloop.counter == 1 %}current{% endif %}">
                                     <div class="content">
                                         <div class="text">{{ faq.answer | safe }}</div>
                                     </div>
@@ -55,8 +55,8 @@
                             <!--Block  active-block -->
                              {% for faq in right_faqs %}
                                  <li class="accordion block  wow fadeInUp">
-                                <div class="acc-btn "><div class="icon-outer"><span class="icon icon-plus fa fa-angle-down"></span> </div>{{ faq.question }}</div>
-                                <div class="acc-content current">
+                                <div class="acc-btn {% if forloop.counter == 1 %}active-block{% endif %}"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-down"></span> </div>{{ faq.question }}</div>
+                                  <div class="acc-content {% if forloop.counter == 1 %}current{% endif %}">
                                     <div class="content">
                                         <div class="text">{{ faq.answer | safe }}</div>
                                     </div>
