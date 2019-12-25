@@ -14,3 +14,7 @@ def speaker(request,nickNameSlug):
 def all_speakers(request):
     allSpeakers = Speaker.objects.all().order_by('orderPP')
     return render(request, 'speaker/speakers.html', locals())
+
+def stats(request,code):
+    streamer = get_object_or_404(Speaker, uniqUrl=code)
+    return render(request, 'speaker/stat.html', locals())

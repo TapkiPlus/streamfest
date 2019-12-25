@@ -1,0 +1,46 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({{ curSpeaker.pageHeader.url }});">
+        <div class="auto-container">
+            <h1>{{curSpeaker.nickName}}</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="/">Статистика</a></li>
+
+                <li>{{streamer.name}}</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!-- Speker Detail -->
+    <section class="">
+        <div class="auto-container">
+            <div class="row">
+                <div class="image-column col-lg-4 col-md-12 col-sm-12">
+                    <div class="image-box">
+                        <figure class="image"><img src="{{ streamer.photo.url }}" alt=""></figure>
+                      <h3>{{streamer.name}}</h3>
+                        <p>{{streamer.nickName}}</p>
+                    </div>
+                </div>
+
+                <div class="info-column col-lg-8 col-md-12 col-sm-12">
+                    <h5 class="price"><span >{{ streamer.buys }} </span>билетов продано {% if streamer.buys > 0 %}х 300 рублей{% endif %}</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Speker Detail -->
+
+
+
+
+
+{%  endblock %}
+
+
+

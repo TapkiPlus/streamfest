@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render,HttpResponseRedirect
+from django.shortcuts import render,HttpResponseRedirect, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 
 from speaker.models import *
@@ -8,11 +8,12 @@ from speaker.models import Ticket,Order
 from platron.request.request_builders.init_payment_builder import InitPaymentBuilder
 from platron.request.clients.post_client import PostClient
 from platron.sdk_exception import SdkException
-import settings
+#import settings
 import xml.etree.ElementTree as ET
 
 
 def index(request):
+    set= Settings.objects.first()
     allSpeakers = Speaker.objects.filter(isAtHome=True).order_by('orderPP')
     indexactive = 'current'
     allBanners = Banner.objects.filter(is_active=True).order_by('order')
@@ -110,7 +111,7 @@ def posts(request):
 
 
 def post(request, slug):
-    post = Post.objects.get(nameSlug=slug)
+    post =  get_object_or_404(Post, nameSlug=slug)
     allPosts = Post.objects.all()[:3]
     return render(request, 'staticPages/post.html', locals())
 

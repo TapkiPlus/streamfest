@@ -38,20 +38,20 @@
         </div>
     </section>
     <!-- End Coming Soon -->
-
+{% if set.showTwitch %}
        <section class="video-translate">
           <div class="auto-container">
             <div style="margin-bottom: 40px" class="sec-title light ">
 
                 <h2 style="font-size: 32px"> <span style="margin-right: 20px;" class="icon fab fa-twitch"></span>Наша Online трансляция</h2>
             </div>
- <div  id="twitch-embed"></div>
+        <div  id="twitch-embed"></div>
 
 
 
         </div>
     </section>
-
+{% endif %}
 
     <!-- About Section -->
     <section class="about-section">
@@ -166,7 +166,7 @@
               <div class="sec-title text-center">
                             <span class="title">Кто будет</span>
                             <h2>Участники Стримфеста 2020</h2>
-                            <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incd idunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat.</div>
+{#                            <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incd idunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat.</div>#}
                         </div>
 
             <div class="row">
@@ -478,3 +478,17 @@
 
 
 {%  endblock %}
+{% if set.showTwitch %}
+{% block js %}
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: '100%',
+        height: 480,
+        channel: "Streamfest"
+      });
+    </script>
+{% endblock %}
+{% endif %}

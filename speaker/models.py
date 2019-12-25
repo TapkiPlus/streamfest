@@ -17,18 +17,21 @@ class Speaker(models.Model):
                                     null=True)
 
     nickNameSlug = models.CharField(max_length=255, blank=True, null=True, unique=True, db_index=True)
-    linkVK = models.CharField('Ссылка на VK', max_length=255, blank=True, null=True, default='Не указано')
-    linkTW = models.CharField('Ссылка на Twitch', max_length=255, blank=True, null=True, default='Не указано')
-    linkYT = models.CharField('Ссылка на YouTube', max_length=255, blank=True, null=True, default='Не указано')
-    linkIN = models.CharField('Ссылка на Instagram', max_length=255, blank=True, null=True, default='Не указано')
+    linkVK = models.CharField('Ссылка на VK', max_length=255, blank=True, null=True )
+    linkTW = models.CharField('Ссылка на Twitch', max_length=255, blank=True, null=True )
+    linkYT = models.CharField('Ссылка на YouTube', max_length=255, blank=True, null=True )
+    linkIN = models.CharField('Ссылка на Instagram', max_length=255, blank=True, null=True)
     views = models.IntegerField('Просмотров профиля', default=0)
     buys = models.IntegerField('Покупок', default=0)
     about = RichTextUploadingField('Описание', blank=True, null=True)
     streaming = RichTextUploadingField('Что стримит', blank=True, null=True)
     isAtHome = models.BooleanField('Отображать на главной?', default=False)
+    uniqUrl = models.CharField('Хеш для ссылки', max_length=100, editable=False, blank=True,null=True)
 
     def save(self, *args, **kwargs):
         slug = slugify(self.nickName)
+        if not self.uniqUrl:
+            self.uniqUrl = '-' + ''.join(choices(string.ascii_lowercase + string.digits, k=20))
 
         if self.nickNameSlug != slug:
             testSlug = Speaker.objects.filter(nickNameSlug=slug)
