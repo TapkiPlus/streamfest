@@ -77,3 +77,16 @@ class Post(models.Model):
 
 class Settings(models.Model):
     showTwitch = models.BooleanField('Показывать твич?', default=False)
+
+
+class Callback(models.Model):
+    name = models.CharField('Имя', max_length=255, blank=False, null=True)
+    email = models.CharField('E-Mail', max_length=255, blank=False, null=True)
+    text = models.TextField('Сообщение', blank=True, null=True)
+
+    def __str__(self):
+        return 'Сообщение от: {}'.format(self.name)
+
+    class Meta:
+        verbose_name = "Сообщение"
+        verbose_name_plural = "Сообщения"

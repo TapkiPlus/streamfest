@@ -1,10 +1,6 @@
 {% extends 'basic.html' %}
 {% load static %}
-
 {% block content %}
-
-
-    <!--Page Title-->
     <section class="page-title" style="background-image:url({% static 'images/background/5.jpg' %});">
         <div class="auto-container">
             <h1>FAQ's</h1>
@@ -14,65 +10,55 @@
             </ul>
         </div>
     </section>
-    <!--End Page Title-->
-
-    <!-- FAQ's Section -->
     <section class="faq-section">
         <div class="auto-container">
-            <!-- Sec Title -->
             <div class="sec-title">
                 <span class="title">FAQ 2020</span>
                 <h2>Ответы <span>на вопросы</span></h2>
             </div>
-
             <div class="row clearfix">
-                <!-- Content Column -->
-
-                    <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                <div class="content-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
-                        <!--Accordian Box-->
-                        <ul class="accordion-box">
-                           {% for faq in left_faqs %}
-                                <li class="accordion block  wow fadeInUp">
-                                <div class="acc-btn {% if forloop.counter == 1 %}active-block{% endif %}"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-down"></span> </div>{{ faq.question }}</div>
-                                <div class="acc-content {% if forloop.counter == 1 %}current{% endif %}">
-                                    <div class="content">
-                                        <div class="text">{{ faq.answer | safe }}</div>
+                        {% for faq in left_faqs %}
+                            <div {% if forloop.last %} style="margin-bottom: 0"{% endif %} class="card">
+                                <div class="card-header " id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link card-toggle" data-toggle="collapse" data-target="#collapse{{ faq.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                            {{ faq.question }}
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse{{ faq.id }}" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        {{ faq.answer | safe }}
                                     </div>
                                 </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
-
-                <!-- Content Column -->
-
-                    <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                <div class="content-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
-                        <!--Accordian Box-->
-                        <ul class="accordion-box">
-                            <!--Block  active-block -->
-                             {% for faq in right_faqs %}
-                                 <li class="accordion block  wow fadeInUp">
-                                <div class="acc-btn {% if forloop.counter == 1 %}active-block{% endif %}"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-down"></span> </div>{{ faq.question }}</div>
-                                  <div class="acc-content {% if forloop.counter == 1 %}current{% endif %}">
-                                    <div class="content">
-                                        <div class="text">{{ faq.answer | safe }}</div>
+                        {% for faq in right_faqs %}
+                            <div {% if forloop.last %} style="margin-bottom: 0"{% endif %} class="card">
+                                <div class="card-header " id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link card-toggle" data-toggle="collapse" data-target="#collapse{{ faq.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                            {{ faq.question }}
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse{{ faq.id }}" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        {{ faq.answer | safe }}
                                     </div>
                                 </div>
-                            </li>
-                             {% endfor %}
-
-                        </ul>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <!-- End FAQ's Section -->
-
-
-
 {%  endblock %}

@@ -17,16 +17,12 @@
     <!--End Page Title-->
 
 
-
     <!-- Contact Page Section -->
     <section class="contact-page-section">
         <div class="auto-container">
-        <div class="map">
-              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02f79490145bc8c3e217841b2604d825f0efd34665a4567f8e8d01cf2a4a7050&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true%22%3E"></script>
-
-
-
-        </div>
+            <div class="map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02f79490145bc8c3e217841b2604d825f0efd34665a4567f8e8d01cf2a4a7050&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true%22%3E"></script>
+            </div>
 
 
             <div class="row clearfix">
@@ -130,7 +126,7 @@
                             <div class="sec-title">
                                 <h2>Есть вопрос? Напишите нам!</h2>
                             </div>
-                            <form method="post" action="sendemail.php" id="contact-form">
+                            <form method="post" action="{% url 'callback' %}" id="contact-form">{% csrf_token %}
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <input type="text" name="username" placeholder="Имя" required="">
@@ -145,7 +141,7 @@
 
 
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <textarea name="message" placeholder="Сообщение"></textarea>
+                                        <textarea name="message" required placeholder="Сообщение"></textarea>
                                     </div>
 
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
@@ -161,9 +157,35 @@
     </section>
     <!--End Contact Page Section -->
 
+    {% if messages %}
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ваше сообщение отправлено</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Спасибо за обращение, c Вами обязательно свяжутся.
+                </div>
 
+            </div>
+        </div>
+    </div>
+    {% endif %}
 
 {%  endblock %}
+{% if messages %}
+    {% block js %}
+        <script>
+            $( document ).ready(function() {
+                $('#modal').modal({show:true})
+            });
+        </script>
+    {% endblock %}
+{% endif %}
 
 
 

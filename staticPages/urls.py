@@ -15,7 +15,7 @@ urlpatterns = [
    path('new_order/', views.new_order, name='new_order'),
    path('order_complete/<order_id>/', views.order_complete, name='order_complete'),
    path('about/', views.about, name='about'),
-   # path('service/<slug>/', views.service, name='service'),
+   path('callback', views.callback, name='callback'),
    # path('robots.txt', views.robots, name='robots'),
 
 

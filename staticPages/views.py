@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render,HttpResponseRedirect, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
-
+from django.contrib import messages
 from speaker.models import *
 from .models import *
 from speaker.models import Ticket,Order
@@ -118,3 +118,12 @@ def post(request, slug):
 def about(request):
 
     return render(request, 'staticPages/about.html', locals())
+
+def callback(request):
+    if request.POST:
+        print(request.POST)
+        Callback.objects.create(name=request.POST.get('username'),
+                                email=request.POST.get('email'),
+                                text=request.POST.get('message'))
+        messages.success(request, 'Спасибо, форма успешно отправлена')
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

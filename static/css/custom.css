@@ -107,3 +107,25 @@ h4 > a{
         font-size: 50px !important;
     }
 }
+
+.card{
+    background-color: #009ccc;
+    margin-bottom: 30px;
+
+}
+.card-header {
+    padding: 0;
+}
+
+.card-toggle{
+    width: 100%;
+    text-align: start;
+    line-height: 38px;
+    color: #ffffff;
+}
+.card-toggle:hover{
+    color: #ffffff;
+}
+.card-body {
+    background: #ffffff;
+}
