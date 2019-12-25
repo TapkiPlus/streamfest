@@ -26,12 +26,12 @@ class Speaker(models.Model):
     about = RichTextUploadingField('Описание', blank=True, null=True)
     streaming = RichTextUploadingField('Что стримит', blank=True, null=True)
     isAtHome = models.BooleanField('Отображать на главной?', default=False)
-    uniqUrl = models.CharField('Хеш для ссылки', max_length=100,  blank=True,null=True)
+    uniqUrl = models.CharField('Хеш для ссылки (/speaker/stats/)', max_length=100,  blank=True,null=True)
 
     def save(self, *args, **kwargs):
         slug = slugify(self.nickName)
         if not self.uniqUrl:
-            self.uniqUrl = '-' + ''.join(choices(string.ascii_lowercase + string.digits, k=20))
+            self.uniqUrl = self.nickNameSlug + '-' + ''.join(choices(string.ascii_lowercase + string.digits, k=10))
 
         if self.nickNameSlug != slug:
             testSlug = Speaker.objects.filter(nickNameSlug=slug)
