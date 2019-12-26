@@ -84,7 +84,7 @@
                 <!-- Image Column -->
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="image-box">
-                        <figure class=" wow fadeIn"><img style="border-radius: 0" src="{% static 'images/1.jpg' %}" alt=""></figure>
+                        <figure class=" wow fadeIn"><img style="border-radius: 0" src="{% static 'images/1.jpeg' %}" alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@
     <!--End Features Section -->
 
     <!-- Speakers Section -->
-    <section class="speakers-section-three" style="background: url({% static 'images/streamers-bg.jpg' %})">
+    <section class="speakers-section-three" style="background: url({% static 'images/streamer-bg.jpg' %})">
         <div class="auto-container">
               <div class="sec-title light text-center">
                             <span  class="title" >Кто будет</span>
@@ -202,22 +202,20 @@
         <div class="auto-container">
             <div class="fact-counter">
                 <div class="row clearfix">
-
                     <!--Column-->
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                         <div class="count-box">
                             <span class="icon icon_headphones"></span>
-                            <span class="count-text" data-speed="3000" data-stop="190">0</span>
-                            <h4 class="counter-title">Participants</h4>
+                            <span class="count-text">200+</span>
+                            <h4 class="counter-title">Звезд</h4>
                         </div>
                     </div>
-
                     <!--Column-->
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
                         <div class="count-box">
                             <span class="icon icon_ribbon_alt"></span>
-                            <span class="count-text" data-speed="3000" data-stop="62">0</span>
-                            <h4 class="counter-title">Awards Win</h4>
+                            <span class="count-text" >40+</span>
+                            <h4 class="counter-title">Стендов</h4>
                         </div>
                     </div>
 
@@ -225,8 +223,8 @@
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
                         <div class="count-box">
                             <span class="icon icon_like"></span>
-                            <span class="count-text" data-speed="3000" data-stop="54">0</span>
-                            <h4 class="counter-title">Certified Teachers</h4>
+                            <span class="count-text" >1000+</span>
+                            <h4 class="counter-title">Развлечений</h4>
                         </div>
                     </div>
 
@@ -234,8 +232,8 @@
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
                         <div class="count-box">
                             <span class="icon icon_book_alt"></span>
-                            <span class="count-text" data-speed="3000" data-stop="38">0</span>
-                            <h4 class="counter-title">Courses</h4>
+                            <span class="count-text" >2</span>
+                            <h4 class="counter-title">Дня</h4>
                         </div>
                     </div>
                 </div>
@@ -465,7 +463,7 @@
     <!--End Clients Section-->
 
     <!-- Pricing Section -->
-    <section class="pricing-section">
+    <section id="buy_ticket" class="pricing-section">
         <div class="anim-icons">
             <span class="icon icon-circle-green wow fadeIn"></span>
             <span class="icon icon-circle-blue wow fadeIn"></span>
@@ -491,11 +489,11 @@
                                 <h4 class="price">1300 руб</h4>
                             </div>
                             <ul class="features">
-                                <li class="true">Conference Tickets</li>
-                                <li class="true">Free Lunch And Coffee</li>
-                                <li class="true">Certificate</li>
-                                <li class="false">Easy Access</li>
-                                <li class="false">Free Contacts</li>
+                                <li class="true">1 день на выбор</li>
+                                <li class="true">Все стенды</li>
+                                <li class="true">Хайп, веселье и конкурсы</li>
+                                <li class="false">Два дня</li>
+
                             </ul>
                             <div class="btn-box">
                                 <a href="{% url 'order' oneDayTicket.article %}" class="theme-btn">Купить билет</a>
@@ -514,11 +512,10 @@
                                 <h4 class="price">2100 руб</h4>
                             </div>
                             <ul class="features">
-                                <li class="true">Conference Tickets</li>
-                                <li class="true">Free Lunch And Coffee</li>
-                                <li class="true">Certificate</li>
-                                <li class="true">Easy Access</li>
-                                <li class="false">Free Contacts</li>
+                                  <li class="true">В 2 раза больше веселья</li>
+                                <li class="true">Все стенды</li>
+                                <li class="true">Хайп, веселье и конкурсы</li>
+                                <li class="true">Два дня</li>
                             </ul>
                             <div class="btn-box">
                                 <a href="{% url 'order' twoDayTicket.article %}" class="theme-btn">Купить билет</a>
