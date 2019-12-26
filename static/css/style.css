@@ -5103,9 +5103,9 @@ img{
 	transition:all 600ms ease;
 }
 
-.pricing-block .inner-box:hover .icon-box .icon{
-	transform:rotate(360deg);
-}
+/*.pricing-block .inner-box:hover .icon-box .icon{*/
+/*	transform:rotate(360deg);*/
+/*}*/
 
 .pricing-block .price-box{
 	position: relative;
@@ -5682,9 +5682,9 @@ img{
 	box-shadow: 5px 10px 30px rgba(0,0,0,0.10);
 }
 
-.fun-fact-section .count-box:hover .icon{
-	transform:rotateY(360deg);
-}
+/*.fun-fact-section .count-box:hover .icon{*/
+/*	transform:rotateY(360deg);*/
+/*}*/
 
 .fun-fact-section .count-box .count-text{
 	position:relative;

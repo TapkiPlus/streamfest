@@ -69,6 +69,9 @@ h4 > a{
 
 
 @media only screen and (max-width: 599px){
+    .faq-section{
+        margin-top: 30px;
+    }
     .tab-buttons{
         display: flex;
         flex-wrap: wrap;
@@ -128,4 +131,8 @@ h4 > a{
 }
 .card-body {
     background: #ffffff;
+}
+
+.btn{
+    white-space: normal;
 }

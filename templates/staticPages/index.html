@@ -161,11 +161,11 @@
     <!--End Features Section -->
 
     <!-- Speakers Section -->
-    <section class="speakers-section-three">
+    <section class="speakers-section-three" style="background: url({% static 'images/streamers-bg.jpg' %})">
         <div class="auto-container">
-              <div class="sec-title text-center">
-                            <span class="title">Кто будет</span>
-                            <h2>Участники Стримфеста 2020</h2>
+              <div class="sec-title light text-center">
+                            <span  class="title" >Кто будет</span>
+                            <h2 >Участники Стримфеста 2020</h2>
 {#                            <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incd idunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat.</div>#}
                         </div>
 
@@ -197,7 +197,52 @@
         </div>
     </section>
     <!-- End Speakers Section -->
+     <!-- Fun Fact Section -->
+    <section class="fun-fact-section">
+        <div class="auto-container">
+            <div class="fact-counter">
+                <div class="row clearfix">
 
+                    <!--Column-->
+                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                        <div class="count-box">
+                            <span class="icon icon_headphones"></span>
+                            <span class="count-text" data-speed="3000" data-stop="190">0</span>
+                            <h4 class="counter-title">Participants</h4>
+                        </div>
+                    </div>
+
+                    <!--Column-->
+                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="count-box">
+                            <span class="icon icon_ribbon_alt"></span>
+                            <span class="count-text" data-speed="3000" data-stop="62">0</span>
+                            <h4 class="counter-title">Awards Win</h4>
+                        </div>
+                    </div>
+
+                    <!--Column-->
+                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
+                        <div class="count-box">
+                            <span class="icon icon_like"></span>
+                            <span class="count-text" data-speed="3000" data-stop="54">0</span>
+                            <h4 class="counter-title">Certified Teachers</h4>
+                        </div>
+                    </div>
+
+                    <!--Column-->
+                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
+                        <div class="count-box">
+                            <span class="icon icon_book_alt"></span>
+                            <span class="count-text" data-speed="3000" data-stop="38">0</span>
+                            <h4 class="counter-title">Courses</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Fun Fact Section -->
     <!-- About Section -->
     <section class="about-section about1">
         <div class="anim-icons full-width">
@@ -291,7 +336,7 @@
     <!--End About Section -->
 
    <!-- News Section -->
-    <section class="news-section">
+    <section style="background-color: #fafafa;" class="news-section">
         <div class="anim-icons">
             <span class="icon icon-circle-blue wow fadeIn"></span>
             <span class="icon twist-line-1 wow zoomIn"></span>
@@ -419,16 +464,16 @@
     </section>
     <!--End Clients Section-->
 
-      <!-- Pricing Section -->
-    <section id="buy_ticket" class="pricing-section-three">
+    <!-- Pricing Section -->
+    <section class="pricing-section">
         <div class="anim-icons">
-            <span class="icon icon-line-1 wow zoomIn"></span>
-            <span class="icon icon-circle-1 wow zoomIn"></span>
-            <span class="icon icon-dots wow zoomIn"></span>
+            <span class="icon icon-circle-green wow fadeIn"></span>
+            <span class="icon icon-circle-blue wow fadeIn"></span>
+            <span class="icon icon-circle-pink wow fadeIn"></span>
         </div>
 
         <div class="auto-container">
-            <div class="sec-title text-center">
+           <div class="sec-title text-center">
                 <span class="title">выбери свой!</span>
                 <h2>Билеты на фестиваль</h2>
             </div>
@@ -436,33 +481,47 @@
             <div class="outer-box">
                 <div class="row">
                     <!-- Pricing Block -->
-                    <div class="pricing-block-three col-lg-6  col-md-6 col-sm-12 wow fadeInUp">
-                        <div class="inner-box">
-                            <div class="title">Билет на 1 День</div>
-                            <h4 class="price">1300 руб</h4>
+                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                        <div style="max-width: none;" class="inner-box">
+                            <div class="icon-box">
+                                <div class="icon-outer"><span class="icon flaticon-paper-plane"></span></div>
+                            </div>
+                            <div class="price-box">
+                                <div class="title">Билет на 1 День</div>
+                                <h4 class="price">1300 руб</h4>
+                            </div>
                             <ul class="features">
-                                <li>Хайп, веселье, конкурсы, обнимашки и мемы — все, что ты любишь в стриминге, только живьем!</li>
-                                <li>Билет дает доступ в развлекательную, где у популярных стримеров и стрим-команд свои стенды, а также лекторий фестиваля</li>
-                                <li>Вы сами решаете, когда воспользоваться билетом: 25 или 26 апреля</li>
+                                <li class="true">Conference Tickets</li>
+                                <li class="true">Free Lunch And Coffee</li>
+                                <li class="true">Certificate</li>
+                                <li class="false">Easy Access</li>
+                                <li class="false">Free Contacts</li>
                             </ul>
                             <div class="btn-box">
-                                <a href="{% url 'order' oneDayTicket.article %}" class="theme-btn btn-style-one"><span class="btn-title">Купить билет</span></a>
+                                <a href="{% url 'order' oneDayTicket.article %}" class="theme-btn">Купить билет</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Pricing Block -->
-                    <div class="pricing-block-three col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="inner-box">
-                            <div class="title">Билет на 2 дня</div>
-                           <h4 class="price">2100 руб</h4>
+                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                        <div style="max-width: none;" class="inner-box">
+                            <div class="icon-box">
+                                <div class="icon-outer"><span class="icon flaticon-diamond-1"></span></div>
+                            </div>
+                            <div class="price-box">
+                                <div class="title">Билет на 2 дня</div>
+                                <h4 class="price">2100 руб</h4>
+                            </div>
                             <ul class="features">
-                                <li>В два раза больше общения и веселья — билет, что позволит насладиться Стримфестом сполна!</li>
-                                <li>Билет дает доступ в развлекательную, где у популярных стримеров и стрим-команд свои стенды, а также лекторий фестиваля</li>
-                                <li>Билет позволяет посетить оба фестивальных дня: 25 и 26 апреля</li>
+                                <li class="true">Conference Tickets</li>
+                                <li class="true">Free Lunch And Coffee</li>
+                                <li class="true">Certificate</li>
+                                <li class="true">Easy Access</li>
+                                <li class="false">Free Contacts</li>
                             </ul>
                             <div class="btn-box">
-                                <a href="{% url 'order' twoDayTicket.article %}" class="theme-btn btn-style-one"><span class="btn-title">Купить билет</span></a>
+                                <a href="{% url 'order' twoDayTicket.article %}" class="theme-btn">Купить билет</a>
                             </div>
                         </div>
                     </div>
@@ -473,6 +532,7 @@
         </div>
     </section>
     <!--End Pricing Section -->
+
 
 
 
