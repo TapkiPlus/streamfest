@@ -6,7 +6,7 @@
     <!--Page Title-->
     <section class="page-title" style="background-image:url({{ curSpeaker.pageHeader.url }});">
         <div class="auto-container">
-            <h1>{{curSpeaker.nickName}}</h1>
+            <h1 >{{curSpeaker.nickName}}</h1>
             <ul class="bread-crumb clearfix">
                 <li><a href="/">Главная</a></li>
                 <li><a href="{% url 'all_speakers' %}">Стримеры</a></li>
@@ -44,7 +44,7 @@
                 <div class="info-column col-lg-8 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="text-box">
-                            <h3>{{curSpeaker.name}}</h3>
+                            <h3 style="margin-bottom: 35px">{{curSpeaker.name}}</h3>
 
                             <h4>Досье</h4>
                             {{ curSpeaker.about | safe }}
