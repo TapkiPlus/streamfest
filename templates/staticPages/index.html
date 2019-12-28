@@ -178,8 +178,8 @@
                             <figure class="image"><a href="{% url 'speaker' speaker.nickNameSlug %}"><img src="{{ speaker.photo.url }}" alt=""></a></figure>
                         </div>
                         <div class="info-box">
-                            <a href="{% url 'speaker' speaker.nickNameSlug %}"><h4 class="name">{{speaker.name}} </h4>
-                            <span class="designation">{{ speaker.nickName }}</span></a>
+                             <a href="{% url 'speaker' speaker.nickNameSlug %}"><h4 class="name">{{speaker.nickName}} </h4>
+                            <span class="designation">{{ speaker.name }}</span></a>
                         </div>
 {#                        <div class="social-box">#}
 {#                            <ul class="social-links social-icon-colored">#}
@@ -206,16 +206,16 @@
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                         <div class="count-box">
                             <span class="icon icon_headphones"></span>
-                            <span class="count-text" data-speed="3000" data-stop="200">0</span>
-                            <h4 class="counter-title">Звезд</h4>
+                            <span class="count-text" data-speed="3000" data-stop="185">0</span>
+                            <h4 class="counter-title">Звезд веб-камеры</h4>
                         </div>
                     </div>
                     <!--Column-->
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
                         <div class="count-box">
                             <span class="icon icon_ribbon_alt"></span>
-                            <span class="count-text" data-speed="3000" data-stop="40">0</span>
-                            <h4 class="counter-title">Стендов</h4>
+                            <span class="count-text" data-speed="3000" data-stop="7200">0</span>
+                            <h4 class="counter-title">Посетителей</h4>
                         </div>
                     </div>
 
@@ -223,8 +223,8 @@
                     <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
                         <div class="count-box">
                             <span class="icon icon_like"></span>
-                            <span class="count-text" data-speed="2000" data-stop="1000">0</span>
-                            <h4 class="counter-title">Развлечений</h4>
+                            <span class="count-text">2000000</span>
+                            <h4 class="counter-title">Просмотров онлайн</h4>
                         </div>
                     </div>
 
@@ -256,75 +256,35 @@
                         <div class="sec-title">
                             <span class="title">КАК ЭТО БЫЛО</span>
                             <h2>Все о Стримфест 2019</h2>
-                            <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incd idunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat.</div>
+                            <div class="text">Стрифест - фестивать сообщества. В 2019 году он прошел с огромным успехом. Мы собрали в Технопарке "Сколково":</div>
                         </div>
                         <ul class="list-style-one">
-                            <li>Multiple Announcements during the event.</li>
-                            <li>Logo & company details on the WordCamp.</li>
-                            <li>Dedicated blog post thanking each Gold.</li>
-                            <li>Acknowledgment and opening and closing.</li>
+                            <li>185 звезд веб-камеры</li>
+                            <li>7200 посетителей</li>
+                            <li>2 миллиона просмотров онлайн</li>
                         </ul>
-
+                           <div class="text">Мы организовали десятки стримпозиций, чтобы участники могли одновременно работать на аудиторию в сети и на площадке. Мы растем с каждым годом, и в 2020-м усилим фестивальный уикэнд первой в шоу-церемонией Streamfest Awards.</div>
                     </div>
                 </div>
 
                 <!-- Image Column -->
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                                   <iframe style="width: 100%" src="https://player.vimeo.com/video/69250225?color=00fff2"  height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/69250225">Suaveciclo @ Brasilia, DF</a> from <a href="https://vimeo.com/vjsuave">VJ Suave</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                                   <iframe style="width: 100%" src="https://player.vimeo.com/video/348364566?color=00fff2" width="100%"  height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
                 </div>
             </div>
 
 
         <div class="gallery-carousel owl-carousel owl-theme">
+            {% for i in items %}
+
                   <div class="gallery-item ">
                     <div class="image-box">
-                        <figure class="image"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></figure>
-                        <div class="overlay-box"><a href="{% static 'images/gallery/1.jpg' %}" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
+                        <figure class="image"><img src="/static/images/gallery/2019_main_{{ i }}.jpg" alt=""></figure>
+                        <div class="overlay-box"><a href="/static/images/gallery/2019_main_{{ i }}.jpg" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
                     </div>
-                </div>
-                  <div class="gallery-item ">
-                    <div class="image-box">
-                        <figure class="image"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></figure>
-                        <div class="overlay-box"><a href="{% static 'images/gallery/1.jpg' %}" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
-                    </div>
-                </div>
-                  <div class="gallery-item ">
-                    <div class="image-box">
-                        <figure class="image"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></figure>
-                        <div class="overlay-box"><a href="{% static 'images/gallery/1.jpg' %}" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
-                    </div>
-                </div>
-                  <div class="gallery-item ">
-                    <div class="image-box">
-                        <figure class="image"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></figure>
-                        <div class="overlay-box"><a href="{% static 'images/gallery/1.jpg' %}" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
-                    </div>
-                </div>
-                  <div class="gallery-item ">
-                    <div class="image-box">
-                        <figure class="image"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></figure>
-                        <div class="overlay-box"><a href="{% static 'images/gallery/1.jpg' %}" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
-                    </div>
-                </div>
-                  <div class="gallery-item ">
-                    <div class="image-box">
-                        <figure class="image"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></figure>
-                        <div class="overlay-box"><a href="{% static 'images/gallery/1.jpg' %}" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
-                    </div>
-                </div>
-                  <div class="gallery-item ">
-                    <div class="image-box">
-                        <figure class="image"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></figure>
-                        <div class="overlay-box"><a href="{% static 'images/gallery/1.jpg' %}" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
-                    </div>
-                </div>
-                  <div class="gallery-item ">
-                    <div class="image-box">
-                        <figure class="image"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></figure>
-                        <div class="overlay-box"><a href="{% static 'images/gallery/1.jpg' %}" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
-                    </div>
-                </div>
+                  </div>
+            {% endfor %}
         </div>
 
 

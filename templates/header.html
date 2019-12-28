@@ -15,11 +15,11 @@
                         </div>
                         <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li class="current "><a href="/">Главная</a></li>
-                                <li class=""><a href="{% url 'about' %}">Активности</a></li>
-                                <li class=""><a href="{% url 'all_speakers' %}">Участники</a></li>
-                                <li class=""><a href="{% url 'faq' %}">FAQ</a></li>
-                                <li><a href="{% url 'contacts' %}">Как добраться</a></li>
+                                <li class="{{ indexactive }} "><a href="/">Главная</a></li>
+                                <li class="{{ activityactive }}"><a href="{% url 'about' %}">Активности</a></li>
+                                <li class="{{ streamersactive }}"><a href="{% url 'all_speakers' %}">Участники</a></li>
+                                <li class="{{ faqactive }}"><a href="{% url 'faq' %}">FAQ</a></li>
+                                <li class="{{ contactactive }}"><a href="{% url 'contacts' %}">Как добраться</a></li>
                             </ul>
                         </div>
                     </nav>

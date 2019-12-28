@@ -3,7 +3,7 @@
 
 {% block content %}
   <!--Page Title-->
-    <section class="page-title" style="background-image:url({% static 'images/background/5.jpg' %});">
+    <section class="page-title" style="background-image:url({% static 'images/Speakers.jpg' %});">
         <div class="auto-container">
             <h1>Участники</h1>
             <ul class="bread-crumb clearfix">
@@ -29,8 +29,8 @@
                             <figure class="image"><a href="{% url 'speaker' speaker.nickNameSlug %}"><img src="{{ speaker.photo.url }}" alt=""></a></figure>
                         </div>
                         <div class="info-box">
-                            <a href="{% url 'speaker' speaker.nickNameSlug %}"><h4 class="name">{{speaker.name}} {{ speaker.family }}</h4>
-                            <span class="designation">{{ speaker.nickName }}</span></a>
+                            <a href="{% url 'speaker' speaker.nickNameSlug %}"><h4 class="name">{{speaker.nickName}} </h4>
+                            <span class="designation">{{ speaker.name }}</span></a>
                         </div>
 {#                        <div class="social-box">#}
 {#                            <ul class="social-links social-icon-colored">#}

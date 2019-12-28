@@ -20,16 +20,19 @@ def index(request):
     oneDayTicket = Ticket.objects.get(isDefaultOneDayTicket=True)
     twoDayTicket = Ticket.objects.get(isDefaultTwoDayTicket=True)
     posts = Post.objects.filter(isAtHome=True)
+    items = range(1,32)
+
     return render(request, 'staticPages/index.html', locals())
 
 def faq(request):
+    faqactive = 'current'
     faqs = list(Faq.objects.all())
     left_faqs = faqs[0::2]
     right_faqs = faqs[1::2]
     return render(request, 'staticPages/faq.html', locals())
 
 def contacts(request):
-
+    contactactive = 'current'
     return render(request, 'staticPages/contacts.html', locals())
 
 
@@ -116,7 +119,7 @@ def post(request, slug):
     return render(request, 'staticPages/post.html', locals())
 
 def about(request):
-
+    activityactive = 'current'
     return render(request, 'staticPages/about.html', locals())
 
 def callback(request):

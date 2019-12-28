@@ -47,7 +47,7 @@ h4 > a{
 }
 
 .owl-theme .owl-nav [class*=owl-]{
-    background: #4dd5f3;
+    background: transparent !important;
 }
 
 .owl-theme .owl-nav [class*=owl-]:hover{

@@ -334,7 +334,7 @@ color:#ffffff;
 	color:#ffffff;
 	font-weight:400;
 	text-align:center;
-	background-color: #faaC1D;
+	background-color: #009ccc;
 	overflow: hidden;
 	border-radius: 10px;
 }
@@ -344,7 +344,7 @@ color:#ffffff;
 }
 
 .btn-style-two:hover{
-	color:#faaC1D;
+	color:#ffffff;
 	-webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.10);
 	-moz-box-shadow: 0 10px 30px rgba(0,0,0,0.10);
 	-ms-box-shadow: 0 10px 30px rgba(0,0,0,0.10);
@@ -359,7 +359,8 @@ color:#ffffff;
 	height: 100%;
 	width: 100%;
 	content: "";
-	background-color: #ffffff;
+	color: #ffffff;
+	background-color: #4dd5f3;
 	-webkit-transform: scale(0, 1);
 	-ms-transform: scale(0, 1);
 	transform: scale(0, 1);
@@ -1729,7 +1730,7 @@ img{
 .banner-carousel .content-box .title{
 	display: block;
     font-size: 28px;
-    color: #faaC1D;
+    color: #009ccc;
     font-weight: 500;
     margin-bottom: 25px;
 	opacity: 0;
@@ -1830,7 +1831,7 @@ img{
 }
 
 .banner-carousel .content-box .info-list li .icon{
-	color: #faaC1D;
+	color: #009ccc;
 	margin-right: 10px;
 	float: left;
 	font-size: 18px;
@@ -10797,7 +10798,7 @@ img{
 }
 
 .banner-conference-two .time-countdown .counter-column:nth-child(3):after{
-	background-color:#faaC1D;
+	background-color:#009ccc;
 }
 
 .banner-conference-two .time-countdown .counter-column:nth-child(4):after{
