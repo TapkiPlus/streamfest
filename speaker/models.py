@@ -30,15 +30,16 @@ class Speaker(models.Model):
 
     def save(self, *args, **kwargs):
         slug = slugify(self.nickName)
-        if not self.uniqUrl:
-            self.uniqUrl = self.nickNameSlug + '-' + ''.join(choices(string.ascii_lowercase + string.digits, k=10))
 
-        if self.nickNameSlug != slug:
+        if not self.nickNameSlug:
             testSlug = Speaker.objects.filter(nickNameSlug=slug)
             slugRandom = ''
             if testSlug:
                 slugRandom = '-' + ''.join(choices(string.ascii_lowercase + string.digits, k=2))
             self.nickNameSlug = slug + slugRandom
+        if not self.uniqUrl:
+            self.uniqUrl = self.nickNameSlug + '-' + ''.join(choices(string.ascii_lowercase + string.digits, k=10))
+
         super(Speaker, self).save(*args, **kwargs)
 
     def get_absolute_url(self):

@@ -69,7 +69,7 @@ h4 > a{
 
 
 @media only screen and (max-width: 599px){
-    .faq-section{
+    .faq-section, .sec-title{
         margin-top: 30px;
     }
     .tab-buttons{
