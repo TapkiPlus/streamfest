@@ -18,4 +18,10 @@ def all_speakers(request):
 
 def stats(request,code):
     streamer = get_object_or_404(Speaker, uniqUrl=code)
+    oneDayTicket = Ticket.objects.get(isDefaultOneDayTicket=True)
+    twoDayTicket = Ticket.objects.get(isDefaultTwoDayTicket=True)
+    oneDayTicket_slug = f'{streamer.nickNameSlug}_{oneDayTicket.article}'
+    twoDayTicket_slug = f'{streamer.nickNameSlug}_{twoDayTicket.article}'
+    oneDayTicket_count = Ticket.objects.get(article=oneDayTicket_slug).sells
+    twoDayTicket_count = Ticket.objects.get(article=twoDayTicket_slug).sells
     return render(request, 'speaker/stat.html', locals())
