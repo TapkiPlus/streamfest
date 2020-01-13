@@ -170,9 +170,10 @@
                         </div>
 
             <div class="row">
-                {% for speaker in allSpeakers %}
+            <div class="gallery-carousel1 owl-carousel owl-theme">
+            {% for speaker in allSpeakers %}
                 <!-- Speaker Block -->
-                    <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="speaker-block-three col-xl-12 col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image"><a href="{% url 'speaker' speaker.nickNameSlug %}"><img src="{{ speaker.photo.url }}" alt=""></a></figure>
@@ -192,6 +193,8 @@
                     </div>
                 </div>
                 {% endfor %}
+        </div>
+
 
             </div>
                            <div class="btn-box text-center"><a href="{% url 'all_speakers' %}" class="theme-btn btn-style-two"><span class="btn-title">Более 200 участников, смотреть тут</span></a></div>

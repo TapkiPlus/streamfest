@@ -181,6 +181,34 @@
 		});    		
 	}
 
+	if ($('.gallery-carousel1').length) {
+		$('.gallery-carousel1').owlCarousel({
+			loop:true,
+			margin:10,
+			nav:true,
+			smartSpeed: 500,
+			autoplay: true,
+			navText: [ '<span class="arrow_carrot-left"></span>', '<span class="arrow_carrot-right"></span>' ],
+			responsive:{
+				0:{
+					items:1
+				},
+				480:{
+					items:2
+				},
+				767:{
+					items:3
+				},
+				800:{
+					items:4
+				},
+				1200:{
+					items:4
+				}
+			}
+		});
+	}
+
 	//Clients Carousel
 	if ($('.sponsors-carousel').length) {
 		$('.sponsors-carousel').owlCarousel({
