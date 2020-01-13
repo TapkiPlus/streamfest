@@ -344,7 +344,7 @@
 		$('.time-countdown').each(function() {
 		var $this = $(this), finalDate = $(this).data('countdown');
 		$this.countdown(finalDate, function(event) {
-			var $this = $(this).html(event.strftime('' + '<div class="counter-column"><span class="count">%D</span>Days</div> ' + '<div class="counter-column"><span class="count">%H</span>Hours</div>  ' + '<div class="counter-column"><span class="count">%M</span>Minutes</div>  ' + '<div class="counter-column"><span class="count">%S</span>Second</div>'));
+			var $this = $(this).html(event.strftime('' + '<div class="counter-column"><span class="count">%D</span>Дней</div> ' + '<div class="counter-column"><span class="count">%H</span>Часов</div>  ' + '<div class="counter-column"><span class="count">%M</span>Минут</div>  ' + '<div class="counter-column"><span class="count">%S</span>Секунд</div>'));
 		});
 	 });
 	}
@@ -360,7 +360,7 @@
 		});
 
 	   $('.cs-countdown').countdown('').on('update.countdown', function(event) {
-		  var $this = $(this).html(event.strftime('<div><span>%m</span><h6>Months</h6></div> <div><span>%D</span><h6>days</h6></div> <div><span>%H</span><h6>Hours</h6></div> <div><span>%M</span><h6>Minutes</h6></div> <div><span>%S</span><h6>Seconds</h6></div>'));
+		  var $this = $(this).html(event.strftime('<div><span>%m</span><h6>Месяцев</h6></div> <div><span>%D</span><h6>Дней</h6></div> <div><span>%H</span><h6>Часов</h6></div> <div><span>%M</span><h6>Минут</h6></div> <div><span>%S</span><h6>Секунд</h6></div>'));
 		});
 	}
 

@@ -8,7 +8,7 @@ from speaker.models import Ticket,Order
 from platron.request.request_builders.init_payment_builder import InitPaymentBuilder
 from platron.request.clients.post_client import PostClient
 from platron.sdk_exception import SdkException
-#import settings
+import settings
 import xml.etree.ElementTree as ET
 
 
@@ -98,11 +98,10 @@ def new_order(request):
 def order_complete(request, order_id):
     if request.POST:
         order = Order.objects.get(id=order_id)
+        order.ticket.sells += 1
+        order.ticket.save()
         order.isPayed = True
         order.save()
-        if order.streamer:
-            order.streamer.buys += 1
-            order.streamer.save()
         return render(request, 'staticPages/order_complete.html', locals())
     else:
         return HttpResponse(status=404)

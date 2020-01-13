@@ -22,7 +22,6 @@ class Speaker(models.Model):
     linkYT = models.CharField('Ссылка на YouTube', max_length=255, blank=True, null=True )
     linkIN = models.CharField('Ссылка на Instagram', max_length=255, blank=True, null=True)
     views = models.IntegerField('Просмотров профиля', default=0)
-    buys = models.IntegerField('Покупок', default=0)
     about = RichTextUploadingField('Описание', blank=True, null=True)
     streaming = RichTextUploadingField('Что стримит', blank=True, null=True)
     isAtHome = models.BooleanField('Отображать на главной?', default=False)
@@ -61,6 +60,7 @@ class Ticket(models.Model):
     isDefaultOneDayTicket = models.BooleanField('Это билет на 1 день?', default=False, db_index=True)
     isDefaultTwoDayTicket = models.BooleanField('Это билет на 2 дня?', default=False, db_index=True)
     price = models.IntegerField('Цена билета. Эта цена будет применена ко всем билетам', default=0)
+    sells = models.IntegerField('Всего продаж', default=0)
 
 
     def __str__(self):
