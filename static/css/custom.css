@@ -139,6 +139,7 @@ h4 > a{
 }
 
 .mobile-nav-cart{
+    display: none;
     position: relative;
     float: right;
     font-size: 40px;

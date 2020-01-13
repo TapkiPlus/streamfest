@@ -296,9 +296,13 @@
 		top: 0;
 	}
 
-	.nav-outer .mobile-nav-toggler{
+	.nav-outer .mobile-nav-toggler {
 		display: block;
 		margin: 0;
+	}
+
+	.mobile-nav-cart{
+		display: block !important;
 	}
 
 	.page-title{
