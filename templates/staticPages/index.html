@@ -194,9 +194,78 @@
                 {% endfor %}
 
             </div>
+                           <div class="btn-box text-center"><a href="{% url 'all_speakers' %}" class="theme-btn btn-style-two"><span class="btn-title">Более 200 участников, смотреть тут</span></a></div>
+
         </div>
     </section>
     <!-- End Speakers Section -->
+     <!-- Pricing Section -->
+    <section id="buy_ticket" class="pricing-section">
+        <div class="anim-icons">
+            <span class="icon icon-circle-green wow fadeIn"></span>
+            <span class="icon icon-circle-blue wow fadeIn"></span>
+            <span class="icon icon-circle-pink wow fadeIn"></span>
+        </div>
+
+        <div class="auto-container">
+           <div class="sec-title text-center">
+                <span class="title">выбери свой!</span>
+                <h2>Билеты на фестиваль</h2>
+            </div>
+
+            <div class="outer-box">
+                <div class="row">
+                    <!-- Pricing Block -->
+                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                        <div style="max-width: none;" class="inner-box">
+                            <div class="icon-box">
+                                <div class="icon-outer"><span class="icon flaticon-paper-plane"></span></div>
+                            </div>
+                            <div class="price-box">
+                                <div class="title">Билет на 1 День</div>
+                                <h4 class="price">1300 руб</h4>
+                            </div>
+                            <ul class="features">
+                                <li class="true">1 день на выбор</li>
+                                <li class="true">Все стенды</li>
+                                <li class="true">Хайп, веселье и конкурсы</li>
+                                <li class="false">Два дня</li>
+
+                            </ul>
+                            <div class="btn-box">
+                                <a href="{% url 'order' oneDayTicket.article %}" class="theme-btn">Купить билет</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Block -->
+                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                        <div style="max-width: none;" class="inner-box">
+                            <div class="icon-box">
+                                <div class="icon-outer"><span class="icon flaticon-diamond-1"></span></div>
+                            </div>
+                            <div class="price-box">
+                                <div class="title">Билет на 2 дня</div>
+                                <h4 class="price">2100 руб</h4>
+                            </div>
+                            <ul class="features">
+                                  <li class="true">В 2 раза больше веселья</li>
+                                <li class="true">Все стенды</li>
+                                <li class="true">Хайп, веселье и конкурсы</li>
+                                <li class="true">Два дня</li>
+                            </ul>
+                            <div class="btn-box">
+                                <a href="{% url 'order' twoDayTicket.article %}" class="theme-btn">Купить билет</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Pricing Section -->
      <!-- Fun Fact Section -->
     <section class="fun-fact-section">
         <div class="auto-container">
@@ -422,76 +491,14 @@
     </section>
     <!--End Clients Section-->
 
-    <!-- Pricing Section -->
-    <section id="buy_ticket" class="pricing-section">
-        <div class="anim-icons">
-            <span class="icon icon-circle-green wow fadeIn"></span>
-            <span class="icon icon-circle-blue wow fadeIn"></span>
-            <span class="icon icon-circle-pink wow fadeIn"></span>
-        </div>
-
-        <div class="auto-container">
-           <div class="sec-title text-center">
-                <span class="title">выбери свой!</span>
-                <h2>Билеты на фестиваль</h2>
-            </div>
-
-            <div class="outer-box">
-                <div class="row">
-                    <!-- Pricing Block -->
-                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
-                        <div style="max-width: none;" class="inner-box">
-                            <div class="icon-box">
-                                <div class="icon-outer"><span class="icon flaticon-paper-plane"></span></div>
-                            </div>
-                            <div class="price-box">
-                                <div class="title">Билет на 1 День</div>
-                                <h4 class="price">1300 руб</h4>
-                            </div>
-                            <ul class="features">
-                                <li class="true">1 день на выбор</li>
-                                <li class="true">Все стенды</li>
-                                <li class="true">Хайп, веселье и конкурсы</li>
-                                <li class="false">Два дня</li>
-
-                            </ul>
-                            <div class="btn-box">
-                                <a href="{% url 'order' oneDayTicket.article %}" class="theme-btn">Купить билет</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pricing Block -->
-                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                        <div style="max-width: none;" class="inner-box">
-                            <div class="icon-box">
-                                <div class="icon-outer"><span class="icon flaticon-diamond-1"></span></div>
-                            </div>
-                            <div class="price-box">
-                                <div class="title">Билет на 2 дня</div>
-                                <h4 class="price">2100 руб</h4>
-                            </div>
-                            <ul class="features">
-                                  <li class="true">В 2 раза больше веселья</li>
-                                <li class="true">Все стенды</li>
-                                <li class="true">Хайп, веселье и конкурсы</li>
-                                <li class="true">Два дня</li>
-                            </ul>
-                            <div class="btn-box">
-                                <a href="{% url 'order' twoDayTicket.article %}" class="theme-btn">Купить билет</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Pricing Section -->
 
 
 
+    <script>
+    function closeMenu() {
+        document.getElementsByClassName('mobile-menu-visible')[0].classList.remove('mobile-menu-visible')
+    }
+    </script>
 
 {%  endblock %}
 {% if set.showTwitch %}
