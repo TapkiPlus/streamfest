@@ -3,6 +3,9 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from pytils.translit import slugify
 from random import choices
 import string
+import uuid
+import pyqrcode
+from streamfest.settings import BASE_DIR
 from django.db.models.signals import post_save, post_delete
 
 
@@ -55,7 +58,7 @@ class Speaker(models.Model):
 class Ticket(models.Model):
     streamer = models.ForeignKey(Speaker,blank=True,null=True,on_delete=models.CASCADE,verbose_name='Билет от стримера',
                              related_name='user_item', db_index=True)
-    article = models.CharField('Артикул', max_length=100,blank=True,null=True, db_index=True)
+    article = models.CharField('Артикул', max_length=100, blank=True, null=True, db_index=True)
 
     isDefaultOneDayTicket = models.BooleanField('Это билет на 1 день?', default=False, db_index=True)
     isDefaultTwoDayTicket = models.BooleanField('Это билет на 2 дня?', default=False, db_index=True)
@@ -93,19 +96,6 @@ class Ticket(models.Model):
         verbose_name_plural = "Билеты"
 
 
-def createSpeakerItem(sender, instance, created, **kwargs):
-    if created:
-        oneDayArticle = Ticket.objects.get(isDefaultOneDayTicket=True)
-        twoDayArticle = Ticket.objects.get(isDefaultTwoDayTicket=True)
-        Ticket.objects.create(streamer=instance,
-                              article=f'{instance.nickNameSlug}_{oneDayArticle.article}')
-        Ticket.objects.create(streamer=instance,
-                              article=f'{instance.nickNameSlug}_{twoDayArticle.article}')
-
-
-post_save.connect(createSpeakerItem, sender=Speaker)
-
-
 class Order(models.Model):
     streamer = models.ForeignKey(Speaker,blank=True,null=True, on_delete=models.CASCADE,
                                      verbose_name='Билет от')
@@ -115,7 +105,10 @@ class Order(models.Model):
     ticket = models.ForeignKey(Ticket, blank=True,null=True, on_delete=models.CASCADE,
                                      verbose_name='Заказан')
     price = models.IntegerField('Сумма', default=0)
-
+    isCheckIn = models.BooleanField('Погашен', default=False)
+    isSpecial = models.BooleanField('Специальный заказ', default=False)
+    codeQR = models.CharField('Случайное число для QR кода', max_length=255, blank=True, null=True, editable=False)
+    imageQR = models.CharField('QR код', max_length=255, blank=True, null=True, editable=False)
     isPayed = models.BooleanField('Оплачено', default=False)
     createdAt = models.DateTimeField('Заказ создан', auto_now_add=True)
     updatedAt = models.DateTimeField('Заказ изменен', auto_now=True)
@@ -125,7 +118,32 @@ class Order(models.Model):
             return f'Оплаченный заказ №-{self.id} от {self.customerFio}'
         else:
             return f'Не оплаченный заказ №-{self.id} от {self.customerFio}'
+    #str(uuid.uuid4()) img = qrcode.make('Some data here')
 
+    def save(self, *args, **kwargs):
+        print(BASE_DIR)
+        super(Order, self).save(*args, **kwargs)
     class Meta:
         verbose_name = "Заказ"
         verbose_name_plural = "Заказы"
+
+def createSpeakerItem(sender, instance, created, **kwargs):
+    if created:
+        oneDayArticle = Ticket.objects.get(isDefaultOneDayTicket=True)
+        twoDayArticle = Ticket.objects.get(isDefaultTwoDayTicket=True)
+        Ticket.objects.create(streamer=instance,
+                              article=f'{instance.nickNameSlug}_{oneDayArticle.article}')
+        Ticket.objects.create(streamer=instance,
+                              article=f'{instance.nickNameSlug}_{twoDayArticle.article}')
+
+def createOrder(sender, instance, created, **kwargs):
+    if created:
+        print('Create QR')
+        codeQR = str(uuid.uuid4())
+        instance.codeQR = codeQR
+        url = pyqrcode.create(f'https://streamfest.ru/check_order/{codeQR}')
+        url.png(f'{BASE_DIR}\media\qrcodes\{instance.id}.png', scale=10)
+        instance.imageQR = f'\media\qrcodes\{instance.id}.png'
+        instance.save()
+post_save.connect(createOrder, sender=Order)
+post_save.connect(createSpeakerItem, sender=Speaker)

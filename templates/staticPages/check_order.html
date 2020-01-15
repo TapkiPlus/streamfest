@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка заказа {{ order.id }}</title>
+    <style>
+        .isok{
+                font-size: 206px;
+                line-height: 73px;
+                color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+<h1>Проверка заказа {{ order.id }}</h1>
+{% if order.isPayed %}
+    <span class="isok">&#9786;</span>
+{% endif %}
+<h3>{{ order.streamer }}</h3>
+<h3>{{ order.ticket }}</h3>
+<img width="250" height="250" src="{{ order.imageQR }}" alt="">
+
+<ul>
+    <li>Покупатель : {{ order.customerFio }}</li>
+    <li>E-Mail : {{ order.customerEmail }}</li>
+    <li>Телефон : {{ order.customerPhone }}</li>
+    <li>Дата создания заказа : {{ order.createdAt |date }}</li>
+    <li>Дата покупки : {{ order.updatedAt |date }}</li>
+</ul>
+</body>
+</html>

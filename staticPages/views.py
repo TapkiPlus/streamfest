@@ -8,7 +8,7 @@ from speaker.models import Ticket,Order
 from platron.request.request_builders.init_payment_builder import InitPaymentBuilder
 from platron.request.clients.post_client import PostClient
 from platron.sdk_exception import SdkException
-#import settings
+import settings
 import xml.etree.ElementTree as ET
 
 
@@ -129,3 +129,9 @@ def callback(request):
                                 text=request.POST.get('message'))
         messages.success(request, 'Спасибо, форма успешно отправлена')
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+def check_order(request, qr):
+    order = get_object_or_404(Order, codeQR=qr)
+    print (order)
+    return render(request, 'staticPages/check_order.html', locals())

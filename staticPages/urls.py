@@ -16,6 +16,7 @@ urlpatterns = [
    path('order_complete/<order_id>/', views.order_complete, name='order_complete'),
    path('about/', views.about, name='about'),
    path('callback', views.callback, name='callback'),
+   path('check_order/<qr>/', views.check_order, name='check_order'),
    # path('robots.txt', views.robots, name='robots'),
 
 
