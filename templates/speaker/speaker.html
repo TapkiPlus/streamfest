@@ -5,12 +5,12 @@
 
     <!--Page Title-->
     <section class="page-title" style="background-image:url({{ curSpeaker.pageHeader.url }});">
-    <div class="overlay-box"></div>
+        <div class="overlay-box"></div>
         <div class="auto-container">
             <h1 >{{curSpeaker.nickName}}</h1>
             <ul class="bread-crumb clearfix">
-                <li><a href="/">Главная</a></li>
-                <li><a href="{% url 'all_speakers' %}">Стримеры</a></li>
+                {#                <li><a href="/">Главная</a></li>#}
+                {#                <li><a href="{% url 'all_speakers' %}">Стримеры</a></li>#}
                 <li>{{curSpeaker.name}}</li>
             </ul>
         </div>
@@ -47,7 +47,7 @@
                         <div class="text-box">
                             <h3 style="margin-bottom: 35px">{{curSpeaker.name}}</h3>
 
-                            <h4>Досье</h4>
+                            {#                            <h4>Досье</h4>#}
                             {{ curSpeaker.about | safe }}
                             <h4>Стримит</h4>
                             {{ curSpeaker.streaming | safe }}
@@ -61,7 +61,7 @@
 
 
     <!-- Pricing Section -->
-    <section id="buy_ticket" class="pricing-section-three">
+    <section style="padding-top: 0" id="buy_ticket" class="pricing-section-three">
         <div class="anim-icons">
             <span class="icon icon-line-1 wow zoomIn"></span>
             <span class="icon icon-circle-1 wow zoomIn"></span>
@@ -76,16 +76,16 @@
 
             <div class="outer-box">
 
-                  <div class="row">
+                <div class="row">
                     <!-- Pricing Block -->
                     <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
                         <div style="max-width: none;" class="inner-box">
                             <div class="icon-box">
-                                <div class="icon-outer"><span class="icon flaticon-paper-plane"></span></div>
+                                <div class="icon-outer"><span class="icon flaticon-diamond"></span></div>
                             </div>
                             <div class="price-box">
                                 <div class="title">Билет на 1 День</div>
-                                <h4 class="price">1300 руб</h4>
+                                <h4 class="price">1300 рублей</h4>
                             </div>
                             <ul class="features">
                                 <li class="true">1 день на выбор</li>
@@ -94,8 +94,8 @@
                                 <li class="false">Два дня</li>
 
                             </ul>
-                            <div class="btn-box">
-                                <a href="{% url 'order' oneDayTicket_slug %}" class="theme-btn">Купить билет</a>
+                            <div class="text-center">
+                                <a href="{% url 'order' oneDayTicket_slug %}" class="theme-btn btn-style-one"><span class="btn-title">Купить билет</span></a>
                             </div>
                         </div>
                     </div>
@@ -108,16 +108,17 @@
                             </div>
                             <div class="price-box">
                                 <div class="title">Билет на 2 дня</div>
-                                <h4 class="price">2100 руб</h4>
+                                <h4 class="price">2100 рублей</h4>
                             </div>
                             <ul class="features">
-                                  <li class="true">В 2 раза больше веселья</li>
+                                <li class="true">В 2 раза больше веселья</li>
                                 <li class="true">Все стенды</li>
                                 <li class="true">Хайп, веселье и конкурсы</li>
                                 <li class="true">Два дня</li>
                             </ul>
-                            <div class="btn-box">
-                                <a href="{% url 'order' twoDayTicket_slug %}" class="theme-btn">Купить билет</a>
+
+                            <div class="text-center">
+                                <a href="{% url 'order' twoDayTicket_slug %}" class="theme-btn btn-style-one"><span class="btn-title">Купить билет</span></a>
                             </div>
                         </div>
                     </div>

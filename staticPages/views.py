@@ -8,7 +8,7 @@ from speaker.models import Ticket,Order
 from platron.request.request_builders.init_payment_builder import InitPaymentBuilder
 from platron.request.clients.post_client import PostClient
 from platron.sdk_exception import SdkException
-import settings
+#import settings
 import xml.etree.ElementTree as ET
 
 
