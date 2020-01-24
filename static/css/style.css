@@ -5161,7 +5161,7 @@ img{
 }
 
 .pricing-block .features li.false:before{
-	color: #009ccc;
+	color: red;
 	content: "\51";
 }
 
