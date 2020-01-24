@@ -1,5 +1,5 @@
 {% load static %}
-<span class="header-span"></span>
+{% if not indexactive %}<span class="header-span"></span>{% endif %}
 <header class="main-header {% if not indexactive %}header-style-two{% endif %}">
     <div class="main-box">
         <div class="auto-container clearfix">
