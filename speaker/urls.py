@@ -10,7 +10,8 @@ urlpatterns = [
    # path('index.php', RedirectView.as_view(url='/', permanent=False), name='index2'),
    # # path('posts/', views.allPosts, name='allposts'),
    # # path('post/<slug>/', views.showPost, name='showpost'),
-   path('all/', views.all_speakers, name='all_speakers'),
+   # path('all/', views.all_speakers, name='all_speakers'),
+
    path('stats/<code>', views.stats, name='stats'),
    # path('services/', views.services, name='services'),
    # path('service/<slug>/', views.service, name='service'),

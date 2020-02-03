@@ -31,6 +31,10 @@ def faq(request):
     right_faqs = faqs[1::2]
     return render(request, 'staticPages/faq.html', locals())
 
+def apply(request):
+    applytactive = 'current'
+    return render(request, 'staticPages/apply.html', locals())
+
 def contacts(request):
     contactactive = 'current'
     return render(request, 'staticPages/contacts.html', locals())
@@ -135,3 +139,19 @@ def check_order(request, qr):
     order = get_object_or_404(Order, codeQR=qr)
     print (order)
     return render(request, 'staticPages/check_order.html', locals())
+
+
+
+def speaker(request,nickNameSlug):
+    curSpeaker = get_object_or_404(Speaker, nickNameSlug=nickNameSlug)
+    streamersactive = 'current'
+    oneDayTicket = Ticket.objects.get(isDefaultOneDayTicket=True)
+    twoDayTicket = Ticket.objects.get(isDefaultTwoDayTicket=True)
+    oneDayTicket_slug = f'{curSpeaker.nickNameSlug}_{oneDayTicket.article}'
+    twoDayTicket_slug = f'{curSpeaker.nickNameSlug}_{twoDayTicket.article}'
+    return render(request, 'speaker/speaker.html', locals())
+
+def all_speakers(request):
+    streamersactive = 'current'
+    allSpeakers = Speaker.objects.all().order_by('orderPP')
+    return render(request, 'speaker/speakers.html', locals())
