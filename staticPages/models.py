@@ -43,6 +43,17 @@ class Faq(models.Model):
         verbose_name = "Вопрос - Ответ"
         verbose_name_plural = "Вопросы - Ответы"
 
+class StandStar(models.Model):
+    question = models.CharField('Вопрос', max_length=255, blank=False,null=True)
+    answer = RichTextUploadingField('Ответ', blank=True, null=True)
+    isActive = models.BooleanField('Выводить на странице', default=True)
+    def __str__(self):
+        return 'Вопрос - Ответ №{}'.format(self.id)
+
+    class Meta:
+        verbose_name = "Стать участником Вопрос - Ответ"
+        verbose_name_plural = "Стать участником Вопросы - Ответы"
+
 class Post(models.Model):
     name = models.CharField('Название', max_length=255, blank=False, null=True)
     image = models.ImageField('Изображение для поста', upload_to='post_img/', blank=False,

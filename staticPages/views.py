@@ -32,6 +32,9 @@ def faq(request):
     return render(request, 'staticPages/faq.html', locals())
 
 def apply(request):
+    faqs = list(StandStar.objects.all())
+    left_faqs = faqs[0::2]
+    right_faqs = faqs[1::2]
     applytactive = 'current'
     return render(request, 'staticPages/apply.html', locals())
 
