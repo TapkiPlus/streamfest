@@ -1,61 +1,80 @@
 {% extends 'basic.html' %}
 {% load static %}
 {% block content %}
-    <section class="page-title" style="background-image:url({% static 'images/faq&become.jpg' %});">
-     <div class="overlay-box"></div>
-        <div class="auto-container">
-            <h1>Стать участником</h1>
-{#            <ul class="bread-crumb clearfix">#}
-{#                <li><a href="/">Главная</a></li>#}
-{#                <li>FAQ</li>#}
-{#            </ul>#}
+       <section style="margin-bottom: 40px">
+        <div class="lgx-banner lgx-banner-inner" style="background: url({% static 'img/inner-becomespeaker.jpg' %})">
+            <div class="lgx-page-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading-area">
+                                <div class="lgx-heading lgx-heading-white">
+                                    <h2 class="heading">Стать участником</h2>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i>Главная</a></li>
+                                    <li class="active">Стать участником</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--//.ROW-->
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
         </div>
     </section>
-    <section class="faq-section">
-        <div class="auto-container">
-            <div class="sec-title">
-                <span class="title">Стать участником</span>
-                <h2 class="mb-5">Ответы <span>на вопросы</span></h2>
+    <section style="margin-bottom: 40px" class="faq-section">
+        <div class="container">
 
+                <div style="text-align: start; margin-bottom: 20px" class="lgx-heading">
+                                            <h2 class="heading">Стать участником</h2>
+                                            <h3 class="subheading">Ответы на вопросы</h3>
+                                        </div>
             <div class="row clearfix">
                 <div class="content-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
-                        {% for faq in left_faqs %}
-                            <div {% if forloop.last %} style="margin-bottom: 0"{% endif %} class="card">
-                                <div class="card-header " id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link card-toggle" data-toggle="collapse" data-target="#collapse{{ faq.id }}" aria-expanded="true" aria-controls="collapseOne">
-                                            {{ faq.question }}
-                                        </button>
-                                    </h5>
-                                </div>
+                             {% for faq in left_faqs %}
 
-                                <div id="collapse{{ faq.id }}" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-                                    <div class="card-body">
-                                        {{ faq.answer | safe }}
+
+                            <div class="panel panel-default">
+                                <!-- Заголовок 1 панели -->
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ faq.id }}"> {{ faq.question }}</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse{{ faq.id }}" class="panel-collapse collapse ">
+                                    <!-- Содержимое 1 панели -->
+                                    <div class="panel-body">
+                                          {{ faq.answer | safe }}
                                     </div>
                                 </div>
                             </div>
+
+
                         {% endfor %}
                     </div>
                 </div>
                 <div class="content-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
-                        {% for faq in right_faqs %}
-                            <div {% if forloop.last %} style="margin-bottom: 0"{% endif %} class="card">
-                                <div class="card-header " id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link card-toggle" data-toggle="collapse" data-target="#collapse{{ faq.id }}" aria-expanded="true" aria-controls="collapseOne">
-                                            {{ faq.question }}
-                                        </button>
-                                    </h5>
+                             {% for faq in right_faqs %}
+
+
+                            <div class="panel panel-default">
+                                <!-- Заголовок 1 панели -->
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ faq.id }}"> {{ faq.question }}</a>
+                                    </h4>
                                 </div>
-                                <div id="collapse{{ faq.id }}" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-                                    <div class="card-body">
-                                        {{ faq.answer | safe }}
+                                <div id="collapse{{ faq.id }}" class="panel-collapse collapse ">
+                                    <!-- Содержимое 1 панели -->
+                                    <div class="panel-body">
+                                          {{ faq.answer | safe }}
                                     </div>
                                 </div>
                             </div>
+
+
                         {% endfor %}
                     </div>
                 </div>

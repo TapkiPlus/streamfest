@@ -171,7 +171,7 @@
                         <div class="col-xs-12">
                             <div class="lgx-heading lgx-heading-white">
                                 <h2 class="heading">Кто будет</h2>
-                                <h3 class="subheading">Участники Стримфеста 2020</h3>
+                                <h3 class="subheading">Участники Стримфеста 2021</h3>
                             </div>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
 {#                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>#}
 {#                                        </div>#}
                                         <div class="speaker-info">
-                                            <h3 class="title"><a href="speaker.html">{{speaker.nickName}}</a></h3>
+                                            <h3 class="title"><a href="{% url 'speaker' speaker.nickNameSlug %}">{{speaker.nickName}}</a></h3>
                                             <h4 class="subtitle">{{ speaker.name }}</h4>
                                         </div>
                                     </figcaption>
@@ -202,8 +202,8 @@
                 </div>
                 <!--//.ROW-->
                 <div class="section-btn-area">
-                    <a class="lgx-btn lgx-btn-big" href="speakers.html"><span>View More Speakers</span></a>
-                    <a class="lgx-btn lgx-btn-red lgx-btn-big" href="speakers.html"><span>Become A Speakers</span></a>
+                    <a class="lgx-btn lgx-btn-big" href="{% url 'all_speakers' %}"><span>Все участники</span></a>
+                    <a class="lgx-btn lgx-btn-red lgx-btn-big" href="{% url 'apply' %}"><span>Стать участником</span></a>
                 </div>
             </div>
             <!-- //.CONTAINER -->

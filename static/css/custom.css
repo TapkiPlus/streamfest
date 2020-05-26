@@ -305,3 +305,19 @@ ul,li{
     font-weight: 700;
     letter-spacing: 0.05rem;
 }
+
+body{
+	overflow-x: hidden;
+}
+
+.panel-default>.panel-heading {
+    color: #fff;
+    background-color: #5181b8;}
+
+.panel-title a:hover{
+	color: #ffffff;
+}
+
+.panel-title a{
+	color: #ffffff;
+}

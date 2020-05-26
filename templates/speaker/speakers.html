@@ -46,7 +46,7 @@
 {#                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>#}
 {#                                        </div>#}
                                         <div class="speaker-info">
-                                            <h3 class="title"><a href="speaker.html">{{speaker.nickName}}</a></h3>
+                                            <h3 class="title"><a href="{% url 'speaker' speaker.nickNameSlug %}">{{speaker.nickName}}</a></h3>
                                             <h4 class="subtitle">{{ speaker.name }}</h4>
                                         </div>
                                     </figcaption>
