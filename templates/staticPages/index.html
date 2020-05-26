@@ -2,519 +2,473 @@
 {% load static %}
 
 {% block content %}
-     <!-- Banner Section -->
-    <section class="banner-section">
-        <div class="banner-carousel owl-carousel owl-theme">
-            {% for banner in allBanners %}
-            <!-- Slide Item -->
-            <div class="slide-item" style="background-image: url({{ banner.image.url }});">
-                <div class="auto-container">
-                    <div class="content-box">
-                        <span class="title">{{ banner.smallText }}</span>
-                        <h2>{{ banner.bigText }}</h2>
-{#                        <ul class="info-list">#}
-{#                            <li><span class="icon fa fa-chair"></span> 5000 Seats</li>#}
-{#                            <li><span class="icon fa fa-user-alt"></span> 12 SPEAKERS</li>#}
-{#                            <li><span class="icon fa fa-map-marker-alt"></span> Palo, California</li>#}
-{#                        </ul>#}
-                        <div class="btn-box"><a href="{{ banner.buttonUrl }}" class="theme-btn btn-style-two"><span class="btn-title">{{ banner.buttonText }}</span></a></div>
+
+
+
+    <!--BANNER-->
+    <section>
+        <div id="lgx-parallax-banner" class="lgx-banner lgx-banner-parallax"> <!--lgx-about-bottom-->
+            <div class="lgx-section">
+                <div id="layer-wrapper" class="lgx-item-parallax-banner">
+
+                    <div id="object1" class="bglayer1 hidden-sm hidden-xs">
+                        <img src="{% static 'img/parallax/3.png' %}" alt="">
                     </div>
-                </div>
-            </div>
-            {% endfor %}
-
-        </div>
-    </section>
-    <!--End Banner Section -->
-
-
-
-    <!-- Coming Soon -->
-    <section class="coming-soon-section">
-        <div class="auto-container">
-            <div class="outer-box">
-                <div class="time-counter"><div class="time-countdown clearfix" data-countdown="1/1/2020"></div></div>
-            </div>
-        </div>
-    </section>
-    <!-- End Coming Soon -->
-{% if set.showTwitch %}
-       <section class="video-translate">
-          <div class="auto-container">
-            <div style="margin-bottom: 40px" class="sec-title light ">
-
-                <h2 style="font-size: 32px"> <span style="margin-right: 20px;" class="icon fab fa-twitch"></span>Наша Online трансляция</h2>
-            </div>
-        <div  id="twitch-embed"></div>
-
-
-
-        </div>
-    </section>
-{% endif %}
-
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="anim-icons full-width">
-            <span class="icon icon-circle-blue wow fadeIn"></span>
-            <span class="icon icon-dots wow fadeInleft"></span>
-            <span class="icon icon-circle-1 wow zoomIn"></span>
-        </div>
-        <div class="auto-container">
-            <div class="row">
-                <!-- Content Column -->
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="title">О ФЕСТИВАЛЕ</span>
-                            <h2>Добро пожаловать на Стримфест</h2>
-                            <div class="text">Стримфест — единственный в СНГ международный фестиваль стримеров и их поклонников, проходящий в партнерстве с ведущими стрим-платформами. В 2019 году состоялся в четвертый раз и впервые продолжался два дня.</div>
-                        </div>
-                        <ul class="list-style-one">
-                            <li>200+ звёзд веб-камеры</li>
-                            <li>7000+ посетителей</li>
-                            <li>2.000.000+ зрителей онлайн</li>
-
-                        </ul>
-                           <div class="text">Стримфест — это фестиваль комьюнити для комьюнити. Вас ждет много отличного общения с влогерами, прогеймерами, подкастерами, художниками и музыкантами, шоу-матчи на турнирной сцене, стенды с игровыми новинками, полезные мастер-классы, настольные игры и многое другое. Играйте, общайтесь, развивайтесь!</div>
-
+                    <div id="object5" class="rightlayer1 hidden-sm hidden-xs">
+                        <img src="{% static 'img/parallax/4.png' %}" alt="">
                     </div>
-                </div>
-
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="image-box">
-                        <figure class=" wow fadeIn"><img style="border-radius: 0" src="{% static 'images/1.jpeg' %}" alt=""></figure>
+                    <div id="object2" class="bglayer2 hidden-sm hidden-xs">
+                        <img src="{% static 'img/parallax/5.png' %}" alt="">
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End About Section -->
-
-    <!-- Features Section Two -->
-    <section class="features-section-two">
-        <div class="auto-container">
-            <div class="anim-icons">
-                <span class="icon twist-line-1 wow zoomIn"></span>
-                <span class="icon twist-line-2 wow zoomIn" data-wow-delay="1s"></span>
-                <span class="icon twist-line-3 wow zoomIn" data-wow-delay="2s"></span>
-            </div>
-
-            <div class="row">
-                <!-- Title Block -->
-               <div class="feature-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon flaticon-lecture"></span></div>
-                        <h4><a href="javascript: void(0)">ВСТРЕЧИ СО ЗВЕЗДАМИ TWITCH, YOUTUBE И GOODGAME</a></h4>
-{#                        <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incd.</div>#}
+                    <div id="object6" class="rightlayer2shade hidden-sm hidden-xs">
+                        <img src="{% static 'img/parallax/7.png' %}" alt="">
                     </div>
-                </div>
-
-                <!-- Feature Block -->
-                <div class="feature-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon flaticon-lecture"></span></div>
-                        <h4><a href="javascript: void(0)">ИГРОВЫЕ ЗОНЫ И ТУРНИРЫ С ЦЕННЫМИ ПРИЗАМИ</a></h4>
-
+                    <div id="object7" class="rightlayer2 hidden-sm hidden-xs">
+                        <img src="{% static 'img/parallax/6.png' %}" alt="">
                     </div>
-                </div>
 
-                <!-- Feature Block -->
-                <div class="feature-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon flaticon-search"></span></div>
-                        <h4><a href="javascript: void(0)">ЗВЁЗДЫ КОСПЛЕЯ И ИНТЕРАКТИВНАЯ ТАНЦ-ПЛОЩАДКА</a></h4>
-
-                    </div>
-                </div>
-
-                <!-- Feature Block -->
-                <div class="feature-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon flaticon-diamond-1"></span></div>
-                        <h4><a href="javascript: void(0)">ШОУ-МАТЧИ, ВИКТОРИНЫ И ПРЕЗЕНТАЦИИ ВИДЕОИГР</a></h4>
-
-                    </div>
-                </div>
-
-                <!-- Feature Block -->
-                <div class="feature-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon flaticon-success"></span></div>
-                        <h4><a href="javascript: void(0)">ПОДВИЖНЫЕ РАЗВЛЕЧЕНИЯ И ЗОНА НАСТОЛЬНЫХ ИГР</a></h4>
-
-                    </div>
-                </div>
-
-                <!-- Feature Block -->
-                <div class="feature-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-                    <div class="inner-box">
-                        <div class="icon-box"><span class="icon flaticon-employee"></span></div>
-                        <h4><a href="javascript: void(0)">МАСТЕР-КЛАССЫ И ЛЕКЦИИ О ТЕХНОЛОГИЯХ И НАУКЕ</a></h4>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Features Section -->
-
-    <!-- Speakers Section -->
-    <section class="speakers-section-three" style="background: url({% static 'images/streamer-bg.jpg' %})">
-        <div class="auto-container">
-              <div class="sec-title light text-center">
-                            <span  class="title" >Кто будет</span>
-                            <h2 >Участники Стримфеста 2020</h2>
-{#                            <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incd idunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat.</div>#}
-                        </div>
-
-            <div class="row">
-            <div class="gallery-carousel1 owl-carousel owl-theme">
-            {% for speaker in allSpeakers %}
-                <!-- Speaker Block -->
-                    <div class="speaker-block-three col-xl-12 col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="{% url 'speaker' speaker.nickNameSlug %}"><img src="{{ speaker.photo.url }}" alt=""></a></figure>
-                        </div>
-                        <div class="info-box">
-                             <a href="{% url 'speaker' speaker.nickNameSlug %}"><h4 class="name">{{speaker.nickName}} </h4>
-                            <span class="designation">{{ speaker.name }}</span></a>
-                        </div>
-{#                        <div class="social-box">#}
-{#                            <ul class="social-links social-icon-colored">#}
-{#                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>#}
-{#                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>#}
-{#                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>#}
-{#                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>#}
-{#                            </ul>#}
-{#                        </div>#}
-                    </div>
-                </div>
-                {% endfor %}
-        </div>
-
-
-            </div>
-                           <div class="btn-box text-center"><a href="{% url 'all_speakers' %}" class="theme-btn btn-style-two"><span class="btn-title">Более 200 участников, смотреть тут</span></a></div>
-
-        </div>
-    </section>
-    <!-- End Speakers Section -->
-     <!-- Pricing Section -->
-    <section id="buy_ticket" class="pricing-section">
-        <div class="anim-icons">
-            <span class="icon icon-circle-green wow fadeIn"></span>
-            <span class="icon icon-circle-blue wow fadeIn"></span>
-            <span class="icon icon-circle-pink wow fadeIn"></span>
-        </div>
-
-        <div class="auto-container">
-           <div class="sec-title text-center">
-                <span class="title">выбери свой!</span>
-                <h2>Билеты на фестиваль</h2>
-            </div>
-
-            <div class="outer-box">
-                <div class="row">
-                    <!-- Pricing Block -->
-                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
-                        <div style="max-width: none;" class="inner-box">
-                            <div class="icon-box">
-                                <div class="icon-outer"><span class="icon flaticon-paper-plane"></span></div>
-                            </div>
-                            <div class="price-box">
-                                <div class="title">Билет на 1 день</div>
-                                <h4 class="price">1300 руб</h4>
-                            </div>
-                            <ul class="features">
-                                <li class="true">25 или 26 апреля</li>
-                                <li class="true">Все стенды</li>
-                                <li class="true">Хайп, веселье и конкурсы</li>
-                                <li class="false">Два дня</li>
-
-                            </ul>
-                            <div class="btn-box">
-                                <a href="{% url 'order' oneDayTicket.article %}" class="theme-btn">Купить билет</a>
+                    <div class="banner-content">
+                        <div class="lgx-hover-link">
+                            <div class="lgx-vertical">
+                                <div class="lgx-banner-info lgx-banner-info-center"> <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg--> <!--banner-info-margin-->
+                                    <div class="lgx-countdown-area">
+                                        <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
+                                        <div id="lgx-countdown" data-date="2019/12/15"></div>
+                                    </div>
+                                    <h2 class="title">Conference <span><b>2</b><b>0</b><b>1</b><b>9</b></span></h2>
+                                    <h3 class="location"><i class="fa fa-map-marker"></i> 21 King Street, Dhaka 1205, Bangladesh.</h3>
+                                    <h3 class="date"><i class="fa fa-calendar"></i> 23-27 September, 2018</h3>
+                                    <div class="action-area">
+                                        <div class="lgx-video-area">
+                                            <a class="lgx-btn lgx-btn-red" href="#">Buy Ticket Now</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Pricing Block -->
-                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                        <div style="max-width: none;" class="inner-box">
-                            <div class="icon-box">
-                                <div class="icon-outer"><span class="icon flaticon-diamond-1"></span></div>
+                </div>
+            </div>
+            <!-- //.INNER -->
+        </div>
+    </section>
+    <!--BANNER END-->
+
+
+
+
+
+    <!--ABOUT-->
+    <section>
+        <div id="lgx-about" class="lgx-about lgx-about2">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-5 col-sm-12 col-md-7">
+                            <div class="lgx-about-content-area">
+                                <div class="lgx-heading">
+                                    <h2 class="heading">Стримфест в 2020 году</h2>
+                                    <h3 class="subheading">Наши изменения в связи с короновирусом</h3>
+                                </div>
+                                <div class="lgx-about-content">
+                                    <p class="text">
+                                        Morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris Eonec eu ribero sit amet quam egestas semper. Aenean are ultricies mi senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae vitae.
+                                    </p>
+                                    <div class="section-btn-area">
+                                        <a class="lgx-btn" href="about.html">Узнать подробнее</a>
+                                        <a class="lgx-btn lgx-btn-red lgx-scroll" href="#lgx-registration">Связаться с нами</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="price-box">
-                                <div class="title">Билет на 2 дня</div>
-                                <h4 class="price">2100 руб</h4>
+                        </div>
+                    </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
+        </div>
+    </section>
+    <!--ABOUT END-->
+    <section>
+        <div id="lgx-about" class="lgx-about">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-7">
+                            <div class="lgx-about-content-area">
+                                <div class="lgx-heading">
+                                    <h2 class="heading">Happy New Year 2019</h2>
+                                    <h3 class="subheading">Do not miss the upcoming event, Who should attend?</h3>
+                                </div>
+                                <div class="lgx-about-content">
+                                    <p class="text">
+                                        Morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, tristique senectus et netus et malesuada fames ac turpis egestas ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris Eonec eu ribero sit amet quam egestas semper. Aenean are ultricies mi senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae vitae fames ac turpis egestas.
+                                    </p>
+                                    <div class="about-date-area">
+                                        <h4 class="date"><span>29</span></h4>
+                                        <p><span>November 2019</span> King Street, Dhaka, Bangladesh</p>
+                                    </div>
+
+                                    <div class="section-btn-area">
+                                        <a class="lgx-btn" href="about.html"><span>More About</span></a>
+                                        <a class="lgx-btn lgx-btn-red lgx-scroll" href="#lgx-registration"><span>Buy Ticket Now</span></a>
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="features">
-                                  <li class="true">В 2 раза больше веселья</li>
-                                <li class="true">Все стенды</li>
-                                <li class="true">Хайп, веселье и конкурсы</li>
-                                <li class="true">Два дня</li>
-                            </ul>
-                            <div class="btn-box">
-                                <a href="{% url 'order' twoDayTicket.article %}" class="theme-btn btn-style-one">Купить билет</a>
+                        </div>
+                        <div class="col-sm-12 col-md-5">
+                            <div class="lgx-about-img-sp">
+                                <img src="img/about-sp.jpg" alt="about">
                             </div>
                         </div>
                     </div>
-
-
-                </div>
-            </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
         </div>
     </section>
-    <!--End Pricing Section -->
-     <!-- Fun Fact Section -->
-    <section class="fun-fact-section">
-        <div class="auto-container">
-            <div class="fact-counter">
-                <div class="row clearfix">
-                    <!--Column-->
-                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                        <div class="count-box">
-                            <span class="icon icon_headphones"></span>
-                            <span class="count-text" data-speed="3000" data-stop="185">0</span>
-                            <h4 class="counter-title">Звезд веб-камеры</h4>
-                        </div>
-                    </div>
-                    <!--Column-->
-                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="count-box">
-                            <span class="icon icon_ribbon_alt"></span>
-                            <span class="count-text" data-speed="3000" data-stop="7200">0</span>
-                            <h4 class="counter-title">Посетителей</h4>
-                        </div>
-                    </div>
+<section style="background: white;padding-bottom: 60px">
+<div class="row">
+        <div class="col-xs-12">
+            <div class="sponsors-area sponsors-area-bg">
+                <div class="single">
+                    <a class="" href="#"><img src="http://placehold.it/60" alt="sponsor"></a>
+                    <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, unde!</p>
+                </div>
+                 <div class="single">
+                    <a class="" href="#"><img src="http://placehold.it/60" alt="sponsor"></a>
+                 <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, unde!</p>
+                </div>
+                <div class="single">
+                    <a class="" href="#"><img src="http://placehold.it/60" alt="sponsor"></a>
+                  <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, unde!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+           <div class="sponsors-area sponsors-area-bg">
+                <div class="single">
+                    <a class="" href="#"><img src="http://placehold.it/60" alt="sponsor"></a>
+                    <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, unde!</p>
+                </div>
+                 <div class="single">
+                    <a class="" href="#"><img src="http://placehold.it/60" alt="sponsor"></a>
+                 <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, unde!</p>
+                </div>
+                <div class="single">
+                    <a class="" href="#"><img src="http://placehold.it/60" alt="sponsor"></a>
+                  <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, unde!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <!--Column-->
-                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-                        <div class="count-box">
-                            <span class="icon icon_like"></span>
-                            <span class="count-text">2000000</span>
-                            <h4 class="counter-title">Просмотров онлайн</h4>
+
+    <section>
+        <div id="lgx-speakers" class="lgx-speakers lgx-speakers2">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading lgx-heading-white">
+                                <h2 class="heading">Кто будет</h2>
+                                <h3 class="subheading">Участники Стримфеста 2020</h3>
+                            </div>
                         </div>
                     </div>
-
-                    <!--Column-->
-                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-                        <div class="count-box">
-                            <span class="icon icon_book_alt"></span>
-                            <span class="count-text" data-speed="2000" data-stop="2">0</span>
-                            <h4 class="counter-title">Дня</h4>
+                    <!--//.ROW-->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            {% for speaker in allSpeakers %}
+                                <div class="lgx-col4 lgx-single-speaker2">
+                                <figure>
+                                    <a class="profile-img" href="{% url 'speaker' speaker.nickNameSlug %}"><img src="{{ speaker.photo.url }}" alt="speaker"></a>
+                                    <figcaption>
+{#                                        <div class="social-group">#}
+{#                                            <a class="sp-tw" href="#"><i class="fa fa-twitter"></i></a>#}
+{#                                            <a class="sp-fb" href="#"><i class="fa fa-facebook"></i></a>#}
+{#                                            <a class="sp-insta" href="#"><i class="fa fa-instagram"></i></a>#}
+{#                                            <a class="sp-in" href="#"><i class="fa fa-linkedin"></i></a>#}
+{#                                        </div>#}
+                                        <div class="speaker-info">
+                                            <h3 class="title"><a href="speaker.html">{{speaker.nickName}}</a></h3>
+                                            <h4 class="subtitle">{{ speaker.name }}</h4>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
+                <!--//.ROW-->
+                <div class="section-btn-area">
+                    <a class="lgx-btn lgx-btn-big" href="speakers.html"><span>View More Speakers</span></a>
+                    <a class="lgx-btn lgx-btn-red lgx-btn-big" href="speakers.html"><span>Become A Speakers</span></a>
+                </div>
             </div>
+            <!-- //.CONTAINER -->
+        </div>
+        <!-- //.INNER -->
         </div>
     </section>
-    <!--End Fun Fact Section -->
-    <!-- About Section -->
-    <section class="about-section about1">
-        <div class="anim-icons full-width">
-            <span class="icon icon-circle-blue wow fadeIn"></span>
-            <span class="icon icon-dots wow fadeInleft"></span>
-            <span class="icon icon-circle-1 wow zoomIn"></span>
-        </div>
-        <div class="auto-container">
-            <div class="row">
-                <!-- Content Column -->
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="title">КАК ЭТО БЫЛО</span>
-                            <h2>Все о Стримфест 2019</h2>
-                            <div class="text">Стрифест - фестивать сообщества. В 2019 году он прошел с огромным успехом. Мы собрали в Технопарке "Сколково":</div>
-                        </div>
-                        <ul class="list-style-one">
-                            <li>185 звезд веб-камеры</li>
-                            <li>7200 посетителей</li>
-                            <li>2 миллиона просмотров онлайн</li>
-                        </ul>
-                           <div class="text">Мы организовали десятки стримпозиций, чтобы участники могли одновременно работать на аудиторию в сети и на площадке. Мы растем с каждым годом, и в 2020-м усилим фестивальный уикэнд первой в шоу-церемонией Streamfest Awards.</div>
-                    </div>
-                </div>
-
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                                   <iframe style="width: 100%" src="https://player.vimeo.com/video/348364566?color=00fff2" width="100%"  height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-                </div>
-            </div>
 
 
-        <div class="gallery-carousel owl-carousel owl-theme">
-            {% for i in items %}
+    <section>
+        <div id="buy_ticket" class="lgx-registration lgx-registration4"> <!--lgx-registration2 lgx-registration3 lgx-registration4-->
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-9 col-xs-offset-1">
+                            <div class="lgx-registration-area lgx-registration-area-nogap lgx-registration-area3"> <!-- lgx-registration-area-nogap lgx-registration-area2 lgx-registration-area3 -->
+                                <div class="lgx-single-registration">
+                                    <div class="lgx-single-registration-inner">
+                                        <div class="single-top">
+                                            <h3 class="title">1 день</h3>
+                                            <h4 style="font-size: 50px" class="price">1300 <i>P</i></h4>
+                                        </div>
+                                        <div class="single-bottom">
+                                            <ul class="list-unstyled list">
+                                                  <li>25 или 26 апреля</li>
+                                                    <li>Все стенды</li>
+                                                    <li>Хайп, веселье и конкурсы</li>
+                                                    <li>Два дня</li>
+                                            </ul>
 
-                  <div class="gallery-item ">
-                    <div class="image-box">
-                        <figure class="image"><img src="/static/images/gallery/2019_main_{{ i }}.jpg" alt=""></figure>
-                        <div class="overlay-box"><a href="/static/images/gallery/2019_main_{{ i }}.jpg" class="lightbox-image" data-fancybox='gallery'><span class="icon fa fa-expand-arrows-alt"></span></a></div>
-                    </div>
-                  </div>
-            {% endfor %}
-        </div>
-
-
-
-        </div>
-    </section>
-    <!--End About Section -->
-
-   <!-- News Section -->
-    <section style="background-color: #fafafa;" class="news-section">
-        <div class="anim-icons">
-            <span class="icon icon-circle-blue wow fadeIn"></span>
-            <span class="icon twist-line-1 wow zoomIn"></span>
-            <span class="icon twist-line-2 wow zoomIn"></span>
-            <span class="icon twist-line-3 wow zoomIn"></span>
-        </div>
-
-        <div class="auto-container">
-            <div class="sec-title text-center">
-                <span class="title">Блог</span>
-                <h2>Последние новости</h2>
-            </div>
-
-            <div class="row">
-
-                <!-- News Block Three -->
-                {% for post in posts %}
-                  <div data-wow-delay="100ms" class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="{% url 'post' post.nameSlug %}"><img src="{{ post.image.url}}" alt=""></a></figure>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-info">
-                                <li><span class="far fa-user"></span> {{ post.author }}</li>
-                                <li><span class="far fa-comments"></span> {{ post.date }}</li>
-                            </ul>
-                            <h4><a href="{% url 'post' post.nameSlug %}">{{ post.about }}</a></h4>
-                            <div class="btn-box"><a href="{% url 'post' post.nameSlug %}" class="read-more">Подробнее</a></div>
+                                              <a href="{% url 'order' oneDayTicket.article %}" class="lgx-btn"><span>Купить билет</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lgx-single-registration recommended">
+                                    <div class="lgx-single-registration-inner">
+                                        <div class="single-top">
+                                            <h3 class="title">2 дня</h3>
+                                            <h4 style="font-size: 50px" class="price">2100 <i>Р</i></h4>
+                                        </div>
+                                        <div class="single-bottom">
+                                            <ul class="list-unstyled list">
+                                                <li>В 2 раза больше веселья</li>
+                                                <li>Все стенды</li>
+                                                <li>Хайп, веселье и конкурсы</li>
+                                                <li>Два дня</li>
+                                            </ul>
+                                              <a href="{% url 'order' twoDayTicket.article %}" class="lgx-btn"><span >Купить билет</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+{#
+                            </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
-
-            </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
         </div>
     </section>
-    <!--End News Section -->
 
-    <!--Clients Section-->
-    <section class="clients-section">
-        <div class="anim-icons">
-            <span class="icon icon-dots-3 wow zoomIn"></span>
-            <span class="icon icon-circle-blue wow zoomIn"></span>
-        </div>
-        <div class="auto-container">
-            <div class="sec-title">
-                <span class="title">Наши</span>
-                <h2>Партнеры</h2>
-            </div>
 
-            <div class="sponsors-outer">
-                <h3>Стратегические Партнеры</h3>
-                <div class="row">
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-4 col-md-4 col-sm-12">
-                        <figure class="image-box"><a href="http://www.lg.com/ru/monitors/lg-34UC79G-B"><img style="max-width: 100%" src="{% static 'images/sponsor/LG.jpg' %}" alt=""></a></figure>
+    <section>
+        <div id="lgx-milestone-about" class="lgx-milestone-about">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="lgx-milestone-area">
+                                <div class="lgx-milestone">
+                                    <div class="milestone-inner">
+                                        <div class="lgx-content">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <div class="lgx-counter-area">
+                                                        <img src="{% static 'img/icons/1.png' %}" alt="teacher icon">
+                                                        <div class="counter-text">
+                                                            <span class="lgx-counter">185</span>
+                                                            <small>Звезд веб-камеры</small>
+                                                        </div>
+                                                    </div>
+                                                </div> <!--//.COL-->
+                                                <div class="col-sm-3">
+                                                    <div class="lgx-counter-area">
+                                                        <img src="{% static 'img/icons/2.png' %}" alt="teacher icon">
+                                                        <div class="counter-text">
+                                                            <span class="lgx-counter">7200</span>
+                                                            <small>Посетителей</small>
+                                                        </div>
+                                                    </div>
+                                                </div> <!--//.COL-->
+                                                <div class="col-sm-3">
+                                                    <div class="lgx-counter-area">
+                                                        <img src="{% static 'img/icons/3.png' %}" alt="teacher icon">
+                                                        <div class="counter-text">
+                                                            <span class="lgx-counter">2000000</span>
+                                                            <small>Просмотров онлайн</small>
+                                                        </div>
+                                                    </div>
+                                                </div> <!--//.COL-->
+                                                <div class="col-sm-3">
+                                                    <div class="lgx-counter-area">
+                                                        <img src="{% static 'img/icons/4.png' %}" alt="teacher icon">
+                                                        <div class="counter-text">
+                                                            <span class="lgx-counter">2</span>
+                                                            <small>Дня</small>
+                                                        </div>
+                                                    </div>
+                                                </div> <!--//.COL-->
+                                            </div> <!--//.ROW-->
+                                        </div> <!--//. lgx CONTENT CONTENT-->
+                                    </div><!--//.lgx INNER-->
+                                </div><!--//.Milestone End -->
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-4 col-md-4 col-sm-12">
-                        <figure class="image-box"><a href="https://www.asus.com/Microsite/powered-by-asus/RU/"><img style="max-width: 100%" src="{% static 'images/sponsor/ROG.jpg' %}" alt=""></a></figure>
-                    </div>
-
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-4 col-md-4 col-sm-12">
-                        <figure class="image-box"><a href="https://wasd.tv/"><img style="max-width: 100%" src="{% static 'images/sponsor/WASD.jpg' %}" alt=""></a></figure>
-                    </div>
-
-               </div>
-            </div>
-
-            <div class="sponsors-outer">
-                <h3>Gold Sponsors</h3>
-
-                <div class="row">
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-3 col-md-6 col-sm-12">
-                        <figure class="image-box"><a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a></figure>
-                    </div>
-
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-3 col-md-6 col-sm-12">
-                        <figure class="image-box"><a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a></figure>
-                    </div>
-
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-3 col-md-6 col-sm-12">
-                        <figure class="image-box"><a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a></figure>
-                    </div>
-
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-3 col-md-6 col-sm-12">
-                        <figure class="image-box"><a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a></figure>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sponsors-outer">
-                <h3>Silver Sponsors</h3>
-
-                <div class="row">
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-3 col-md-6 col-sm-12">
-                        <figure class="image-box"><a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a></figure>
-                    </div>
-
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-3 col-md-6 col-sm-12">
-                        <figure class="image-box"><a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a></figure>
-                    </div>
-
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-3 col-md-6 col-sm-12">
-                        <figure class="image-box"><a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a></figure>
-                    </div>
-
-                    <!-- Client Block -->
-                    <div class="client-block col-lg-3 col-md-6 col-sm-12">
-                        <figure class="image-box"><a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a></figure>
-                    </div>
-                </div>
-            </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
         </div>
     </section>
-    <!--End Clients Section-->
+
+
+    <!--TESTIMONIALS -->
+    <section>
+        <div id="lgx-testimonial" class="lgx-testimonial">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading">
+                                <h2 class="heading">What Clients Say</h2>
+                                <h3 class="subheading">Welcome to the dedicated to building remarkable Testimonials!</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//.ROW-->
+                    <div class="row">
+                        <div id="lgx-owltestimonial" class="lgx-owltestimonial lgx-owlnews">
+
+                            <div class="item">
+                                <!--Testimonial-single-->
+                                <blockquote class="lgx-testi-single">
+                                    <p><span>2This is the best Event Organization in the world</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
+                                    <div class="author">
+                                        <img src="assets/img/testimonials/author1.jpg" alt="author">
+                                        <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                        <div class="rate">
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                </blockquote> <!--//.Testimonial-single-->
+                            </div> <!--//.Item-->
+                            <div class="item">
+                                <!--Testimonial-single-->
+                                <blockquote class="lgx-testi-single">
+                                    <p><span>1This is the best Event Organization in the world</span> Proin sodales dapibus magna, et porta leo convallis sed. Duis tincidunt libero ut neque mollis dignissim. Nullam ultricies sit amet quam non iaculis. Curabitur convallis nulla non nibh aliquet rhoncus. Donec at tempus felis.</p>
+                                    <div class="author">
+                                        <img src="assets/img/testimonials/author1.jpg" alt="author">
+                                        <h4 class="title"><a href="#"></a>Jonathon Doe</h4>
+                                        <div class="rate">
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                </blockquote> <!--//.Testimonial-single-->
+                            </div> <!--//.Item-->
+
+                        </div><!--l//#lgx-OWL NEWS-->
+                    </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
+        </div>
+    </section>
+    <!--TESTIMONIALS END-->
+
+
+
+
+    <!--VIDEO-->
+    <section>
+        <div id="lgx-video" class="lgx-video">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--<h2 class="lgx-video-title"><span>Watch Our Promo video!</span>How to make an online order</h2>-->
+                            <div class="lgx-video-area">
+                                <figure>
+                                    <figcaption>
+                                        <div class="video-icon">
+                                            <div class="lgx-vertical">
+                                                <a id="myModalLabel" class="icon" href="#" data-toggle="modal" data-target="#lgx-modal">
+                                                    <i class="fa fa-play " aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                                <!-- Modal-->
+                                <div id="lgx-modal" class="modal fade lgx-modal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <iframe id="modalvideo" src="https://www.youtube.com/embed/oSPR5Go05Vg" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- //.Modal-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
+        </div>
+    </section>
+    <!--//.VIDEO END-->
+
+
+
+    {% if set.showTwitch %}
+        <section class="video-translate">
+            <div class="auto-container">
+                <div style="margin-bottom: 40px" class="sec-title light ">
+
+                    <h2 style="font-size: 32px"> <span style="margin-right: 20px;" class="icon fab fa-twitch"></span>Наша Online трансляция</h2>
+                </div>
+                <div  id="twitch-embed"></div>
+
+
+
+            </div>
+        </section>
+    {% endif %}
+
 
 
 
 
     <script>
-    function closeMenu() {
-        document.getElementsByClassName('mobile-menu-visible')[0].classList.remove('mobile-menu-visible')
-    }
+        function closeMenu() {
+            document.getElementsByClassName('mobile-menu-visible')[0].classList.remove('mobile-menu-visible')
+        }
     </script>
 
 {%  endblock %}
 {% if set.showTwitch %}
-{% block js %}
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    {% block js %}
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: '100%',
-        height: 480,
-        channel: "Streamfest"
-      });
-    </script>
-{% endblock %}
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+            new Twitch.Embed("twitch-embed", {
+                width: '100%',
+                height: 480,
+                channel: "Streamfest"
+            });
+        </script>
+    {% endblock %}
 {% endif %}

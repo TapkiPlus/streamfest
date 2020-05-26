@@ -2,43 +2,53 @@
 {% load static %}
 
 {% block content %}
-
-    <!--Page Title-->
-    <section class="page-title" style="background-image:url({{ curSpeaker.pageHeader.url }});">
-        <div class="overlay-box"></div>
-        <div class="auto-container">
-            <h1 >{{curSpeaker.nickName}}</h1>
-            <ul class="bread-crumb clearfix">
-                {#                <li><a href="/">Главная</a></li>#}
-                {#                <li><a href="{% url 'all_speakers' %}">Стримеры</a></li>#}
-                <li>{{curSpeaker.name}}</li>
-            </ul>
+  <section style="margin-bottom: 40px">
+        <div class="lgx-banner lgx-banner-inner"  style="background-image:url({{ curSpeaker.pageHeader.url }});">
+            <div class="lgx-page-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading-area">
+                                <div class="lgx-heading lgx-heading-white">
+                                    <h2 class="heading">{{curSpeaker.nickName}}</h2>
+                                    <p style="color: white">{{curSpeaker.name}}</p>
+                                </div>
+{#                                <ul class="breadcrumb">#}
+{#                                    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i>Главная</a></li>#}
+{#                                    <li class="active">Как добраться</li>#}
+{#                                </ul>#}
+                            </div>
+                        </div>
+                    </div><!--//.ROW-->
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
         </div>
     </section>
-    <!--End Page Title-->
 
     <!-- Speker Detail -->
-    <section class="speaker-detail">
-        <div class="auto-container">
+    <section style="margin-bottom: 40px" class="speaker-detail">
+        <div class="container">
             <div class="row">
                 <div class="image-column col-lg-4 col-md-12 col-sm-12">
                     <div class="image-box">
-                        <figure class="image"><img src="{{ curSpeaker.photo.url }}" alt=""></figure>
-                        <ul class="social-icon-two social-icon-colored text-center">
-                            {% if curSpeaker.linkVK %}
-                                <li><a href="{{ curSpeaker.linkVK }}"><span class="fab fa-vk"></span></a></li>
+                        <figure style="margin-bottom: 20px" class="image"><img src="{{ curSpeaker.photo.url }}" alt=""></figure>
+                    <div class="lgx-share">
+                                                <ul class="list-inline lgx-social">
+                                                    {% if curSpeaker.linkVK %}
+                                <li><a href="{{ curSpeaker.linkVK }}"><span class="fa fa-vk"></span></a></li>
                             {% endif %}
                             {% if curSpeaker.linkTW %}
-                                <li><a href="{{ curSpeaker.linkTW }}"><span class="fab fa-twitch"></span></a></li>
+                                <li><a href="{{ curSpeaker.linkTW }}"><span class="fa fa-twitch"></span></a></li>
                             {% endif %}
                             {% if curSpeaker.linkYT %}
-                                <li><a href="{{ curSpeaker.linkYT }}"><span class="fab fa-youtube"></span></a></li>
+                                <li><a href="{{ curSpeaker.linkYT }}"><span class="fa fa-youtube"></span></a></li>
                             {% endif %}
                             {% if curSpeaker.linkIN %}
-                                <li><a href="{{curSpeaker.linkIN}}"><span class="fab fa-instagram"></span></a></li>
+                                <li><a href="{{curSpeaker.linkIN}}"><span class="fa fa-instagram"></span></a></li>
                             {% endif %}
+                                                </ul>
+                                            </div>
 
-                        </ul>
                     </div>
                 </div>
 
@@ -60,76 +70,57 @@
     <!--End Speker Detail -->
 
 
-    <!-- Pricing Section -->
-    <section style="padding-top: 0" id="buy_ticket" class="pricing-section-three">
-        <div class="anim-icons">
-            <span class="icon icon-line-1 wow zoomIn"></span>
-            <span class="icon icon-circle-1 wow zoomIn"></span>
-            <span class="icon icon-dots wow zoomIn"></span>
-        </div>
 
-        <div class="auto-container">
-            <div class="sec-title text-center">
-                <span class="title">выбери свой!</span>
-                <h2 style="font-size: 36px">Билеты на фестиваль от {{ curSpeaker.nickName }}</h2>
-            </div>
+ <section>
+        <div id="buy_ticket" class="lgx-registration lgx-registration4"> <!--lgx-registration2 lgx-registration3 lgx-registration4-->
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-9 col-xs-offset-1">
+                            <div class="lgx-registration-area lgx-registration-area-nogap lgx-registration-area3"> <!-- lgx-registration-area-nogap lgx-registration-area2 lgx-registration-area3 -->
+                                <div class="lgx-single-registration">
+                                    <div class="lgx-single-registration-inner">
+                                        <div class="single-top">
+                                            <h3 class="title">1 день</h3>
+                                            <h4 style="font-size: 50px" class="price">1300 <i>P</i></h4>
+                                        </div>
+                                        <div class="single-bottom">
+                                            <ul class="list-unstyled list">
+                                                  <li>25 или 26 апреля</li>
+                                                    <li>Все стенды</li>
+                                                    <li>Хайп, веселье и конкурсы</li>
+                                                    <li>Два дня</li>
+                                            </ul>
 
-            <div class="outer-box">
-
-                <div class="row">
-                    <!-- Pricing Block -->
-                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
-                        <div style="max-width: none;" class="inner-box">
-                            <div class="icon-box">
-                                <div class="icon-outer"><span class="icon flaticon-diamond"></span></div>
-                            </div>
-                            <div class="price-box">
-                                <div class="title">Билет на 1 День</div>
-                                <h4 class="price">1300 рублей</h4>
-                            </div>
-                            <ul class="features">
-                                <li class="true">25 или 26 апреля</li>
-                                <li class="true">Все стенды</li>
-                                <li class="true">Хайп, веселье и конкурсы</li>
-                                <li  class="false">Два дня</li>
-
-                            </ul>
-                            <div class="text-center">
-                                <a href="{% url 'order' oneDayTicket_slug %}" class="theme-btn btn-style-one"><span class="btn-title">Купить билет</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pricing Block -->
-                    <div class="pricing-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                        <div style="max-width: none;" class="inner-box">
-                            <div class="icon-box">
-                                <div class="icon-outer"><span class="icon flaticon-diamond-1"></span></div>
-                            </div>
-                            <div class="price-box">
-                                <div class="title">Билет на 2 дня</div>
-                                <h4 class="price">2100 рублей</h4>
-                            </div>
-                            <ul class="features">
-                                <li class="true">В 2 раза больше веселья</li>
-                                <li class="true">Все стенды</li>
-                                <li class="true">Хайп, веселье и конкурсы</li>
-                                <li class="true">Два дня</li>
-                            </ul>
-
-                            <div class="text-center">
-                                <a href="{% url 'order' twoDayTicket_slug %}" class="theme-btn btn-style-one"><span class="btn-title">Купить билет</span></a>
+                                              <a href="{% url 'order' oneDayTicket_slug %}" class="lgx-btn"><span>Купить билет</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lgx-single-registration recommended">
+                                    <div class="lgx-single-registration-inner">
+                                        <div class="single-top">
+                                            <h3 class="title">2 дня</h3>
+                                            <h4 style="font-size: 50px" class="price">2100 <i>Р</i></h4>
+                                        </div>
+                                        <div class="single-bottom">
+                                            <ul class="list-unstyled list">
+                                                <li>В 2 раза больше веселья</li>
+                                                <li>Все стенды</li>
+                                                <li>Хайп, веселье и конкурсы</li>
+                                                <li>Два дня</li>
+                                            </ul>
+                                              <a href="{% url 'order' twoDayTicket_slug %}" class="lgx-btn"><span >Купить билет</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+{#
                             </div>
                         </div>
                     </div>
-
-
-                </div>
-            </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
         </div>
     </section>
-    <!--End Pricing Section -->
-
 
 
 {%  endblock %}

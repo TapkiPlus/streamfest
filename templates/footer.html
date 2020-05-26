@@ -1,138 +1,85 @@
 {% load static %}
-<!-- Main Footer -->
-<footer class="main-footer">
-    <!--Widgets Section-->
-    <div class="widgets-section">
-        <div class="auto-container">
-            <div class="row">
-                <!--Big Column-->
-                <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                    <div class="row">
-                        <!--Footer Column-->
-                        <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
-                            <div class="footer-widget about-widget">
 
-                                <div class="text">
-                                    <p>Стримеры — сила! Старые медиа уходят или видоизменяются. Новым — порой достаточно веб-камеры. 200 млн человек в мире регулярно смотрят Twitch, YouTube, Goodgame и другие стрим-сервисы. Из них 6 млн — в России. Стримфест — это точка входа в новую реальность. Ждем вас в апреле 2020 года в Технопарке «Сколково»!</p>
-                                </div>
-                                <ul class="social-icon-one social-icon-colored">
-                                    <li><a href="https://vk.com/streamfest"><i class="fab fa-vk"></i></a></li>
-                                    <li><a href="https://www.instagram.com/streamfestmoscow/"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://www.facebook.com/streamfestmoscow"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://telegram.me/streamfestmoscow"><i class="fab fa-telegram"></i></a></li>
-                                    <li><a href="https://twitter.com/streamfest_2018"><i class="fab fa-twitter"></i></a></li>
-                                </ul>
+
+<footer>
+    <div id="lgx-footer" class="lgx-footer lgx-footer-black"> <!--lgx-footer-white-->
+        <div class="lgx-inner-footer">
+            <div class="lgx-subscriber-area"> <!--lgx-subscriber-area-indiv-->
+                <div class="container">
+                    <div class="lgx-subscriber-inner">  <!--lgx-subscriber-inner-indiv-->
+                        <h3 class="subscriber-title">Join Newsletter</h3>
+                        <form class="lgx-subscribe-form">
+                            <div class="form-group form-group-email">
+                                <input type="email" id="subscribe" placeholder="Enter your email Address  ..." class="form-control lgx-input-form form-control">
                             </div>
-                        </div>
-
-                        <!--Footer Column-->
-                        <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
-                            <div class="footer-widget useful-links">
-                                <h2 class="widget-title">Ссылки</h2>
-                                <ul class="user-links">
-                                    <li ><a href="/">Главная</a>
-
-                                    </li>
-                                    <li class=""><a href="about-us.html">Активности</a>
-
-                                    </li>
-                                    <li class=""><a href="{% url 'all_speakers' %}">Участники</a>
-
-                                    </li>
-                                    <li class=""><a href="{% url 'faq' %}">FAQ</a>
-
-                                    </li>
-
-                                    <li><a href="{% url 'contacts' %}">Как добраться</a></li>
-                                </ul>
+                            <div class="form-group form-group-submit">
+                                <button type="submit" name="lgx-submit" id="lgx-submit" class="lgx-btn lgx-submit"><span>Subscribe</span></button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Big Column-->
-                <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                    <div class="row">
-                        <!--Footer Column-->
-                        <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                            <!--Footer Column-->
-                            <div class="footer-widget contact-widget">
-                                <h2 class="widget-title">Контакты</h2>
-                                <!--Footer Column-->
-                                <div class="widget-content">
-                                    <ul class="contact-list">
-                                        <li>
-                                            <span class="icon fa fa-map-marker-alt"></span>
-                                            <div class="text">Москва, Большой бульвар, д. 42, стр. 1</div>
-                                        </li>
-
-                                        <li>
-                                            <span class="icon fa fa-envelope"></span>
-                                            <div class="text"><a href="mailto:mike@streamfest.ru">mike@streamfest.ru</a></div>
-                                        </li>
-
-                                        <li>
-                                            <span class="icon fa fa-envelope"></span>
-                                             <div class="text"><a href="mailto:alyona@streamfest.ru">alyona@streamfest.ru</a></div>
-                                        </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Footer Column-->
-                        <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                            <!--Footer Column-->
-                            <div class="footer-widget instagram-widget">
-                                <h2 class="widget-title">Наш Instagram</h2>
-                                <div class="widget-content">
-                                    <div class="outer clearfix">
-                                        <figure class="image">
-                                            <a href="{% static 'images/insta/1.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static 'images/insta/1.jpg' %}" alt=""></a>
-                                        </figure>
-
-                                        <figure class="image">
-                                            <a href="{% static 'images/insta/2.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static 'images/insta/2.jpg' %}" alt=""></a>
-                                        </figure>
-
-                                        <figure class="image">
-                                            <a href="{% static 'images/insta/3.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static 'images/insta/3.jpg' %}" alt=""></a>
-                                        </figure>
-
-                                        <figure class="image">
-                                            <a href="{% static 'images/insta/4.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static 'images/insta/4.jpg' %}" alt=""></a>
-                                        </figure>
-
-                                        <figure class="image">
-                                            <a href="{% static 'images/insta/5.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static 'images/insta/5.jpg' %}" alt=""></a>
-                                        </figure>
-
-                                        <figure class="image">
-                                            <a href="{% static 'images/insta/6.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static 'images/insta/6.jpg' %}" alt=""></a>
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </form> <!--//.SUBSCRIBE-->
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!--Footer Bottom-->
-    <div class="footer-bottom">
-        <div class="auto-container">
-            <div class="inner-container clearfix">
-                <div class="copyright-text">
-                    <p>© 2020. Все права защищены.</p>
+            <div class="container">
+                <div class="lgx-footer-area lgx-footer-area-center">
+                    <div class="lgx-footer-single">
+                        <h3 class="footer-title">Social Connection</h3>
+                        <p class="text">
+                            You should connect social area <br> for Any update
+                        </p>
+                        <ul class="list-inline lgx-social-footer">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="lgx-footer-single">
+                        <h3 class="footer-title">Venue Location </h3>
+                        <h4 class="date">
+                            18 - 21 December, 2019
+                        </h4>
+                        <address>
+                            85 Golden Street, Darlinghurst <br>
+                            ERP 2019, United States
+                        </address>
+                        <a id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> View Map location</a>
+                    </div>
+                    <div class="lgx-footer-single">
+                        <h2 class="footer-title">Instagram Feed</h2>
+                        <div id="instafeed">
+                        <a href="https://www.instagram.com/p/B_VqtQxlY9_vfFWfZdhn3xU_ZST5XvmCKbtMJQ0/" target="_blank" id="2293927413556809599_623597756"><img src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/94566898_118878186451506_1903416596842970172_n.jpg?_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=4rzwS87BRuIAX9muk6a&amp;oh=dc2da4babadb1766c81e3470a94cc2fc&amp;oe=5ECE8C03"></a><a href="https://www.instagram.com/p/B-2MFdAFt_k8eKDhycQDADyGK2Imt3L3FaafWY0/" target="_blank" id="2285067012232634340_623597756"><img src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/92692577_3120232291321369_4247816399742756208_n.jpg?_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=_TunNersVW8AX_nysxq&amp;oh=2145bcb1ea8b55415142466afae8a039&amp;oe=5EF3E88D"></a><a href="https://www.instagram.com/p/B-BZyIHFvPnmKXMUeqzGGjDLNH2LsWXxO3NKu80/" target="_blank" id="2270209083016934375_623597756"><img src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/90091385_536015670453314_6110334200168617668_n.jpg?_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=S_Q-35YlJY0AX_SJpRm&amp;oh=73b64a692912e40ed2f54a7da11125ef&amp;oe=5EF751F1"></a><a href="https://www.instagram.com/p/BwF84nSlnDruq-q3LD97emX4f83D-a_4Obe4kM0/" target="_blank" id="2019287781214679275_623597756"><img src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/57019659_150084679360366_5692915827630205660_n.jpg?_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=KwbtAd7leFUAX-wCxfa&amp;oh=b173c5cf0be7b81da9af944eb323ee91&amp;oe=5EF4D6D0"></a><a href="https://www.instagram.com/p/BwCXMRllt5CNthWl5cXLPlaIG4i4Ee7pFz2VWo0/" target="_blank" id="2018277581603135042_623597756"><img src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/54247593_405821336867063_8591436048766475595_n.jpg?_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=h6BUlgZRV9UAX-C17IW&amp;oh=4c86827c0788d65a6e69be6d6cde0b0c&amp;oe=5EF56BDC"></a><a href="https://www.instagram.com/p/BmnlsDxAhGA_3Vo1wnz4jUYAxK1rMUZxISb4Ww0/" target="_blank" id="1848611927480209792_623597756"><img src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/38618419_456627461522630_1934546569692971008_n.jpg?_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=NinKuJINub4AX89dSbO&amp;oh=efe70ceb444d56ac0f4107be3a00e167&amp;oe=5EF519F0"></a><a href="https://www.instagram.com/p/Biwi2f4nrBZ1BAuUxp7-Wuv0rQzCB8p2kUaImk0/" target="_blank" id="1779075131480387673_623597756"><img src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/31694791_239733239922763_4543999300937449472_n.jpg?_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=W_9Ws6F2ssMAX8qbw3n&amp;oh=c29a7ff32e7c5a6be652aaec3fe2660a&amp;oe=5EF59E8D"></a><a href="https://www.instagram.com/p/Bg-Yqs4Bjaj8BIBquyc7_eeugZUUW6aBaW431w0/" target="_blank" id="1746942192985192099_623597756"><img src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/29094987_612582779080678_8452365578328342528_n.jpg?_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=xAVPV_gxgvsAX8QtnIN&amp;oh=03679580fe096c022d5566b4c080e6ba&amp;oe=5EF6C35A"></a></div>
+                    </div>
                 </div>
+                <!-- Modal-->
+                <div id="lgx-modal-map" class="modal fade lgx-modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="lgxmapcanvas map-canvas-default" id="map_canvas" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Ошибка</div><div class="gm-err-message">При загрузке Google Карт на этой странице возникла проблема. Подробности вы найдете в консоли JavaScript.</div></div></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- //.Modal-->
+
+                <div class="lgx-footer-bottom">
+                    <div class="lgx-copyright">
+                        <p> <span>©</span> 2018 EventHunt is powered by <a href="http://www.themearth.com/">themearth.</a> The property of their owners.</p>
+                    </div>
+                </div>
+
             </div>
+            <!-- //.CONTAINER -->
         </div>
+        <!-- //.footer Middle -->
     </div>
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?162%22%3E"></script>
+</footer>
+
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162%22%3E"></script>
 
 
 <div id="vk_community_messages"></div>

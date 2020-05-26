@@ -2,25 +2,33 @@
 {% load static %}
 
 {% block content %}
-
-
-    <!--Page Title-->
-    <section class="page-title" style="background-image:url({% static 'images/vhod-1.jpg' %});">
-     <div class="overlay-box"></div>
-        <div class="auto-container">
-            <h1>ТЕХНОПАРК «СКОЛКОВО»</h1>
-{#            <ul class="bread-crumb clearfix">#}
-{#                <li><a href="index.html">Главная</a></li>#}
-{#                <li>Контакты</li>#}
-{#            </ul>#}
+    <section style="margin-bottom: 40px">
+        <div class="lgx-banner lgx-banner-inner">
+            <div class="lgx-page-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading-area">
+                                <div class="lgx-heading lgx-heading-white">
+                                    <h2 class="heading">ТЕХНОПАРК «СКОЛКОВО»</h2>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i>Главная</a></li>
+                                    <li class="active">Как добраться</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--//.ROW-->
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
         </div>
     </section>
-    <!--End Page Title-->
+
 
 
     <!-- Contact Page Section -->
     <section class="contact-page-section">
-        <div class="auto-container">
+        <div class="container">
             <div class="map">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02f79490145bc8c3e217841b2604d825f0efd34665a4567f8e8d01cf2a4a7050&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true%22%3E"></script>
             </div>
@@ -30,65 +38,65 @@
                 <!-- Map Section -->
 
                 <!-- End Map Section -->
-                <div class="info-column col-lg-9 col-md-12 col-sm-12 order-2">
+                <div class="info-column col-lg-8 col-md-8 col-sm8 order-2">
                     <div class="inner-column">
-                        <div class="sec-title style-two">
+                        <div style="margin-bottom: 30px" class="sec-title style-two">
                             {#                            <span class="title">Как и на чем </span>#}
                             <h2>Как добраться</h2>
                         </div>
-
-                        <div class="event-info-tabs tabs-box">
-                            <!--Tabs Box-->
-                            <ul class="tab-buttons clearfix">
-                                <li class="tab-btn active-btn" data-tab="#tab1">МЕТРО</li>
-                                <li class="tab-btn " data-tab="#tab5">АВТОБУС</li>
-                                <li class="tab-btn" data-tab="#tab2">ТАКСИ</li>
-                                <li class="tab-btn" data-tab="#tab3">СВОЕ АВТО</li>
-                                <li class="tab-btn" data-tab="#tab4">КАРШЕРИНГ</li>
-                            </ul>
-
-                            <div class="tabs-content">
-                                <!--Tab-->
-                                <div class="tab active-tab" id="tab1">
-                                    <p>Доехать до Сколково можно на электропоезде по направлению МЦД-1 (Одинцово-Лобня), на станцию «Инновационный центр Сколково».</p>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item active">
+                                <a class="nav-link active" data-toggle="tab" href="#metro">Метро</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#bus">Автобус</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#taxi">Такси</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#auto">Свое авто</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#carsharing">Каршеринг</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane  active " id="metro">
+                                 <p>Доехать до Сколково можно на электропоезде по направлению МЦД-1 (Одинцово-Лобня), на станцию «Инновационный центр Сколково».</p>
                                     <p>Пересадка на МЦД-1 осуществялется с станции метро Белорусская. Стоимость билета 45р по карте "Тройка".</p>
-                                </div>
-
-                                <!--Tab-->
-                                <div class="tab" id="tab2">
-                                    <p>Вызывайте Яндекс.Такси или Uber — только они могут проезжать на территорию Сколково.</p>
+                            </div>
+                            <div class="tab-pane " id="taxi">
+                               <p>Вызывайте Яндекс.Такси или Uber — только они могут проезжать на территорию Сколково.</p>
                                     <p> Все остальные такси остановят у шлагбаума на КПП, и вам придется идти пешком.</p>
                                     <p>Такси нужно вызывать на адрес "Парковка Технопарк Сколково".</p>
-                                </div>
-
-                                <!--Tab-->
-                                <div class="tab" id="tab3">
-                                    <p>До Сколково можно доехать по Минскому, Можайскому и Сколковскому шоссе и оставить машину на одной из двух парковок: Технопарк или парковке Сколковская.</p>
+                            </div>
+                            <div class="tab-pane " id="auto">
+                                <p>До Сколково можно доехать по Минскому, Можайскому и Сколковскому шоссе и оставить машину на одной из двух парковок: Технопарк или парковке Сколковская.</p>
                                     <p> ВАЖНО: в навигаторе вбивайте адрес Парковка Технопарк Сколково.</p>
 
                                     <p>На всех парковках первые два часа бесплатно, а дальше — 50 рублей/час.</p>
-                                </div>
-                                <div class="tab" id="tab4">
-                                    <p>Запарковать машину прямо перед зданием нельзя — вас не пустят на территорию. На парковке «Амальтея» парковаться нельзя.</p>
+                            </div>
+                             <div class="tab-pane " id="carsharing">
+                               <p>Запарковать машину прямо перед зданием нельзя — вас не пустят на территорию. На парковке «Амальтея» парковаться нельзя.</p>
                                     <p>В Сколково нельзя завершить аренду машин от «Яндекс.Драйв», Anytime, МатрёшCar — их можно только поставить на ожидание!</p>
                                     <p>Как проехать - смотрите "На машине".</p>
-                                </div>
-                                <div class="tab" id="tab5">
-                                    <p> На автобусе 867 от станции метро Кунцевская до остановки "Сколково" (время в пути ~ 30мин)</p>
-
-                                </div>
+                            </div>
+                             <div class="tab-pane " id="bus">
+                               <p> На автобусе 867 от станции метро Кунцевская до остановки "Сколково" (время в пути ~ 30мин)</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
-                <div class="contact-column col-lg-3 col-md-12 col-sm-12 order-2">
+                <div class="contact-column col-lg-4 col-md-4 col-sm-4 order-2">
                     <div class="inner-column">
                         <div class="sec-title">
                             <h2>Контакты</h2>
                         </div>
                         <ul class="contact-info">
                             <li>
-                                <span class="icon fa fa-map-marker-alt"></span>
+                                <span class="icon fa fa-map-marker"></span>
                                 <p><strong>Адрес</strong></p>
                                 <p>Москва, Большой бульвар, д. 42, стр. 1</p>
                             </li>
@@ -108,11 +116,11 @@
                         </ul>
 
                         <ul class="social-icon-two social-icon-colored">
-                            <li><a href="https://vk.com/streamfest"><i class="fab fa-vk"></i></a></li>
-                            <li><a href="https://www.instagram.com/streamfestmoscow/"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.facebook.com/streamfestmoscow"><i class="fab fa-facebook"></i></a></li>
-                            <li><a href="https://telegram.me/streamfestmoscow"><i class="fab fa-telegram"></i></a></li>
-                            <li><a href="https://twitter.com/streamfest_2018"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://vk.com/streamfest"><i class="fa fa-vk"></i></a></li>
+                            <li><a href="https://www.instagram.com/streamfestmoscow/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/streamfestmoscow"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://telegram.me/streamfestmoscow"><i class="fa fa-telegram"></i></a></li>
+                            <li><a href="https://twitter.com/streamfest_2018"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -126,24 +134,24 @@
                         <div class="contact-form">
                             <div class="sec-title">
                                 <h2>Есть вопрос? Напишите нам!</h2>
-                                 <div style="margin-top: 15px" class="text">Мы пришлем вам ответ на указанную вами почту</div>
+                                <div style="margin-top: 15px" class="text">Мы пришлем вам ответ на указанную вами почту</div>
                             </div>
                             <form method="post" action="{% url 'callback' %}" id="contact-form">{% csrf_token %}
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <input type="text" name="username" placeholder="Имя" required="">
+                                        <input class="form-control lgxname" type="text" name="username" placeholder="Имя" required="">
                                     </div>
 
 
 
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <input type="email" name="email" placeholder="Email" required="">
+                                        <input class="form-control lgxname" type="email" name="email" placeholder="Email" required="">
                                     </div>
 
 
 
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <textarea name="message" required placeholder="Сообщение"></textarea>
+                                        <textarea class="form-control lgxname" name="message" required placeholder="Сообщение"></textarea>
                                     </div>
 
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
@@ -160,22 +168,22 @@
     <!--End Contact Page Section -->
 
     {% if messages %}
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Ваше сообщение отправлено</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Спасибо за обращение, c Вами обязательно свяжутся.
-                </div>
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Ваше сообщение отправлено</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Спасибо за обращение, c Вами обязательно свяжутся.
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
     {% endif %}
 
 {%  endblock %}

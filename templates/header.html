@@ -1,52 +1,74 @@
 {% load static %}
-{% if not indexactive %}<span class="header-span"></span>{% endif %}
-<header class="main-header {% if not indexactive %}header-style-two{% endif %}">
-    <div class="main-box">
-        <div class="auto-container clearfix">
-            <div class="logo-box">
-                <div class="logo"><a href="/"><img style="height: 50px" {% if not indexactive %} src="{% static 'images/ru_1.png' %}" {% else %}src="{% static 'images/ru.png' %}" {% endif %} alt="" title=""></a></div>
-            </div>
-            <div class="nav-outer clearfix">
-
-                <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span> </div>
-                  <div style="margin-right: 20px;" class="mobile-nav-cart" onclick="javascript: void(0)"><a href="#buy_ticket"><span class="icon flaticon-shopping-cart"></span></a> </div>
-                <nav class="main-menu navbar-expand-md navbar-light">
+<!--HEADER-->
+{#<header>#}
+{#    <div id="lgx-header" class="lgx-header">#}
+{#        <div class="lgx-header-position lgx-header-position-white lgx-header-position-fixed "> <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->#}
+{#            <div class="lgx-container-fluid"> <!--lgx-container-fluid-->#}
+{#                <nav class="navbar navbar-default lgx-navbar">#}
+{#                    <div class="navbar-header">#}
+{#                        <div class="lgx-logo">#}
+{#                            <a href="index.html" class="lgx-scroll">#}
+{#                                <img src="{% static 'img/logo_w.png' %}" alt="Eventhunt Logo"/>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div id="navbar" class="navbar-collapse collapse">#}
+{#                        <div class="lgx-nav-right navbar-right">#}
+{#                            <div class="lgx-cart-area">#}
+{#                                <a class="lgx-btn lgx-btn-red" href="#">Купить билет</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <ul class="nav navbar-nav lgx-nav navbar-right">#}
+{##}
+{#                        <li><a href="about.html">Активности</a></li>#}
+{#                        <li><a href="schedules.html">Участники</a></li>#}
+{#						<li><a href="schedules.html">FAQ 2020</a></li>#}
+{#						<li><a href="schedules.html">Стать участником</a></li>#}
+{#						<li><a href="schedules.html">Как добраться</a></li>#}
+{#                        </ul>#}
+{#                    </div><!--/.nav-collapse -->#}
+{#                </nav>#}
+{#            </div>#}
+{#            <!-- //.CONTAINER -->#}
+{#        </div>#}
+{#    </div>#}
+{#</header>#}
+<!--HEADER END-->
+<header>
+    <div id="lgx-header" class="lgx-header">
+        <div class="lgx-header-position lgx-header-position-white lgx-header-position-fixed"> <!--lgx-header-position-fixed lgx-header-position-white lgx-header-fixed-container lgx-header-fixed-container-gap lgx-header-position-white-->
+            <div class="lgx-container-fluid"> <!--lgx-container-fluid-->
+                <nav class="navbar navbar-default lgx-navbar">
                     <div class="navbar-header">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="icon flaticon-menu-button"></span>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
+                        <div class="lgx-logo">
+                            <a href="/" class="lgx-scroll">
+                                <img src="{% static 'img/logo_w.png' %}" alt="Eventhunt Logo">
+                            </a>
+                        </div>
                     </div>
-                    <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                        <ul class="navigation clearfix">
-{#                            <li class="{{ indexactive }} "><a href="/">Главная</a></li>#}
-                            <li class="{{ activityactive }}"><a href="{% url 'about' %}">Активности</a></li>
+                    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                        <div class="lgx-nav-right navbar-right">
+                            <div class="lgx-cart-area">
+                                <a class="lgx-btn lgx-btn-red" href="http://{{ request.META.HTTP_HOST }}#buy_ticket">Купить билет</a>
+                            </div>
+                        </div>
+                        <ul class="nav navbar-nav lgx-nav navbar-right">
+                              <li class="{{ activityactive }}"><a href="{% url 'about' %}">Активности</a></li>
                             <li class="{{ streamersactive }}"><a href="{% url 'all_speakers' %}">Участники</a></li>
                             <li class="{{ faqactive }}"><a href="{% url 'faq' %}">FAQ 2020</a></li>
                             <li class="{{ applyactive }}"><a href="{% url 'apply' %}">Стать участником</a></li>
                             <li class="{{ contactactive }}"><a href="{% url 'contacts' %}">Как добраться</a></li>
-
                         </ul>
-                    </div>
+                    </div><!--/.nav-collapse -->
                 </nav>
-                <div class="outer-box">
-                    <div class="btn-box">
-                        <a href="http://{{ request.META.HTTP_HOST }}#buy_ticket" class="theme-btn btn-style-one"><span class="btn-title">Купить билеты</span></a>
-                    </div>
-                </div>
             </div>
+            <!-- //.CONTAINER -->
         </div>
     </div>
-    <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
-        <div class="close-btn"><span class="icon flaticon-cancel-1"></span></div>
-        <nav class="menu-box">
-            <div class="nav-logo"><a href="/"><img src="{% static 'images/ru_1.png' %}" alt="" title=""></a></div>
-            <a style="    margin: 0 auto;
-    display: block;
-    max-width: 320px;
-    margin-bottom: 20px;" href="http://{{ request.META.HTTP_HOST }}#buy_ticket" class="theme-btn btn-style-one" onclick="closeMenu()"><span class="btn-title">Купить билеты</span></a>
-            <ul class="navigation clearfix"></ul>
-        </nav>
-    </div>
 </header>
-
