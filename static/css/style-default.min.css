@@ -6415,7 +6415,7 @@ button:hover:after {
     }
 }
 .lgx-banner {
-    background: url(../img/banner.jpg) top center no-repeat;
+    /*background: url(../img/banner.jpg) top center no-repeat;*/
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -6425,7 +6425,7 @@ button:hover:after {
     padding: 27rem 0 20rem;
 }
 .lgx-banner2 {
-    background: url(../img/bannar-home2.jpg) top center no-repeat;
+    /*background: url(../img/bannar-home2.jpg) top center no-repeat;*/
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -8812,7 +8812,7 @@ button:hover:after {
     margin: 0 0.5% 0.6rem;
     padding: 1.6rem;
     border-radius: 16px;
-    width: 23%;
+    /*width: 23%;*/
     display: inline-block;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
@@ -11524,7 +11524,7 @@ blockquote.lgx-testi-single:before {
         background: #fff;
     }
     .sponsors-area .single {
-        width: 32%;
+        /*width: 32%;*/
     }
     .lgx-registration-area {
         display: block;
@@ -11695,7 +11695,7 @@ blockquote.lgx-testi-single:before {
         margin-bottom: 4.2rem;
     }
     .sponsors-area .single {
-        width: 48%;
+        /*width: 48%;*/
     }
     .lgx-gallery-area .lgx-gallery-single {
         width: 50%;
