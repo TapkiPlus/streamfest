@@ -8,7 +8,7 @@
     <!--BANNER-->
     <section >
         <div class="lgx-banner lgx-banner2">
-            <div style="position: absolute; "><video style="object-fit: initial; width: 100%;height: 100vh;" autoplay muted loop id="myVideo">
+            <div  style="position: absolute; "><video class="video-bg" autoplay muted loop id="myVideo">
                 <source src="{% static 'bg.mp4' %}" type="video/mp4">
 
             </video></div>
@@ -50,11 +50,11 @@
 
     <!--ABOUT-->
     <section>
-        <div id="lgx-about" class="lgx-about lgx-about2" style="background: url({% static 'img/back-2020.jpg' %})">
+        <div id="lgx-about" class="lgx-about lgx-about2" style="background: url({% static 'img/bg_1.png' %})">
             <div class="lgx-inner">
                 <div class="container">
                     <div class="row">
-                        <div class=" col-sm-12 col-md-7">
+                        <div class=" col-sm-12 col-md-9">
                             <div class="lgx-about-content-area">
                                 <div class="lgx-heading">
                                     <h2 class="heading">Стримфест в 2020 году</h2>
@@ -70,6 +70,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="{% static 'img/streamfest_logo_white.png' %}" alt="">
                         </div>
                     </div>
                 </div><!-- //.CONTAINER -->
