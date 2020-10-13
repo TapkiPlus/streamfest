@@ -45,6 +45,8 @@ def contacts(request):
 
 def order(request, pass_type):
     passArticle = pass_type
+    day = pass_type.split('_')[1]
+    streamer = pass_type.split('_')[0]
     return render(request, 'staticPages/order.html', locals())
 
 def new_order(request):

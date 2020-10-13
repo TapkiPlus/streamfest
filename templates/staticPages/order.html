@@ -2,29 +2,45 @@
 {% load static %}
 
 {% block content %}
-  <!--Page Title-->
-    <section class="page-title" style="background-image:url({% static 'images/background/5.jpg' %});">
-     <div class="overlay-box"></div>
-        <div class="auto-container">
-            <h1>Оформление заказа</h1>
-{#            <ul class="bread-crumb clearfix">#}
-{#                <li><a href="/">Главная</a></li>#}
-{#                <li>Оформление заказа</li>#}
-{#            </ul>#}
+      <section style="margin-bottom: 40px">
+        <div class="lgx-banner lgx-banner-inner">
+            <div class="lgx-page-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading-area">
+                                <div class="lgx-heading lgx-heading-white">
+                                    <h2 class="heading">Оформление заказа</h2>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i>Главная</a></li>
+                                    <li class="active">Оформление заказа</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--//.ROW-->
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
         </div>
     </section>
-    <!--End Page Title-->
-<section class="contact-page-section">
-        <div class="auto-container">
-            <div class="row clearfix">
 
+<section class="contact-page-section">
+        <div class="container">
+            <div class="row clearfix">
+                <h2>Покупка билета на {% if day == 'oneday' %}1 день{% else %}2 дня {% endif %} от стримера {{ streamer | upper}}
+</h2>
+       {% if day == 'oneday' %}
+           <h4>Билет на один день позволяет посетить фестиваль 17 или 18 апреля — на ваш выбор</h4>
+       {% else %}
+          <h4>Билет на два дня позволяет посетить фестиваль 17 и 18 апреля.</h4>
+       {% endif %}
 
                 <!-- Form Column -->
                 <div class="form-column col-lg-12 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="contact-form">
                             <div class="sec-title">
-                                <h2>Оформление заказа</h2>
+
                             </div>
                             <form method="post" action="{% url 'new_order' %}" id="contact-form" >{% csrf_token %}
                                 <div class="row clearfix">

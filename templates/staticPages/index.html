@@ -18,17 +18,18 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="lgx-banner-info-area">
-                                    <div class="lgx-banner-info-date">
-                                        <h3 class="date"> <b class="lgx-counter">25</b> <span>Июля</span></h3>
-                                        <h3 class="location"><i class="fa fa-map-marker"></i> Технопарк "Сколково"</h3>
-                                    </div>
+{#                                    <div class="lgx-banner-info-date">#}
+{#                                        <h3 class="date"> <b class="lgx-counter">17</b> <span>Апреля</span></h3>#}
+{#                                        <h3 class="location"><i class="fa fa-map-marker"></i> Технопарк "Сколково"</h3>#}
+{#                                    </div>#}
                                     <div class="lgx-banner-info lgx-banner-info-xscenter"> <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg--> <!--banner-info-margin-->
-                                        <div class="lgx-countdown-area">
-                                            <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
-                                            <div id="lgx-countdown" data-date="2020/07/25"></div>
-                                        </div>
-                                        <h3 class="subtitle">Главный фестиваль лета</h3>
-                                        <h2 style="font-size: 10rem;" class="title">СТРИМФЕСТ <span><b>2</b><b>0</b><b>2</b><b>0</b></span></h2>
+{#                                        <div class="lgx-countdown-area">#}
+{#                                            <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->#}
+{#                                            <div id="lgx-countdown" data-date="2020/07/25"></div>#}
+{#                                        </div>#}
+                                        <h3 class="subtitle">17-18 апреля</h3>
+                                        <h3 class="subtitle">Главный фестиваль весны</h3>
+                                        <h2 style="font-size: 10rem;" class="title">СТРИМФЕСТ <span><b>2</b><b>0</b><b>2</b><b>1</b></span></h2>
 
                                     </div>
                                 </div>
@@ -48,45 +49,8 @@
 
 
 
-    <!--ABOUT-->
-    <section>
-        <div id="lgx-about" class="lgx-about lgx-about2" style="background: url({% static 'img/bg_1.png' %})">
-            <div class="lgx-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class=" col-sm-12 col-md-9">
-                            <div class="lgx-about-content-area">
-                                <div class="lgx-heading">
-                                    <h2 class="heading">СТРИМФЕСТ 2020 — ОНЛАЙН</h2>
-                                    <h3 class="subheading">Смотрите главное онлайн-шоу лета 25–26 июля!</h3>
-                                </div>
-                                <div class="lgx-about-content">
-                                    <p  class="text">
-                                        Друзья! К сожалению, из-за ситуации с коронавирусом мы вынуждены отменить офлайн-фестиваль в Сколково в 2020 году. Вместо этого мы проведем онлайн-шоу в эти же даты.<br><br>
 
-25-26 июля на Twitch.tv состоится Стримфест LIVE!<br><br>
-
-Вас ждет яркое, интерактивное эфирное шоу с участием популярных стримеров и приглашенных звёзд. Мы объединим в одном эфире видеоигры, just chatting, челленджи, музыкальные номера, VR-состязания, арт, крафт, танцы и фитнес — все грани стриминга, все то, что любите именно вы. Вход — свободный!<br><br>
-
-Все билеты, купленные на фестиваль в этом году, сохраняют действие на новые даты офлайн-фестиваля, когда бы он ни состоялся. Если вы хотите сдать билет и получить возврат денег, пожалуйста, напишите на почту info@streamfest.ru с указанием номера купленного билета и email’а, на который вы его оформляли. Мы сделаем возврат.
-                                     </p>
-                                    <div class="section-btn-area">
-                                        <a class="lgx-btn" target="_blank" href="https://vk.com/streamfest">Подробнее о Стримфесте LIVE</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <img src="{% static 'img/streamfest_logo_white.png' %}" alt="">
-                        </div>
-                    </div>
-                </div><!-- //.CONTAINER -->
-            </div><!-- //.INNER -->
-        </div>
-    </section>
-    <!--ABOUT END-->
-    <section>
+    <section style="padding-top: 150px">
         <div id="lgx-about" class="lgx-about lgx-about3" style="background: #fff url({% static 'img/about-bg-new.jpg' %}) no-repeat; background-position-x: 94% ">
             <div class="lgx-inner">
                 <div class="container">
@@ -142,28 +106,28 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr));grid-gap: 20px" class="sponsors-area sponsors-area-bg">
                 <div class="single ">
-                    <a class="" href="#"><img src="{% static 'img/1.png' %}" alt="sponsor"></a>
+                    <a class="" onclick="return false;" href="#"><img src="{% static 'img/1.png' %}" alt="sponsor"></a>
                     <p class="feature-text">ВСТРЕЧИ СО ЗВЕЗДАМИ TWITCH, YOUTUBE И GOODGAME</p>
                 </div>
                 <div class="single ">
-                    <a class="" href="#"><img src="{% static 'img/2.png' %}" alt="sponsor"></a>
+                    <a class="" onclick="return false;" href="#"><img src="{% static 'img/2.png' %}" alt="sponsor"></a>
                     <p class="feature-text">ИГРОВЫЕ ЗОНЫ И ТУРНИРЫ С ЦЕННЫМИ ПРИЗАМИ</p>
                 </div>
                 <div class="single ">
-                    <a class="" href="#"><img src="{% static 'img/3.png' %}" alt="sponsor"></a>
+                    <a class="" onclick="return false;" href="#"><img src="{% static 'img/3.png' %}" alt="sponsor"></a>
                     <p class="feature-text">ЗВЁЗДЫ КОСПЛЕЯ И ИНТЕРАКТИВНАЯ ТАНЦ-ПЛОЩАДКА</p>
                 </div>
 
                 <div class="single">
-                    <a class="" href="#"><img src="{% static 'img/4.png' %}" alt="sponsor"></a>
+                    <a class="" onclick="return false;" href="#"><img src="{% static 'img/4.png' %}" alt="sponsor"></a>
                     <p class="feature-text">ШОУ-МАТЧИ, ВИКТОРИНЫ И ПРЕЗЕНТАЦИИ ВИДЕОИГР</p>
                 </div>
                 <div class="single">
-                    <a class="" href="#"><img src="{% static 'img/5.png' %}" alt="sponsor"></a>
+                    <a class="" onclick="return false;" href="#"><img src="{% static 'img/5.png' %}" alt="sponsor"></a>
                     <p class="feature-text">ПОДВИЖНЫЕ РАЗВЛЕЧЕНИЯ И ЗОНА НАСТОЛЬНЫХ ИГР</p>
                 </div>
                 <div class="single">
-                    <a class="" href="#"><img src="{% static 'img/6.png' %}" alt="sponsor"></a>
+                    <a class="" onclick="return false;" href="#"><img src="{% static 'img/6.png' %}" alt="sponsor"></a>
                     <p class="feature-text">МАСТЕР-КЛАССЫ И ЛЕКЦИИ О ТЕХНОЛОГИЯХ И НАУКЕ</p>
                 </div>
             </div>
@@ -406,8 +370,8 @@
                         <div class="col-sm-12 col-md-6">
                             <div class="lgx-about-content-area">
                                 <div class="lgx-heading">
-                                    <h2 class="heading">Все о Стримфест 2019</h2>
-                                    <h3 class="subheading">Как это было</h3>
+                                    <h2 class="heading">СТРИМФЕСТ 2019: </h2>
+                                    <h3 class="subheading">ключевые цифры</h3>
                                 </div>
                                 <div class="lgx-about-content">
                                     <p class="text">
@@ -524,7 +488,44 @@
 
     </section>
     <!--gall END-->
+<!--ABOUT-->
+    <section>
+        <div id="lgx-about" class="lgx-about lgx-about2" style="background: url({% static 'img/bg_1.png' %})">
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-sm-12 col-md-9">
+                            <div class="lgx-about-content-area">
+                                <div class="lgx-heading">
+                                    <h2 class="heading">СТРИМФЕСТ 2020 — ОНЛАЙН</h2>
+                                    <h3 class="subheading">Смотрите главное онлайн-шоу лета 25–26 июля!</h3>
+                                </div>
+                                <div class="lgx-about-content">
+                                    <p  class="text">
+                                        Друзья! К сожалению, из-за ситуации с коронавирусом мы вынуждены отменить офлайн-фестиваль в Сколково в 2020 году. Вместо этого мы проведем онлайн-шоу в эти же даты.<br><br>
 
+25-26 июля на Twitch.tv состоится Стримфест LIVE!<br><br>
+
+Вас ждет яркое, интерактивное эфирное шоу с участием популярных стримеров и приглашенных звёзд. Мы объединим в одном эфире видеоигры, just chatting, челленджи, музыкальные номера, VR-состязания, арт, крафт, танцы и фитнес — все грани стриминга, все то, что любите именно вы. Вход — свободный!<br><br>
+
+Все билеты, купленные на фестиваль в этом году, сохраняют действие на новые даты офлайн-фестиваля, когда бы он ни состоялся. Если вы хотите сдать билет и получить возврат денег, пожалуйста, напишите на почту info@streamfest.ru с указанием номера купленного билета и email’а, на который вы его оформляли. Мы сделаем возврат.
+                                     </p>
+                                    <div class="section-btn-area">
+                                        <a class="lgx-btn" target="_blank" href="https://vk.com/streamfest">Подробнее о Стримфесте LIVE</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="{% static 'img/streamfest_logo_white.png' %}" alt="">
+                        </div>
+                    </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
+        </div>
+    </section>
+    <!--ABOUT END-->
 
     <!--SPONSORED-->
     <section>

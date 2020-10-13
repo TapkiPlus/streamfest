@@ -35,7 +35,7 @@
 
             <div class="row">
                 {% for speaker in allSpeakers %}
-                                <div class="lgx-col4 lgx-single-speaker2">
+                                <div class="col-md-3 lgx-single-speaker2">
                                 <figure>
                                     <a class="profile-img" href="{% url 'speaker' speaker.nickNameSlug %}"><img src="{{ speaker.photo.url }}" alt="speaker"></a>
                                     <figcaption>
