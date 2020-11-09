@@ -328,33 +328,59 @@ body{
 	height: 100vh;
 }
 
+.lgx-banner{
+	background-position: center !important;
+	background-size: cover !important;
+}
+.image-box img{
+	width: 360px;
+	height: 360px;
+	object-fit: cover;
+}
+
+.lgx-single-registration{
+	position: relative;
+    /*min-height: 590px;*/
+}
+
+.lgx-single-registration-inner{
+	/*padding-top: 265px !important;*/
+}
+
+.lgx-single-registration-image{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 @media (min-width: 320px){
 	.video-bg{
-		height: 67vh;
+		height: 45vh;
 	}
 }
 @media (min-width: 480px){
 	.video-bg{
-		height: 72vh;
+		height: 50vh;
 	}
 }
 @media (min-width: 768px){
 	.video-bg{
-		height: 59vh;
+		height: 57vh;
 	}
 }
 @media (min-width: 768px){
 	.video-bg{
-		height: 59vh;
+		height: 57vh;
 	}
 }
 @media (min-width: 990px){
 	.video-bg{
-		height: 94vh;
+		height: 84vh;
 	}
 }
 @media (min-width: 1150px){
 	.video-bg{
-		height: 96vh;
+		height: 94vh;
 	}
 }

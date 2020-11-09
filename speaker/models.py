@@ -28,7 +28,7 @@ class Speaker(models.Model):
     about = RichTextUploadingField('Описание', blank=True, null=True)
     streaming = RichTextUploadingField('Что стримит', blank=True, null=True)
     isAtHome = models.BooleanField('Отображать на главной?', default=False)
-    uniqUrl = models.CharField('Хеш для ссылки (/speaker/stats/)', max_length=100,  blank=True,null=True)
+    uniqUrl = models.CharField('Хеш для ссылки (/star/stats/)', max_length=100,  blank=True,null=True)
 
     def save(self, *args, **kwargs):
         slug = slugify(self.nickName)
@@ -120,9 +120,9 @@ class Order(models.Model):
             return f'Не оплаченный заказ №-{self.id} от {self.customerFio}'
     #str(uuid.uuid4()) img = qrcode.make('Some data here')
 
-    def save(self, *args, **kwargs):
-        print(BASE_DIR)
-        super(Order, self).save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     print(BASE_DIR)
+    #     super(Order, self).save(*args, **kwargs)
     class Meta:
         verbose_name = "Заказ"
         verbose_name_plural = "Заказы"
