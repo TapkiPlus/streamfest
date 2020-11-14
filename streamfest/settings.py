@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'staticPages.apps.StaticpagesConfig',
     'speaker.apps.SpeakerConfig',
+    'colorfield',
 
 ]
 

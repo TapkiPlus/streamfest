@@ -8,7 +8,7 @@
     <!--BANNER-->
     <section >
         <div class="lgx-banner lgx-banner2">
-            <div  style="position: absolute; "><video class="video-bg" autoplay muted loop id="myVideo">
+            <div  style="position: absolute; width: 100%"><video class="video-bg" autoplay muted loop id="myVideo">
                 <source src="{% static 'bg.mp4' %}" type="video/mp4">
 
             </video></div>
@@ -44,12 +44,6 @@
         </div>
     </section>
     <!--BANNER END-->
-
-
-
-
-
-
     <section style="padding-top: 150px">
         <div id="lgx-about" class="lgx-about lgx-about3" style="background: #fff url({% static 'img/about-bg-new.jpg' %}) no-repeat; background-position-x: 94% ">
             <div class="lgx-inner">
@@ -136,8 +130,6 @@
         </div>
 
     </section>
-
-
     <section>
         <div id="lgx-speakers" class="lgx-speakers lgx-speakers2">
             <div class="lgx-inner">
@@ -186,59 +178,56 @@
         <!-- //.INNER -->
         </div>
     </section>
+    <section>
+        <div id="buy_ticket" class="lgx-registration lgx-registration4"> <!--lgx-registration2 lgx-registration3 lgx-registration4-->
+            <div class="lgx-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-9 col-xs-offset-1">
+                            <div class="lgx-registration-area lgx-registration-area-nogap lgx-registration-area3"> <!-- lgx-registration-area-nogap lgx-registration-area2 lgx-registration-area3 -->
+                                <div class="lgx-single-registration">
+                                    <div class="lgx-single-registration-inner">
+                                        <div class="single-top">
+                                            <h3 class="title">1 день</h3>
+                                            <h4 style="font-size: 50px;margin-top: -20px;" class="price">1300<span style="font-size: 40px; color: white;font-weight: 700">₽</span></h4>
+                                        </div>
+                                        <div class="single-bottom">
+                                            <ul class="list-unstyled list">
+                                                <li>25 или 26 апреля</li>
+                                                <li>Все стенды</li>
+                                                <li>Хайп, веселье и конкурсы</li>
+                                                <li>Два дня</li>
+                                            </ul>
 
+                                            <a href="{% url 'order' oneDayTicket.article %}" class="lgx-btn"><span>Купить билет</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lgx-single-registration recommended">
+                                    <div class="lgx-single-registration-inner">
+                                        <div class="single-top">
+                                            <h3 class="title">2 дня</h3>
+                                            <h4 style="font-size: 50px;margin-top: -20px;" class="price">2100<span style="font-size: 40px;color: white;font-weight: 700">₽</span></h4>
+                                        </div>
+                                        <div class="single-bottom">
+                                            <ul class="list-unstyled list">
+                                                <li>В 2 раза больше веселья</li>
+                                                <li>Все стенды</li>
+                                                <li>Хайп, веселье и конкурсы</li>
+                                                <li>Два дня</li>
+                                            </ul>
+                                            <a href="{% url 'order' twoDayTicket.article %}" class="lgx-btn"><span >Купить билет</span></a>
+                                        </div>
+                                    </div>
+                                </div>
 
-{#    <section>#}
-{#        <div id="buy_ticket" class="lgx-registration lgx-registration4"> <!--lgx-registration2 lgx-registration3 lgx-registration4-->#}
-{#            <div class="lgx-inner">#}
-{#                <div class="container">#}
-{#                    <div class="row">#}
-{#                        <div class="col-xs-9 col-xs-offset-1">#}
-{#                            <div class="lgx-registration-area lgx-registration-area-nogap lgx-registration-area3"> <!-- lgx-registration-area-nogap lgx-registration-area2 lgx-registration-area3 -->#}
-{#                                <div class="lgx-single-registration">#}
-{#                                    <div class="lgx-single-registration-inner">#}
-{#                                        <div class="single-top">#}
-{#                                            <h3 class="title">1 день</h3>#}
-{#                                            <h4 style="font-size: 50px;margin-top: -20px;" class="price">1300<span style="font-size: 40px; color: white;font-weight: 700">₽</span></h4>#}
-{#                                        </div>#}
-{#                                        <div class="single-bottom">#}
-{#                                            <ul class="list-unstyled list">#}
-{#                                                <li>25 или 26 апреля</li>#}
-{#                                                <li>Все стенды</li>#}
-{#                                                <li>Хайп, веселье и конкурсы</li>#}
-{#                                                <li>Два дня</li>#}
-{#                                            </ul>#}
-{##}
-{#                                            <a href="{% url 'order' oneDayTicket.article %}" class="lgx-btn"><span>Купить билет</span></a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                                <div class="lgx-single-registration recommended">#}
-{#                                    <div class="lgx-single-registration-inner">#}
-{#                                        <div class="single-top">#}
-{#                                            <h3 class="title">2 дня</h3>#}
-{#                                            <h4 style="font-size: 50px;margin-top: -20px;" class="price">2100<span style="font-size: 40px;color: white;font-weight: 700">₽</span></h4>#}
-{#                                        </div>#}
-{#                                        <div class="single-bottom">#}
-{#                                            <ul class="list-unstyled list">#}
-{#                                                <li>В 2 раза больше веселья</li>#}
-{#                                                <li>Все стенды</li>#}
-{#                                                <li>Хайп, веселье и конкурсы</li>#}
-{#                                                <li>Два дня</li>#}
-{#                                            </ul>#}
-{#                                            <a href="{% url 'order' twoDayTicket.article %}" class="lgx-btn"><span >Купить билет</span></a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                </div>#}
-                                {#
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div><!-- //.CONTAINER -->#}
-{#            </div><!-- //.INNER -->#}
-{#        </div>#}
-{#    </section>#}
-
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- //.CONTAINER -->
+            </div><!-- //.INNER -->
+        </div>
+    </section>
 
     <section>
         <div id="lgx-milestone-about" class="lgx-milestone-about">
@@ -298,8 +287,6 @@
             </div><!-- //.INNER -->
         </div>
     </section>
-
-
     <!--TESTIMONIALS -->
     <section>
         <div id="lgx-testimonial" class="lgx-testimonial">
@@ -316,33 +303,21 @@
                     <!--//.ROW-->
                     <div class="row">
                         <div id="lgx-owltestimonial" class="lgx-owltestimonial lgx-owlnews">
-
+                            {% for feedback in feedbacks %}
                             <div class="item">
                                 <!--Testimonial-single-->
                                 <blockquote class="lgx-testi-single">
-                                    <p><span>Ясность нашей позиции очевидна</span>
-                                        Реализация намеченных плановых заданий однозначно фиксирует необходимость поэтапного и последовательного развития общества. Идейные соображения высшего порядка, а также высокое качество позиционных исследований говорит о возможностях системы массового участия.
+                                    <p><span>{{ feedback.quote }}</span>
+                                        {{ feedback.text }}
                                     </p>
                                     <div class="author">
-                                        <img src="{% static 'img/testimonials/author1.jpg' %}" alt="author">
-                                        <h4 class="title"><a href="#"></a>Иван петров</h4>
+                                        <img src="{{ feedback.image.url }}" alt="author">
+                                        <h4 class="title"><a href="#"></a>{{ feedback.name }}</h4>
 
                                     </div>
                                 </blockquote> <!--//.Testimonial-single-->
                             </div> <!--//.Item-->
-                            <div class="item">
-                                <!--Testimonial-single-->
-                                <blockquote class="lgx-testi-single">
-                                    <p><span> Являясь всего лишь частью общей картины</span>
-                                        Явные признаки победы институционализации, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут разоблачены. Внезапно, сторонники тоталитаризма в науке будут объединены в целые кластеры себе подобных.
-                                    </p>
-                                    <div class="author">
-                                        <img src="{% static 'img/testimonials/author1.jpg' %}" alt="author">
-                                        <h4 class="title"><a href="#"></a>МИКРОБ</h4>
-
-                                    </div>
-                                </blockquote> <!--//.Testimonial-single-->
-                            </div> <!--//.Item-->
+                            {% endfor %}
 
                         </div><!--l//#lgx-OWL NEWS-->
                     </div>
@@ -497,19 +472,7 @@
                         <div class=" col-sm-12 col-md-9">
                             <div class="lgx-about-content-area">
                                 <div class="lgx-heading">
-                                    <h2 class="heading">СТРИМФЕСТ 2020 — ОНЛАЙН</h2>
-                                    <h3 class="subheading">Смотрите главное онлайн-шоу лета 25–26 июля!</h3>
-                                </div>
-                                <div class="lgx-about-content">
-                                    <p  class="text">
-                                        Друзья! К сожалению, из-за ситуации с коронавирусом мы вынуждены отменить офлайн-фестиваль в Сколково в 2020 году. Вместо этого мы проведем онлайн-шоу в эти же даты.<br><br>
-
-25-26 июля на Twitch.tv состоится Стримфест LIVE!<br><br>
-
-Вас ждет яркое, интерактивное эфирное шоу с участием популярных стримеров и приглашенных звёзд. Мы объединим в одном эфире видеоигры, just chatting, челленджи, музыкальные номера, VR-состязания, арт, крафт, танцы и фитнес — все грани стриминга, все то, что любите именно вы. Вход — свободный!<br><br>
-
-Все билеты, купленные на фестиваль в этом году, сохраняют действие на новые даты офлайн-фестиваля, когда бы он ни состоялся. Если вы хотите сдать билет и получить возврат денег, пожалуйста, напишите на почту info@streamfest.ru с указанием номера купленного билета и email’а, на который вы его оформляли. Мы сделаем возврат.
-                                     </p>
+                                   {{ index_text_about | safe }}
                                     <div class="section-btn-area">
                                         <a class="lgx-btn" target="_blank" href="https://vk.com/streamfest">Подробнее о Стримфесте LIVE</a>
 
@@ -518,7 +481,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <img src="{% static 'img/streamfest_logo_white.png' %}" alt="">
+                            <img src="{{ index_img_about }}" alt="">
                         </div>
                     </div>
                 </div><!-- //.CONTAINER -->
@@ -545,27 +508,14 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div style="display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr));grid-gap: 20px" class="sponsors-area sponsors-area-colorfull-border">
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'img/sponsors/sponsor-sp3.png' %}" alt="sponsor"/></a>
+                                    {% for sponsor in sponsors %}
+                                    <div style="border-color: {{ sponsor.bg_color }}" class="single">
+                                        <a class="" href="#"><img src="{{ sponsor.image.url }}" alt="sponsor"/></a>
                                     </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'img/sponsors/sponsor-sp3.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'img/sponsors/sponsor-sp3.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'img/sponsors/sponsor-sp3.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'img/sponsors/sponsor-sp3.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'img/sponsors/sponsor-sp3.png' %}" alt="sponsor"/></a>
-                                    </div>
-                                    <div class="single">
-                                        <a class="" href="#"><img src="{% static 'img/sponsors/sponsor-sp3.png' %}" alt="sponsor"/></a>
-                                    </div>
+                                    {% endfor %}
+
+
+
                                 </div>
                             </div>
                             <!--//col-->

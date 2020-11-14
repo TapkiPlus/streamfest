@@ -322,7 +322,7 @@
                 autoplay:true,
                 dots: true,
                 navText: ["<img src='./assets/img/arrow-left-ash.png'>","<img src='./assets/img/arrow-right-ash.png'>"],
-                autoplayTimeout: 5000,
+                autoplayTimeout: 20000,
                 autoplaySpeed: 500,
                 nav: true,
                 addClassActive : true,
@@ -476,7 +476,7 @@
             return regex.test(email);
         }
 
-        $('form.lgx-subscribe-form').on('submit', function (evnt) {
+        $('form.lgx-subscribe-formm').on('submit', function (evnt) {
             evnt.preventDefault();
             //  console.log(lgx_path);
             // console.log('subs submit');

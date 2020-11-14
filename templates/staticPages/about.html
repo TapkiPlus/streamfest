@@ -31,105 +31,30 @@
             <section class="news-section alternate">
                 <div class="container">
                     <div class="row">
-
-
-                        <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+                    {% for activity in activities %}
+                     <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><a href="javascript: void(0)"><img src="{% static 'images/activity/1.jpg' %}" alt=""></a></figure>
+                                    <figure class="image"><img src="{{ activity.image.url }}" alt=""></figure>
                                 </div>
                                 <div class="lower-content">
 
-                                    <h4><a href="javascript: void(0)">Иди на контакт</a></h4>
-                                    <p>Затуси вживую со звездами Twitch, YouTube, Miхer, VK, OK, Goodgame, WASD, Instagram. С лучшими стримерами и подкастерами. Общайся лицом к лицу, а не к экрану!</p>
-                                   
+                                    <h4>{{ activity.name }}</h4>
+                                    {{ activity.text|safe }}
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInRight animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInRight;">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="javascript: void(0)"><img src="{% static 'images/activity/2.jpg' %}" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-
-                                    <h4><a href="javascript: void(0)">Развлекайся на полную</a></h4>
-                                   <p>Прикоснись к игровым новинкам и технологиям Сколково, включайся в интерактив и унеси с фестиваля мешок лута!</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="javascript: void(0)"><img src="{% static 'images/activity/3.jpg' %}" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-
-                                    <h4><a href="javascript: void(0)">Наслаждайся шоу</a></h4>
-                                   <p>Болей за стримеров в жарких шоу-матчах, любуйся косплеерами, смотри громкие презентации — на главной сцене феста.</p>
-                                </div>
-                            </div>
-                        </div>
+                    {% endfor %}
 
 
-                        <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInRight animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInRight;">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="javascript: void(0)"><img src="{% static 'images/activity/4.jpg' %}" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-
-                                    <h4><a href="javascript: void(0)">Встречи со стримерами</a></h4>
-                                   <p>Звезды прямого интернет-эфира на расстоянии вытянутой руки. В развлекательной зоне соберутся лучшие из лучших: подойди к каждому и дай пять! Ни один чат не заменит радости живого общения. Кроме того, кастеры приготовили для тебя много сюрпризов. Не зевай!</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="news-block col-lg-4 col-md-4 col-sm-12 wow fadeInRight animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInRight;">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="javascript: void(0)"><img src="{% static 'images/activity/5.jpg' %}" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-
-                                    <h4><a href="javascript: void(0)">Два зала Лектория</a></h4>
-                                   <p>Как разукрасить свой стрим виджетами и настроить мультикамерную трансляцию, увеличить донат, найти и не потерять рекламодателей, работать с аудиторией в соцсетях и работать над голосом — Лекторий Стримфеста прокачает тебя во всех стримерских предметах. Учись у профи! Наш Лекторий работает в два потока оба фестивальных дня.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-block col-lg-4 col-md-4 col-sm-12 wow fadeInRight animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInRight;">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="javascript: void(0)"><img src="{% static 'images/activity/6.jpg' %}" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-
-                                    <h4><a href="javascript: void(0)">Музыкальная сцена</a></h4>
-                                   <p>Стримфест — это просто песня! Это два дня выступлений, каверов и отборного джема на нашей специальной музыкальной сцене! Поющий ведущий концерта — великолепный dyadyastas.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-block col-lg-4 col-md-4 col-sm-12 wow fadeInRight animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInRight;">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="javascript: void(0)"><img src="{% static 'images/activity/7.jpg' %}" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-
-                                    <h4><a href="javascript: void(0)">И это все? Как бы не так!</a></h4>
-                                   <p>Тебя ждут крутые игровые премьеры, демозоны, классные активности от наших партнеров и резидентов Сколково. И многое другое! Жди сюрпризов и не забудь подписаться на новостную VK-группу Стримфеста и телеграм-бота https://t-do.ru/StreamfestBot. Он поможет сориентироваться на местности и не даст запутаться в расписании участников фестиваля. До встречи на главном фестивале стрим-культуры!</p>
-                                </div>
-                            </div>
-                        </div>
 
 
 
                     </div>
 
-                    <img src="{% static 'images/big.png' %}">
+
                 </div>
             </section>
 

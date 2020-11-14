@@ -21,6 +21,11 @@ def index(request):
     twoDayTicket = Ticket.objects.get(isDefaultTwoDayTicket=True)
     posts = Post.objects.filter(isAtHome=True)
     items = range(1,32)
+    sponsors = Sponsor.objects.all()
+    feedbacks = Feedback.objects.filter(is_active=True)
+    content_table = StaticPage.objects.first()
+    index_text_about = content_table.index_about_text
+    index_img_about = content_table.index_about_image.url
 
     return render(request, 'staticPages/index.html', locals())
 
@@ -36,6 +41,8 @@ def apply(request):
     left_faqs = faqs[0::2]
     right_faqs = faqs[1::2]
     applytactive = 'current'
+    content_table = StaticPage.objects.first()
+    apply_text = content_table.apply_text
     return render(request, 'staticPages/apply.html', locals())
 
 def contacts(request):
@@ -128,6 +135,7 @@ def post(request, slug):
 
 def about(request):
     activityactive = 'current'
+    activities = Activity.objects.all()
     return render(request, 'staticPages/about.html', locals())
 
 def callback(request):
@@ -160,3 +168,9 @@ def all_speakers(request):
     streamersactive = 'current'
     allSpeakers = Speaker.objects.all().order_by('orderPP')
     return render(request, 'speaker/speakers.html', locals())
+
+
+def add_to_mail_subscribe(request):
+    print(request.POST)
+    MailSubscribe.objects.get_or_create(email=request.POST.get('email'))
+    return HttpResponseRedirect('/')

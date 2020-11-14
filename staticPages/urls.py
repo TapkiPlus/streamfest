@@ -20,6 +20,7 @@ urlpatterns = [
    path('callback', views.callback, name='callback'),
    path('stars/', views.all_speakers, name='all_speakers'),
    path('check_order/<qr>/', views.check_order, name='check_order'),
+   path('add_email/', views.add_to_mail_subscribe, name='add_to_mail_subscribe'),
    # path('robots.txt', views.robots, name='robots'),
 
 

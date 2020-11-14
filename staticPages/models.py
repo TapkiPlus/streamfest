@@ -3,10 +3,12 @@ from django.db import models
 from pytils.translit import slugify
 from random import choices
 import string
+from colorfield.fields import ColorField
 
 class Sponsor(models.Model):
     image = models.ImageField('Изображение)', upload_to='sponsor_img/',
                               blank=False, null=True)
+    bg_color = ColorField('Цвет бордера',default='#000000')
     isVip = models.BooleanField('ВИП спонсор?', default=False)
     def __str__(self):
         return 'Спонсор №{}'.format(self.id)
@@ -101,3 +103,51 @@ class Callback(models.Model):
     class Meta:
         verbose_name = "Сообщение"
         verbose_name_plural = "Сообщения"
+
+
+class StaticPage(models.Model):
+    apply_text = RichTextUploadingField('Текст на странице - Стать участником', blank=False, null=True)
+    index_about_text = RichTextUploadingField('Текст на главной странице - Информация', blank=False, null=True)
+    index_about_image = models.ImageField('Изображение на главной странице - Информация', upload_to='img/', blank=False,
+                             null=True)
+    class Meta:
+        verbose_name = "Текст для статических страниц"
+        verbose_name_plural = "Текст для статических страниц"
+
+class Feedback(models.Model):
+    quote = models.CharField('Цитата', max_length=255, blank=False, null=True)
+    name = models.CharField('Отзыв от', max_length=255, blank=False, null=True)
+    image = models.ImageField('Аватарка от кого отзыв', upload_to='post_img/', blank=False,
+                              null=True)
+    text = models.TextField('Текст', blank=True, null=True)
+    is_active = models.BooleanField('Отображать?', default=True)
+
+    def __str__(self):
+        return 'Отзыв от: {}'.format(self.name)
+
+    class Meta:
+        verbose_name = "Отзыв"
+        verbose_name_plural = "Отзывы"
+
+class Activity(models.Model):
+    name = models.CharField('Название', max_length=255, blank=False, null=True)
+    image = models.ImageField('Картинка', upload_to='post_img/', blank=False,
+                              null=True)
+    text = RichTextUploadingField('Текст', blank=False, null=True)
+
+    def __str__(self):
+        return 'Активность: {}'.format(self.name)
+
+    class Meta:
+        verbose_name = "Активность"
+        verbose_name_plural = "Активности"
+
+class MailSubscribe(models.Model):
+    email = models.CharField('E-Mail', max_length=255, blank=False, null=True)
+
+    def __str__(self):
+        return 'Подписка на рассылку: {}'.format(self.email)
+
+    class Meta:
+        verbose_name = "Подписка на рассылку"
+        verbose_name_plural = "Подписки на рассылку"
